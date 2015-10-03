@@ -30,7 +30,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # gem 'capistrano-rails', group: :development
 
 gem 'mongoid', '~> 5.0.0'
-
+gem 'bootstrap-sass', '~> 3.3.5'
 gem 'slim'
 gem 'slim-rails'
 
