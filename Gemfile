@@ -36,6 +36,7 @@ gem 'slim-rails'
 gem 'simple_form'
 gem 'capybara'
 gem 'rails-i18n'
+gem 'puma'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
