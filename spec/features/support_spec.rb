@@ -8,6 +8,7 @@ feature 'Support announcement' do
     fill_in 'Nachname', with: 'Blocher'
     fill_in 'Strasse/Nr.', with: 'Wängirain 53'
     fill_in 'Postleitzahl', with: '8704'
+    fill_in 'Ort', with: 'Hinterm Mond'
     fill_in 'E-Mail', with: 'blocher@blocher.ch'
     fill_in 'E-Mail', with: 'blocher@blocher.ch'
 

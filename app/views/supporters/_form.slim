@@ -4,6 +4,7 @@ h1 = title t('.title')
   = f.input :last_name
   = f.input :street
   = f.input :zip
+  = f.input :city
   = f.input :email
   = f.input :support, as: :radio_buttons, collection: t('support_type'), label_method: :last, value_method: :first
   = f.input :age_category, as: :radio_buttons, collection: t('age_category'), label_method: :last, value_method: :first

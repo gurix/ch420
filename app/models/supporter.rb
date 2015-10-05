@@ -5,6 +5,7 @@ class Supporter
   field :last_name,    type: String
   field :street,       type: String
   field :zip,          type: Integer
+  field :city,         type: String
   field :email,        type: String
   field :support,      type: String # Indicates the type of support
   field :age_category, type: String
