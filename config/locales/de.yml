@@ -1,0 +1,30 @@
+de:
+  support_type:
+    supoorter: Ich unterschreibe eine Volksinitiative für die Freigabe von Cannabis
+    activist: Ich unterschreibe eine Volksinitiative für die Freigabe von Cannabis und helfe aktiv Unterchriften in meinr Umgebung zu sammeln.
+  age_category:
+    underage: Ich bin Jünger als 18
+    young: Ich bin 18 bis 30 Jahre alt
+    middle: Ich bin 30 bis 64 Jahre alt
+    retired: Ich bin über 64 Jahre alt
+    
+  supporters:
+    form:
+      title: Ja, ich will helfen Cannabis in der Schweiz endlich zu legalieren
+      submit: Unterstützung zusichern
+  
+  pages:
+    thanks:
+      title: Besten dank für deine Unterstützung!
+  
+  mongoid:
+   attributes:
+      supporter:
+        first_name: Vorname
+        last_name: Nachname
+        street: Adresse / Strasse
+        zip: Postleitzahl
+        city: Ort
+        email: E-Mail
+        support: Unterstützung
+        age_category: Alterskategorie
