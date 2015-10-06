@@ -9,3 +9,33 @@ h1 = title t('.title_html')
   = f.input :support, as: :radio_buttons, collection: t('support_type'), label_method: :last, value_method: :first
   = f.input :age_category, as: :radio_buttons, collection: t('age_category'), label_method: :last, value_method: :first
   = f.submit value: t('.submit'), class: 'btn btn-success'
+
+javascript:
+  var cities = new Bloodhound({
+    datumTokenizer: Bloodhound.tokenizers.whitespace,
+    queryTokenizer: Bloodhound.tokenizers.whitespace,
+    remote: {
+      url: '/cities_autocomplete.json?query=%QUERY',
+      wildcard: '%QUERY',
+    }
+  });
+  
+  $('#supporter_city').typeahead({
+    minLength: 2,
+    highlight: true,
+  },{
+    display: 'city',
+    source: cities 
+  }).on('typeahead:selected', function(event, datum) {
+    $("#supporter_zip").val(datum.plz);
+  });
+    
+  $('#supporter_zip').typeahead({
+    minLength: 2,
+    highlight: true,
+  },{
+    display: 'plz',
+    source: cities 
+  }).on('typeahead:selected', function(event, datum) {
+    $("#supporter_city").val(datum.city);
+  });  
