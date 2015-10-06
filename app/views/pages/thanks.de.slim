@@ -1,2 +1,15 @@
 .lead
   h1 = title t('.title')
+
+#fb-root
+
+javascript:
+  (function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/de_DE/sdk.js#xfbml=1&version=v2.4&appId=236723906381514";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
+
+.fb-like data-action="like" data-href="https://www.facebook.com/vereinlegalizeit" data-layout="standard" data-share="true" data-show-faces="true" 
