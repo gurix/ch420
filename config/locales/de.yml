@@ -12,6 +12,8 @@ de:
     form:
       title: Ja, ich will helfen Cannabis in der Schweiz endlich zu legalisieren
       submit: Unterstützung zusichern
+    create:
+      timeout: Ihre Eingabe war zu schnell.
   
   pages:
     thanks:

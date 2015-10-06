@@ -43,6 +43,8 @@ group :development, :test do
   gem 'byebug'
   gem 'mongoid-rspec', '3.0.0'
   gem 'rspec-rails', '~> 3.0'
+  
+  gem 'pry-rails'
 end
 
 group :development do
