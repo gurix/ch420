@@ -20,6 +20,10 @@ javascript:
     }
   });
   
+  var suggestion_template = function (data) {
+      return '<p>' + data.plz + ' - ' + data.city + '</p>';
+  }
+  
   $('#supporter_city').typeahead({
     minLength: 2,
   },{
@@ -27,7 +31,7 @@ javascript:
   display: 'city',
   templates: {
     suggestion: function (data) {
-        return '<p><strong>' + data.plz + '</strong> - ' + data.city + '</p>';
+        return suggestion_template(data);
     }
   },
     source: cities 
@@ -42,7 +46,7 @@ javascript:
     display: 'plz',
     templates: {
       suggestion: function (data) {
-          return '<p><strong>' + data.plz + '</strong> - ' + data.city + '</p>';
+          return suggestion_template(data);
       }
     },
     source: cities 
