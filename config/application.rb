@@ -16,6 +16,8 @@ require 'csv'
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
 
+Mongo::Logger.logger.level = Logger::WARN # Set log level to DEBUG to see everything
+
 module Ch420
   class Application < Rails::Application
     # Settings in config/environments/* take precedence over those specified here.
