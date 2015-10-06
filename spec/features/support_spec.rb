@@ -11,7 +11,6 @@ feature 'Support announcement' do
     fill_in 'Postleitzahl', with: '8704'
     fill_in 'Ort', with: 'Hinterm Mond'
     fill_in 'E-Mail', with: 'blocher@blocher.ch'
-    fill_in 'E-Mail', with: 'blocher@blocher.ch'
 
     choose 'Ich unterschreibe eine Volksinitiative für die Freigabe von Cannabis und helfe aktiv Unterschriften in meiner Umgebung zu sammeln.'
 
@@ -26,7 +25,7 @@ feature 'Support announcement' do
     click_button 'Unterstützung zusichern'
 
     expect(page).to have_content 'Ihre Eingabe war zu schnell.'
-    
+
     # Test twice just to be sure that it's not become an update action
     click_button 'Unterstützung zusichern'
 
