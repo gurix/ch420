@@ -22,9 +22,14 @@ javascript:
   
   $('#supporter_city').typeahead({
     minLength: 2,
-    highlight: true,
   },{
-    display: 'city',
+  limit: 20,
+  display: 'city',
+  templates: {
+    suggestion: function (data) {
+        return '<p><strong>' + data.plz + '</strong> - ' + data.city + '</p>';
+    }
+  },
     source: cities 
   }).on('typeahead:selected', function(event, datum) {
     $("#supporter_zip").val(datum.plz);
@@ -32,9 +37,14 @@ javascript:
     
   $('#supporter_zip').typeahead({
     minLength: 2,
-    highlight: true,
   },{
+    limit: 20,
     display: 'plz',
+    templates: {
+      suggestion: function (data) {
+          return '<p><strong>' + data.plz + '</strong> - ' + data.city + '</p>';
+      }
+    },
     source: cities 
   }).on('typeahead:selected', function(event, datum) {
     $("#supporter_city").val(datum.city);
