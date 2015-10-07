@@ -21,7 +21,7 @@ class Supporter
   validates :street,       presence: true
   validates :zip,          presence: true
   validates :city,         presence: true
-  validates :email,        presence: true, uniqueness: true
+  validates :email,        presence: true, uniqueness: true, format: /.+@.+\..+/i
   validates :support,      presence: true
   validates :age_category, presence: true
 
