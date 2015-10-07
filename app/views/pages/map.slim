@@ -41,11 +41,11 @@ javascript:
     map.setMapTypeId(customMapTypeId);
     
     supporters.forEach(function(supporter) {
-      var color = '#FF0000';
-      var radius = 10;
-      if (supporter.support == 'activist') {
-        color = '#00ff00';
-        radius = 500;
+      var color = '#00ff00';
+      var radius = 500;
+      if (supporter.support == 'signer' ) {
+        color = '#FF0000';
+        radius = 10;
       }
       var cityCircle = new google.maps.Circle({
          fillColor: color,
