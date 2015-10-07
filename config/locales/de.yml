@@ -1,7 +1,10 @@
 de:
   support_type:
-    supoorter: Ich unterschreibe eine Volksinitiative für die Freigabe von Cannabis
-    activist: Ich unterschreibe eine Volksinitiative für die Freigabe von Cannabis und helfe aktiv Unterschriften in meiner Umgebung zu sammeln.
+    signer: Ich unterschreibe eine Volksinitiative für die Freigabe von Cannabis.
+    supporter: Ich unterschreibe eine Volksinitiative für die Freigabe von Cannabis und helfe aktiv Unterschriften in meiner Umgebung zu sammeln.
+    activist: Ich beteilige mich bei der Planung und Koordination einer Volksinitiative.
+    nonvoting_supporter: Ich bin nicht stimmberechtigt, helfe aber aktiv Unterschriften in meiner Umgebung zu sammeln.
+    
   age_category:
     underage: Ich bin jünger als 18 Jahre alt
     young: Ich bin 18 bis 30 Jahre alt
