@@ -1,55 +1,65 @@
-h1 = title t('.title_html')
-= simple_form_for @supporter do |f|
-  = f.input :first_name
-  = f.input :last_name
-  = f.input :street
-  = f.input :city
-  = f.input :zip
-  = f.input :email
-  = f.input :support, as: :radio_buttons, collection: t('support_type'), label_method: :last, value_method: :first
-  = f.input :age_category, as: :radio_buttons, collection: t('age_category'), label_method: :last, value_method: :first
-  = f.submit value: t('.submit'), class: 'btn btn-success'
 
-javascript:
-  var cities = new Bloodhound({
-    datumTokenizer: Bloodhound.tokenizers.whitespace,
-    queryTokenizer: Bloodhound.tokenizers.whitespace,
-    remote: {
-      url: '/cities_autocomplete.json?query=%QUERY',
-      wildcard: '%QUERY',
-    }
-  });
-  
-  var suggestion_template = function (data) {
-      return '<p>' + data.plz + ' - ' + data.city + '</p>';
-  }
-  
-  $('#supporter_city').typeahead({
-    minLength: 2,
-  },{
-  limit: 20,
-  display: 'city',
-  templates: {
-    suggestion: function (data) {
-        return suggestion_template(data);
-    }
-  },
-    source: cities 
-  }).on('typeahead:selected', function(event, datum) {
-    $("#supporter_zip").val(datum.plz);
-  });
-    
-  $('#supporter_zip').typeahead({
-    minLength: 2,
-  },{
-    limit: 20,
-    display: 'plz',
-    templates: {
-      suggestion: function (data) {
-          return suggestion_template(data);
+h1 = title t('.title_html')
+.row
+  .col-xs-12.col-md-7
+    = simple_form_for @supporter do |f|
+      = f.input :first_name, placeholder: t('.placeholders.first_name')
+      = f.input :last_name, placeholder: t('.placeholders.last_name')
+      = f.input :street, placeholder: t('.placeholders.street')
+      = f.input :city, placeholder: t('.placeholders.city')
+      = f.input :zip, placeholder: t('.placeholders.zip')
+      = f.input :email, placeholder: t('.placeholders.email')
+      = f.input :support, as: :radio_buttons, collection: t('support_type'), label_method: :last, value_method: :first
+      = f.input :age_category, as: :radio_buttons, collection: t('age_category'), label_method: :last, value_method: :first
+      = f.submit value: t('.submit'), class: 'btn btn-success'
+
+    javascript:
+      var cities = new Bloodhound({
+        datumTokenizer: Bloodhound.tokenizers.whitespace,
+        queryTokenizer: Bloodhound.tokenizers.whitespace,
+        remote: {
+          url: '/cities_autocomplete.json?query=%QUERY',
+          wildcard: '%QUERY',
+        }
+      });
+      
+      var suggestion_template = function (data) {
+          return '<p>' + data.plz + ' - ' + data.city + '</p>';
       }
-    },
-    source: cities 
-  }).on('typeahead:selected', function(event, datum) {
-    $("#supporter_city").val(datum.city);
-  });  
+      
+      $('#supporter_city').typeahead({
+        minLength: 2,
+      },{
+      limit: 20,
+      display: 'city',
+      templates: {
+        suggestion: function (data) {
+            return suggestion_template(data);
+        }
+      },
+        source: cities 
+      }).on('typeahead:selected', function(event, datum) {
+        $("#supporter_zip").val(datum.plz);
+      });
+        
+      $('#supporter_zip').typeahead({
+        minLength: 2,
+      },{
+        limit: 20,
+        display: 'plz',
+        templates: {
+          suggestion: function (data) {
+              return suggestion_template(data);
+          }
+        },
+        source: cities 
+      }).on('typeahead:selected', function(event, datum) {
+        $("#supporter_city").val(datum.city);
+      });  
+  .col-md-4.col-xs-12
+    .well
+      h2 Lorem Ipsum
+      | Er hörte leise Schritte hinter sich. Das bedeutete nichts Gutes. Wer würde ihm schon folgen, spät in der Nacht und dazu noch in dieser engen Gasse mitten im übel beleumundeten Hafenviertel? Gerade jetzt, wo er das Ding seines Lebens gedreht hatte und mit der Beute verschwinden wollte! Hatte einer seiner zahllosen Kollegen dieselbe Idee gehabt, ihn beobachtet und abgewartet, um ihn nun um die Früchte seiner Arbeit zu erleichtern? Oder gehörten die Schritte hinter ihm zu einem der unzähligen Gesetzeshüter dieser Stadt, und die stählerne Acht um seine Handgelenke würde gleich zuschnappen? Er konnte die Aufforderung stehen zu bleiben schon hören. Gehetzt sah er sich um. Plötzlich erblickte er den schmalen Durchgang. Blitzartig drehte er sich nach rechts und verschwand zwischen den beiden Gebäuden. Beinahe wäre er dabei über den umgestürzten Mülleimer gefallen, der mitten im Weg lag. Er versuchte, sich in der Dunkelheit seinen Weg zu ertasten und erstarrte: Anscheinend gab es keinen anderen Ausweg aus diesem kleinen Hof als den Durchgang, durch den er gekommen war. Die Schritte wurden lauter und lauter, er sah eine dunkle Gestalt um die Ecke biegen. Fieberhaft irrten seine Augen durch die nächtliche Dunkelheit und suchten einen Ausweg. War jetzt wirklich alles vorbei?
+      .embed-responsive.embed-responsive-4by3
+        iframe.embed-responsive-item src="https://www.youtube.com/embed/sJOD7Bsllso" frameborder="0" allowfullscreen=""
+        
