@@ -2,7 +2,7 @@ de:
   support_type:
     signer: Ich unterschreibe eine Volksinitiative für die Freigabe von Cannabis.
     supporter: Ich unterschreibe eine Volksinitiative für die Freigabe von Cannabis und helfe aktiv Unterschriften in meiner Umgebung zu sammeln.
-    activist: Ich unterschreibe eine Volksinitiative für die Freigabe von Cannabis und beteilige mich bei der Planung und Koordination einer Volksinitiative.
+    # activist: Ich unterschreibe eine Volksinitiative für die Freigabe von Cannabis und beteilige mich bei der Planung und Koordination einer Volksinitiative.
     nonvoting_supporter: Ich bin nicht stimmberechtigt, helfe aber aktiv Unterschriften in meiner Umgebung zu sammeln.
     
   age_category:
