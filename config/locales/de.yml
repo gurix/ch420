@@ -15,6 +15,7 @@ de:
     form:
       title_html: Ja, ich will <strong class="text-success">Cannabis</strong> in der Schweiz <strong>legalisieren</strong>
       submit: Unterstützung zusichern
+      terms_and_conditions: Mit dem Absenden ihrer Daten stimmen Sie den Nutzungsbedingungen zu.
       placeholders:
         first_name: Hans
         last_name: Muster

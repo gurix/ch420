@@ -1,4 +1,4 @@
-
+= render 'shared/terms_and_conditions'
 h1 = title t('.title_html')
 .row
   .col-xs-12.col-md-7
@@ -11,7 +11,10 @@ h1 = title t('.title_html')
       = f.input :email, placeholder: t('.placeholders.email')
       = f.input :support, as: :radio_buttons, collection: t('support_type'), label_method: :last, value_method: :first
       = f.input :age_category, as: :radio_buttons, collection: t('age_category'), label_method: :last, value_method: :first
-      = f.submit value: t('.submit'), class: 'btn btn-success'
+      .form-group
+        = f.submit value: t('.submit'), class: 'btn btn-success'
+      .form-group
+        = link_to t('.terms_and_conditions'),'#', data: { toggle: :modal, target: '#terms_and_conditions'}, class: 'small'
 
     javascript:
       var cities = new Bloodhound({
