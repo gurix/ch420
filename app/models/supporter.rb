@@ -3,7 +3,7 @@ class Supporter
   include Mongoid::Timestamps
   include Geocoder::Model::Mongoid
 
-  COUNTER_START = 1331
+  COUNTER_START = 322
 
   geocoded_by :address
   after_validation :geocode          # auto-fetch coordinates
