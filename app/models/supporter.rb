@@ -3,6 +3,8 @@ class Supporter
   include Mongoid::Timestamps
   include Geocoder::Model::Mongoid
 
+  COUNTER_START = 1331
+
   geocoded_by :address
   after_validation :geocode          # auto-fetch coordinates
 
@@ -24,6 +26,11 @@ class Supporter
   validates :email,        presence: true, uniqueness: true, format: /.+@.+\..+/i
   validates :support,      presence: true
   validates :age_category, presence: true
+
+  def self.counter
+    actual = count.to_i
+    actual > COUNTER_START ? actual : COUNTER_START
+  end
 
   def address
     "#{street}, #{zip}, #{city}, Switzerland"
