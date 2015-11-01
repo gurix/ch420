@@ -18,6 +18,6 @@ class SupportersController < ApplicationController
   private
 
   def supporter_form_params
-    params.require(:supporter).permit(:first_name, :last_name, :street, :zip, :email, :support, :age_category, :city)
+    params.require(:supporter).permit(:first_name, :last_name, :street, :zip, :email, :support, :age_category, :city, :comments)
   end
 end

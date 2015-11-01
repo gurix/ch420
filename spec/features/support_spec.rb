@@ -11,14 +11,16 @@ feature 'Support announcement' do
     fill_in 'Postleitzahl', with: '8704'
     fill_in 'Ort', with: 'Herrliberg'
     fill_in 'E-Mail', with: 'blocher@blocher.ch'
+    fill_in 'Kommentar / Feedback', with: 'Test text'
 
     choose 'Ich unterschreibe eine Volksinitiative für die Freigabe von Cannabis und helfe aktiv Unterschriften in meiner Umgebung zu sammeln.'
 
     choose 'Ich bin über 64 Jahre alt'
 
     expect { click_button 'Unterstützung zusichern' }.to change { Supporter.count }.by(1)
-
-    expect(Supporter.find_by(email: 'blocher@blocher.ch').coordinates).to eq [8.618589100000001, 47.2926304]
+    supporter = Supporter.find_by(email: 'blocher@blocher.ch')
+    expect(supporter.coordinates).to eq [8.618589100000001, 47.2926304]
+    expect(supporter.comments).to eq 'Test text'
   end
 
   scenario 'A bot tries to enter data' do

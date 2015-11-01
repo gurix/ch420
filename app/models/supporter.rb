@@ -17,6 +17,7 @@ class Supporter
   field :support,      type: String # Indicates the type of support
   field :age_category, type: String
   field :coordinates,  type: Array
+  field :comments,     type: String
 
   validates :first_name,   presence: true
   validates :last_name,    presence: true
