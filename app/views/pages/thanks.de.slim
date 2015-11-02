@@ -1,15 +1,36 @@
 .lead
   h1 = title t('.title')
+  
+  p Du bist nun ein Teil der Bewegung!
+  
+h2 Wie sieht das weitere Vorgehen aus?
+p.lead
+  | Wir informieren dich per E-Mail über die nächsten Schritte und kommen aktiv auf dich zu. 
+  | Auf #{link_to 'http://www.hanflegal.ch/initiative', 'http://www.hanflegal.ch/initiative'} informieren wir über laufende Aktivitäten.
 
-#fb-root
+h2 Was kannst du machen?
+.row
+    .col-xs-12.col-sm-6
+      .well
+        .lead Folge uns auf Facebook
+        #fb-root
+        javascript:
+          (function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = "//connect.facebook.net/de_DE/sdk.js#xfbml=1&version=v2.4&appId=236723906381514";
+            fjs.parentNode.insertBefore(js, fjs);
+          }(document, 'script', 'facebook-jssdk'));
 
-javascript:
-  (function(d, s, id) {
-    var js, fjs = d.getElementsByTagName(s)[0];
-    if (d.getElementById(id)) return;
-    js = d.createElement(s); js.id = id;
-    js.src = "//connect.facebook.net/de_DE/sdk.js#xfbml=1&version=v2.4&appId=236723906381514";
-    fjs.parentNode.insertBefore(js, fjs);
-  }(document, 'script', 'facebook-jssdk'));
-
-.fb-like data-action="like" data-href="https://www.facebook.com/vereinlegalizeit" data-layout="standard" data-share="true" data-show-faces="true" 
+        .fb-like data-action="like" data-href="https://www.facebook.com/vereinlegalizeit" data-layout="standard" data-share="true" data-show-faces="true"
+    .col-xs-12.col-sm-6
+      .well
+        .lead Folge uns auf Twitter
+        p
+          <a href="https://twitter.com/vereinlegalize" class="twitter-follow-button" data-show-count="false" data-lang="de" data-size="large">@vereinlegalize folgen</a>
+          <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+        .lead Setze ein zeichen und zeig, dass du uns unterstützt 
+        p
+          <a href="https://twitter.com/share" class="twitter-share-button" data-url="https://ch420.herokuapp.com" data-text="Ja, ich will Cannabis in der Schweiz legalisieren" data-via="vereinlegalize" data-lang="de" data-size="large" data-hashtags="ch420">Twittern</a>
+          <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
