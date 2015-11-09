@@ -1,9 +1,9 @@
 de:
   support_type:
-    signer: Ich unterschreibe eine Volksinitiative für die Freigabe von Cannabis.
-    supporter: Ich unterschreibe eine Volksinitiative für die Freigabe von Cannabis und helfe aktiv Unterschriften in meiner Umgebung zu sammeln.
-    # activist: Ich unterschreibe eine Volksinitiative für die Freigabe von Cannabis und beteilige mich bei der Planung und Koordination einer Volksinitiative.
-    nonvoting_supporter: Ich bin nicht stimmberechtigt, helfe aber aktiv Unterschriften in meiner Umgebung zu sammeln.
+    signer: Ich unterschreibe eine Volksinitiative für die <span class="text-success">Legalisierung von Cannabis</span>.
+    supporter: Ich unterschreibe eine Volksinitiative für die <span class="text-success">Legalisierung von Cannabis</span> und helfe aktiv Unterschriften in meiner Umgebung zu sammeln.
+    # activist: Ich unterschreibe eine Volksinitiative für die <span class="text-success">Legalisierung von Cannabis</span> und beteilige mich bei der Planung und Koordination einer Volksinitiative.
+    nonvoting_supporter: Ich bin nicht stimmberechtigt, helfe aber aktiv Unterschriften in meiner Umgebung zu sammeln um <span class="text-success">Cannabis zu legalisierung</span>.
     
   age_category:
     underage: Ich bin jünger als 18 Jahre alt
@@ -13,13 +13,13 @@ de:
     
   supporters:
     form:
-      title_html: Ja, ich will <strong class="text-success">Cannabis</strong> in der Schweiz <strong>legalisieren</strong>
+      title_html: Ja, ich will <strong class="text-success">Cannabis</strong> in der Schweiz <strong class="text-success">legalisieren</strong>
       submit: Unterstützung zusichern
       terms_and_conditions: Mit dem Absenden ihrer Daten stimmen Sie den Nutzungsbedingungen zu.
       placeholders:
         first_name: Hans
         last_name: Muster
-        street: Haschgasse 12
+        street: Mustergasse 12
         city: Hinterpfupfikon
         zip: "4200"
         email: hans.muster@hanflegal.ch

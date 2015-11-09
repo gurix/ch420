@@ -9,7 +9,7 @@ h1 = title t('.title_html')
       = f.input :city, placeholder: t('.placeholders.city')
       = f.input :zip, placeholder: t('.placeholders.zip')
       = f.input :email, placeholder: t('.placeholders.email')
-      = f.input :support, as: :radio_buttons, collection: t('support_type'), label_method: :last, value_method: :first
+      = f.input :support, as: :radio_buttons, collection: t('support_type').map{ |x| [x.first, raw(x.last)]}, label_method: :last, value_method: :first
       = f.input :age_category, as: :radio_buttons, collection: t('age_category'), label_method: :last, value_method: :first
       = f.input :comments, as: :text
       .form-group
@@ -77,7 +77,7 @@ h1 = title t('.title_html')
         strong Schritt 3:  
         | Durch eine ausgeklügelte Logistik werden am 20. April 2016 Sympathisanten und Aktivisten zusammengebracht, um gemeinsam die nötigen Unterschriften zu generieren.
       
-      p.lead Wenn du also Cannabis in der Schweiz legalieseren willst, fülle das nebenstehende Formular aus und am 20. April 2016 schreibst du mit uns Geschichte.
+      p.lead Wenn du also <span class="text-success">Cannabis in der Schweiz legalisieren</span> willst, fülle das nebenstehende Formular aus und am 20. April 2016 schreibst du mit uns Geschichte.
       p Mehr Informationen findest du unter #{link_to 'https://www.hanflegal.ch/initiative', 'https://www.hanflegal.ch/initiative'}
       strong Wer steht hinter dieser Aktion?
       p Die Aktion wurde von Mitgliedern des Verein Legalize it! initiiert. Seit 25 Jahren helfen wir vom Verein Legalize it! Menschen, die mit THC-Produkten Umgang pflegen, bei den unterschiedlichsten Fragen.

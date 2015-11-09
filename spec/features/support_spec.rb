@@ -13,7 +13,7 @@ feature 'Support announcement' do
     fill_in 'E-Mail', with: 'blocher@blocher.ch'
     fill_in 'Kommentar / Feedback', with: 'Test text'
 
-    choose 'Ich unterschreibe eine Volksinitiative für die Freigabe von Cannabis und helfe aktiv Unterschriften in meiner Umgebung zu sammeln.'
+    choose 'Ich unterschreibe eine Volksinitiative für die Legalisierung von Cannabis und helfe aktiv Unterschriften in meiner Umgebung zu sammeln.'
 
     choose 'Ich bin über 64 Jahre alt'
 
