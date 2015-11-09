@@ -10,6 +10,7 @@ describe Supporter do
   it { is_expected.to validate_uniqueness_of(:email) }
   it { is_expected.to validate_presence_of(:support) }
   it { is_expected.to validate_presence_of(:age_category) }
+  it { is_expected.to validate_presence_of(:language) }
 
   describe '.counter' do
     it 'counts only from a certain number on' do

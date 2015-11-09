@@ -6,7 +6,7 @@ class SupportersController < ApplicationController
   end
 
   def create
-    @supporter = Supporter.new supporter_form_params
+    @supporter = Supporter.new supporter_form_params.merge(language: I18n.locale)
     if !input_to_fast? && @supporter.save
       redirect_to thanks_path
     else

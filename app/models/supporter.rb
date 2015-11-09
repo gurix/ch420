@@ -18,6 +18,7 @@ class Supporter
   field :age_category, type: String
   field :coordinates,  type: Array
   field :comments,     type: String
+  field :language,     type: String
 
   validates :first_name,   presence: true
   validates :last_name,    presence: true
@@ -27,6 +28,7 @@ class Supporter
   validates :email,        presence: true, uniqueness: true, format: /.+@.+\..+/i
   validates :support,      presence: true
   validates :age_category, presence: true
+  validates :language,     presence: true
 
   def self.counter
     actual = count.to_i

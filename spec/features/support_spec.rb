@@ -21,6 +21,7 @@ feature 'Support announcement' do
     supporter = Supporter.find_by(email: 'blocher@blocher.ch')
     expect(supporter.coordinates).to eq [8.618589100000001, 47.2926304]
     expect(supporter.comments).to eq 'Test text'
+    expect(supporter.language).to eq 'de'
   end
 
   scenario 'A bot tries to enter data' do
