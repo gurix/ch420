@@ -29,6 +29,8 @@ feature 'Support announcement' do
   end
 
   scenario 'A bot tries to enter data' do
+    stub_const('ApplicationController::INPUT_TIMEOUT', 600.seconds)
+
     visit root_path
 
     click_button 'Unterstützung zusichern'
