@@ -2,7 +2,6 @@ require 'rails_helper'
 
 feature 'Support announcement' do
   scenario 'User announces support' do
-    allow_any_instance_of(SupportersController).to receive(:input_to_fast?).and_return(false)
     visit root_path
 
     fill_in 'Vorname', with: 'Christoph'
@@ -18,6 +17,8 @@ feature 'Support announcement' do
     choose 'Ich bin über 64 Jahre alt'
 
     check 'Ich bin interessiert an einer Mitgliedschaft beim Verein Legalize it! (50 Franken pro Jahr)'
+
+    sleep 5 # Do a real sleep to have a real integration test
 
     expect { click_button 'Unterstützung zusichern' }.to change { Supporter.count }.by(1)
     supporter = Supporter.find_by(email: 'blocher@blocher.ch')
