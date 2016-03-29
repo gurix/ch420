@@ -17,11 +17,14 @@ feature 'Support announcement' do
 
     choose 'Ich bin über 64 Jahre alt'
 
+    check 'Ich bin interessiert an einer Mitgliedschaft beim Verein Legalize it! (50 Franken pro Jahr)'
+
     expect { click_button 'Unterstützung zusichern' }.to change { Supporter.count }.by(1)
     supporter = Supporter.find_by(email: 'blocher@blocher.ch')
     expect(supporter.coordinates).to eq [8.618589100000001, 47.2926304]
     expect(supporter.comments).to eq 'Test text'
     expect(supporter.language).to eq 'de'
+    expect(supporter.li_membership).to eq true
   end
 
   scenario 'A bot tries to enter data' do

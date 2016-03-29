@@ -10,6 +10,7 @@ h1 = title t('.title_html')
       = f.input :zip, placeholder: t('.placeholders.zip')
       = f.input :email, placeholder: t('.placeholders.email')
       = f.input :support, as: :radio_buttons, collection: t('support_type').map{ |x| [x.first, raw(x.last)]}, label_method: :last, value_method: :first
+      = f.input :li_membership, as: :boolean
       = f.input :age_category, as: :radio_buttons, collection: t('age_category'), label_method: :last, value_method: :first
       = f.input :comments, as: :text
       .form-group
