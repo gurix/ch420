@@ -15,7 +15,7 @@ class Supporter
   field :city,         type: String
   field :email,        type: String
   field :support,      type: String # Indicates the type of support
-  field :li_membership, type: Boolean
+  field :li_membership, type: Boolean, default: false
   field :age_category, type: String
   field :coordinates,  type: Array
   field :comments,     type: String
