@@ -8,18 +8,18 @@ class Supporter
   geocoded_by :address
   after_validation :geocode          # auto-fetch coordinates
 
-  field :first_name,   type: String
-  field :last_name,    type: String
-  field :street,       type: String
-  field :zip,          type: Integer
-  field :city,         type: String
-  field :email,        type: String
-  field :support,      type: String # Indicates the type of support
+  field :first_name,    type: String
+  field :last_name,     type: String
+  field :street,        type: String
+  field :zip,           type: Integer
+  field :city,          type: String
+  field :email,         type: String
+  field :support,       type: String # Indicates the type of support
   field :li_membership, type: Boolean, default: false
-  field :age_category, type: String
-  field :coordinates,  type: Array
-  field :comments,     type: String
-  field :language,     type: String
+  field :age_category,  type: String
+  field :coordinates,   type: Array
+  field :comments,      type: String
+  field :language,      type: String
 
   validates :first_name,   presence: true
   validates :last_name,    presence: true
