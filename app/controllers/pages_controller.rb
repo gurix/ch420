@@ -3,6 +3,6 @@ class PagesController < ApplicationController
   end
 
   def map
-    @supporters = Supporter.all.select(&:coordinates)
+    @supporters = Supporter.where(:coordinates.ne => nil).only(:coordinates, :support)
   end
 end
