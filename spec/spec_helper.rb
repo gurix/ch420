@@ -44,4 +44,8 @@ RSpec.configure do |config|
   config.after(:each) do
     Mongoid.purge!
   end
+
+  config.before(:each) do
+    ActionMailer::Base.deliveries.clear
+  end
 end

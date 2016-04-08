@@ -1,4 +1,7 @@
 de:
+  welcome_email:
+    subject: Besten dank für deine Unterstützung!
+  
   support_type:
     signer: Ich unterschreibe eine Volksinitiative für die <span class="text-success">Legalisierung von Cannabis</span>.
     supporter: Ich unterschreibe eine Volksinitiative für die <span class="text-success">Legalisierung von Cannabis</span> und helfe aktiv Unterschriften in meiner Umgebung zu sammeln.
