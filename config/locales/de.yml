@@ -1,6 +1,6 @@
 de:
   welcome_email:
-    subject: Besten dank für deine Unterstützung!
+    subject: Besten Dank für deine Unterstützung!
   
   support_type:
     signer: Ich unterschreibe eine Volksinitiative für die <span class="text-success">Legalisierung von Cannabis</span>.
@@ -32,7 +32,7 @@ de:
   
   pages:
     thanks:
-      title: Besten dank für deine Unterstützung!
+      title: Besten Dank für deine Unterstützung!
   
   mongoid:
    attributes:
