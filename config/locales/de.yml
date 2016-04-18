@@ -3,10 +3,10 @@ de:
     subject: Besten Dank für deine Unterstützung!
   
   support_type:
-    signer: Ich unterschreibe eine Volksinitiative für die <span class="text-success">Legalisierung von Cannabis</span>.
-    supporter: Ich unterschreibe eine Volksinitiative für die <span class="text-success">Legalisierung von Cannabis</span> und helfe aktiv Unterschriften in meiner Umgebung zu sammeln.
+    signer: Ich würde eine Volksinitiative für die <span class="text-success">Legalisierung von Cannabis</span> unterschreiben.
+    supporter: Ich würde eine Volksinitiative für die <span class="text-success">Legalisierung von Cannabis</span> unterschreiben und helfe aktiv Unterschriften in meiner Umgebung zu sammeln.
     # activist: Ich unterschreibe eine Volksinitiative für die <span class="text-success">Legalisierung von Cannabis</span> und beteilige mich bei der Planung und Koordination einer Volksinitiative.
-    nonvoting_supporter: Ich bin nicht stimmberechtigt, helfe aber aktiv Unterschriften in meiner Umgebung zu sammeln um <span class="text-success">Cannabis zu legalisierung</span>.
+    # nonvoting_supporter: Ich bin nicht stimmberechtigt, helfe aber aktiv Unterschriften in meiner Umgebung zu sammeln um <span class="text-success">Cannabis zu legalisierung</span>.
     
   age_category:
     underage: Ich bin jünger als 18 Jahre alt
@@ -18,7 +18,7 @@ de:
     form:
       title_html: Ja, ich will <strong class="text-success">Cannabis</strong> in der Schweiz <strong class="text-success">legalisieren</strong>
       submit: Unterstützung zusichern
-      terms_and_conditions: Mit dem Absenden ihrer Daten stimmen Sie den Nutzungsbedingungen zu.
+      terms_and_conditions: Mit dem Absenden deiner Daten stimmst du den Nutzungsbedingungen zu.
       placeholders:
         first_name: Hans
         last_name: Muster
