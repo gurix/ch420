@@ -1,0 +1,21 @@
+h1 #{@supporters.count} Unterstützer
+table.table
+  tr
+    th Eingeschrieben
+    th Adresse
+    th Unterstützung
+    th width="20%" Kommentar
+  - @supporters.each do |supporter|
+    tr
+      td = distance_of_time_in_words_to_now(supporter.created_at)
+      td 
+        address
+          = "#{supporter.first_name} #{supporter.last_name}"
+          = 
+          br
+          = supporter.street
+          br
+          = "#{supporter.zip} #{supporter.city}"
+      td = supporter.support
+      td = supporter.comments
+          
