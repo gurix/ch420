@@ -16,6 +16,10 @@ table.table
           = supporter.street
           br
           = "#{supporter.zip} #{supporter.city}"
-      td = supporter.support
+      td 
+        = supporter.support
+        - if supporter.li_membership
+          br
+          | Mitgliedschaft
       td = supporter.comments
           
