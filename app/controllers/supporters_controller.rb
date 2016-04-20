@@ -8,7 +8,7 @@ class SupportersController < ApplicationController
   def create
     @supporter = Supporter.new supporter_form_params.merge(language: I18n.locale)
     if !input_to_fast? && @supporter.save
-      # SupporterMailer.welcome_email(@supporter).deliver_now
+      SupporterMailer.welcome_email(@supporter).deliver_now
       redirect_to thanks_path
     else
       flash.now[:danger] = t '.timeout' if input_to_fast?
