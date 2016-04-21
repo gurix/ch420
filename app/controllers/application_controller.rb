@@ -2,7 +2,7 @@ class ApplicationController < ActionController::Base
   # Prevent CSRF attacks by raising an exception.
   # For APIs, you may want to use :null_session instead.
   protect_from_forgery with: :exception
-  
+
   before_action :set_locale
 
   INPUT_TIMEOUT = 2.seconds # We estimate that a user needs more then x seconds to enter some informations
@@ -18,11 +18,11 @@ class ApplicationController < ActionController::Base
   def set_form_timestamp
     session[:form_timestamp] = Time.now
   end
- 
+
   def set_locale
     I18n.locale = params[:locale] || I18n.default_locale
   end
-  
+
   # I18n set default language in url
   def default_url_options(options = {})
     options.merge locale: I18n.locale
