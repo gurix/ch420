@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   root 'supporters#new'
-  
+
   namespace :admin do
     get '/map', to: 'pages#map', as: :map
 
