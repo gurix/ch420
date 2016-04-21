@@ -6,7 +6,14 @@
     h1
       = title t('.title_html')
   .col-xs-12.col-md-3
+    .pull-right
+      a href='/' 
+        | Deutsch
+      | &nbsp;
+      a href='/it' 
+        | | Italiano
     = render 'shared/counter'
+    
 .row
   .col-xs-12.col-md-7
     = simple_form_for @supporter do |f|
@@ -69,36 +76,5 @@
         $("#supporter_city").val(datum.city);
       });  
   .col-md-5.col-xs-12
-    .well
-      p = image_tag 'li_logo.svg', class: 'img-responsive'
-      p Wir wollen die nötigen Unterschriften für eine Volksinitiative zur Cannabis-Legalisierung sammeln. Für die Umsetzung setzt man auf ein neues Sammelkonzept. Dies funktioniert in drei Schritten:
-      
-      p
-        strong Schritt 1:  
-        | Durch dieses Onlineformular sammeln wir Sympathisanten und potentielle Aktivisten.
-      p
-        strong Schritt 2:  
-        | Sobald die geforderte Anzahl Personen gesammelt sind, schauen wir, wie viele Ressourcen an Helfer/innen an welchen Orten benötigt werden.
-      p
-        strong Schritt 3:  
-        | Durch eine ausgeklügelte Logistik werden Sympathisanten und Aktivisten zusammengebracht, um gemeinsam die nötigen Unterschriften zu generieren.
-      
-      p.lead Wenn du also <span class="text-success">Cannabis in der Schweiz legalisieren</span> willst, fülle das nebenstehende Formular aus und schreibe mit uns Geschichte.
-      
-      p Mehr Informationen findest du unter #{link_to 'https://www.hanflegal.ch/initiative', 'https://www.hanflegal.ch/initiative'}
-      
-      / p.embed-responsive.embed-responsive-4by3
-        iframe.embed-responsive-item src="https://www.youtube.com/embed/l5DjuLXRVVM" frameborder="0" allowfullscreen=""
-      p.embed-responsive.embed-responsive-4by3
-        iframe src="https://player.vimeo.com/video/163576706?title=0&byline=0&portrait=0" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen
-        
-      strong Wer steht hinter dieser Aktion?
-      p Die Aktion wurde von Mitgliedern des Verein Legalize it! initiiert. Seit 25 Jahren helfen wir vom Verein Legalize it! Menschen, die mit THC-Produkten Umgang pflegen, bei den unterschiedlichsten Fragen.
-      strong Kontakt
-      p
-        | Nino Forrer (#{mail_to 'nino@hanflegal.ch'}) 
-        em Strategie / Presse
-        br
-        | Markus Graf (#{mail_to 'markus@hanflegal.ch'}) 
-        em Inhalt / Technik
-        
+    = render 'right_side'
+    

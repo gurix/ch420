@@ -1,0 +1,53 @@
+it:
+  welcome_email:
+    subject: Grazie mille per il tuo sostegno!
+  
+  support_type:
+    signer: Voglio sottoscrivere l’iniziativa popolare per la <span class="text-success">legalizzazione della Cannabis</span>.
+    supporter: Voglio sottoscrivere l’iniziativa popolare per la <span class="text-success">legalizzazione della Cannabis</span> e aiutare attivamente con la raccolta firme nella mia zona. 
+    # activist: Ich unterschreibe eine Volksinitiative für die <span class="text-success">Legalisierung von Cannabis</span> und beteilige mich bei der Planung und Koordination einer Volksinitiative.
+    # nonvoting_supporter: Ich bin nicht stimmberechtigt, helfe aber aktiv Unterschriften in meiner Umgebung zu sammeln um <span class="text-success">Cannabis zu legalisierung</span>.
+    
+  age_category:
+    underage: Ho meno di 18 anni
+    young: Ho tra 18 e 30 anni
+    middle: Ho tra i 30 ed i 64 anni
+    retired: Ho più di 64 anni
+    
+  supporters:
+    form:
+      title_html: Si, voglio  <strong class="text-success">legalizzare</strong> la  <strong class="text-success">cannabis in Svizzera</strong>
+      submit: Garantire il sostengo
+      terms_and_conditions: Mit dem Absenden deiner Daten stimmst du den Nutzungsbedingungen zu.
+      placeholders:
+        first_name: Hans
+        last_name: Muster
+        street: Mustergasse 12
+        city: Hinterpfupfikon
+        zip: "4200"
+        email: hans.muster@hanflegal.ch
+      
+    create:
+      timeout: Ihre Eingabe war zu schnell.
+  
+  pages:
+    thanks:
+      title: Grazie mille per il tuo sostegno!
+  
+  shared:
+    counter:
+      supporters: "Sostenitore:"
+      
+  mongoid:
+   attributes:
+      supporter:
+        first_name: Nome
+        last_name: Cognome
+        street: Via/N°
+        zip: Codice postale
+        city: Paese
+        email: E-Mail
+        support: Supporto
+        age_category: Categoria Età 
+        li_membership: Sono interessato a diventare membro attivo di Verein Legalize It (50 franchi annuali di tassa).
+        comments: Commenti / Feedback (opzionale)
