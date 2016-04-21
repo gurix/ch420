@@ -45,7 +45,7 @@ it:
         last_name: Cognome
         street: Via/N°
         zip: Codice postale
-        city: Paese
+        city: Luogo
         email: E-Mail
         support: Supporto
         age_category: Categoria Età 
