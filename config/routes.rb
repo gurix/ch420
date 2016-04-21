@@ -6,13 +6,11 @@ Rails.application.routes.draw do
 
     resources :supporters, only: :index
   end
-  
+  get '/cities_autocomplete', to: 'cities_autocomplete#index', as: :cities_autocomplete
   scope '/:locale' do
     get '/', to: 'supporters#new'
     resources :supporters
 
     get '/thanks', to: 'pages#thanks', as: :thanks
   end
-
-  get '/cities_autocomplete', to: 'cities_autocomplete#index', as: :cities_autocomplete
 end
