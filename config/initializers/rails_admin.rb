@@ -18,6 +18,8 @@ RailsAdmin.config do |config|
       field :language
       field :support
       field :li_membership
+      field :created_at
+      field :updated_at
     end
   end
 
