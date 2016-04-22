@@ -1,4 +1,3 @@
-= render 'shared/terms_and_conditions'
 .row
   .col-md-1.col-xs-4
     = image_tag('ch420_logo.png', class:'img-responsive pagelogo')
@@ -9,11 +8,12 @@
     .pull-right
       a href='/' 
         | Deutsch
-      | &nbsp;
+      | &nbsp; | &nbsp;
       a href='/it' 
         | | Italiano
+      | &nbsp; | &nbsp;
+      = link_to 'Français','#', data: { toggle: :modal, target: '#francais'}, class: 'small'
     = render 'shared/counter'
-    
 .row
   .col-xs-12.col-md-7
     = simple_form_for @supporter do |f|
@@ -77,4 +77,15 @@
       });  
   .col-md-5.col-xs-12
     = render 'right_side'
-    
+= render 'shared/terms_and_conditions'
+#francais.modal.fade
+  .modal-dialog
+    .modal-content
+      .modal-header
+        button.close class="close" data-dismiss="modal" aria-label="Close"
+          span aria-hidden="true"
+            | &times;
+        h4.modal-title
+          | Voulez-vous lire cette page en français?
+      .modal-body
+        p Hilf uns diese Seite zu übersetzen. Übersetze die Seiten #{link_to 'https://ch420.herokuapp.com'} und #{link_to 'https://ch420.herokuapp.com/thanks'}. Sende die Übersetzung an #{mail_to 'markus@hanflegal.ch'}.
