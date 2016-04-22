@@ -3,9 +3,10 @@ Rails.application.routes.draw do
 
   namespace :admin do
     get '/map', to: 'pages#map', as: :map
-
-    resources :supporters, only: :index
+    # resources :supporters, only: :index
   end
+  mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
+
   get '/cities_autocomplete', to: 'cities_autocomplete#index', as: :cities_autocomplete
   scope '/:locale' do
     get '/', to: 'supporters#new'

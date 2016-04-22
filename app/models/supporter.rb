@@ -1,6 +1,7 @@
 class Supporter
   include Mongoid::Document
   include Mongoid::Timestamps
+  include Mongoid::Paranoia
   include Geocoder::Model::Mongoid
 
   COUNTER_START = 322
@@ -20,6 +21,9 @@ class Supporter
   field :coordinates,   type: Array
   field :comments,      type: String
   field :language,      type: String
+  field :email2,        type: String
+  field :email3,        type: String
+  field :duplicate,     type: Boolean, default: false
 
   validates :first_name,   presence: true
   validates :last_name,    presence: true

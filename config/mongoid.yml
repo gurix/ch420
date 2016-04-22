@@ -1,8 +1,8 @@
 development:
   clients:
     default:
-      database: ch420_development
-      # database: heroku_t242kdp0
+      # database: ch420_development
+      database: heroku_t242kdp0
       hosts:
         - localhost:27017
 
