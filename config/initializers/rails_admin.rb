@@ -8,16 +8,34 @@ RailsAdmin.config do |config|
   end
 
   config.model 'Supporter' do
+    configure :full_address do
+      pretty_value do
+        util = bindings[:object]
+        %(#{util.first_name} #{util.last_name}
+        <br/>
+        #{util.street} <br/>
+        #{util.zip} #{util.city}).html_safe
+      end
+      children_fields [:first_name, :last_name, :street, :zip, :city] # will be used for searching/filtering, first field will be used for sorting
+      read_only true # won't be editable in forms (alternatively, hide it in edit section)
+    end
+
     list do
       field :duplicate
-      field :first_name
-      field :last_name
-      field :zip
-      field :city
+      field :full_address
       field :email
       field :language
       field :support
-      field :li_membership
+      field :li_membership do
+        label do
+          'Member'
+        end
+      end
+      field :first_name
+      field :last_name
+      field :street
+      field :zip
+      field :city
       field :created_at
       field :updated_at
     end
