@@ -1,11 +1,16 @@
 class MailChimpBatchUpdate
   def self.update_all(api_key, list_id)
     subscribers = []
-    Supporter.each do |supporter|
+    mailchimp = Mailchimp::API.new(api_key)
+
+    Supporter.each_with_index do |supporter, index|
       subscribers.push(subscriber supporter)
+      if index.modulo(20) == 0
+        mailchimp.lists.batch_subscribe(list_id, subscribers, false, true, false)
+        subscribers = []
+      end
     end
 
-    mailchimp = Mailchimp::API.new(api_key)
     mailchimp.lists.batch_subscribe(list_id, subscribers, false, true, false)
   end
 
