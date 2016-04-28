@@ -1,0 +1,53 @@
+fr:
+  welcome_email:
+    subject: Merci beaucoup pour ton soutien!
+  
+  support_type:
+    signer: Je signerais une initiative populaire pour la <span class="text-success">légalisation du cannabis</span>.
+    supporter: Je signerais une initiative populaire pour la <span class="text-success">légalisation du cannabis</span> et aiderais activement à trouver des signatures dans ma région.
+    # activist: Ich unterschreibe eine Volksinitiative für die <span class="text-success">Legalisierung von Cannabis</span> und beteilige mich bei der Planung und Koordination einer Volksinitiative.
+    # nonvoting_supporter: Ich bin nicht stimmberechtigt, helfe aber aktiv Unterschriften in meiner Umgebung zu sammeln um <span class="text-success">Cannabis zu legalisierung</span>.
+    
+  age_category:
+    underage: J’ai moins de 18 ans
+    young: J’ai entre 18 et 30 ans
+    middle: J’ai entre 30 et 64 ans
+    retired: J’ai plus que 64 ans
+    
+  supporters:
+    form:
+      title_html: Oui, je veux  <strong class="text-success">légaliser le cannabis</strong> en Suisse.
+      submit: Confirmer mon soutien
+      terms_and_conditions: En soumettant vos données, vous acceptez les conditions d'utilisation.
+      placeholders:
+        first_name: Hans
+        last_name: Muster
+        street: Mustergasse 12
+        city: Hinterpfupfikon
+        zip: "4200"
+        email: hans.muster@hanflegal.ch
+      
+    create:
+      timeout: Ihre Eingabe war zu schnell.
+  
+  pages:
+    thanks:
+      title: Merci beaucoup pour ton soutien!
+  
+  shared:
+    counter:
+      supporters: "Militant:"
+      
+  mongoid:
+   attributes:
+      supporter:
+        first_name: Prénom
+        last_name: Nom
+        street: Adresse/No.
+        zip: Code postale
+        city: Lieu
+        email: E-mail
+        support: Support
+        age_category: Catégorie d’âge
+        li_membership: Je suis intéressé à joindre l'association Legalize It! (50 francs par an).
+        comments: Commentaires / Feedback (facultatif)
