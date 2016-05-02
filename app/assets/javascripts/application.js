@@ -15,4 +15,5 @@
 //= require turbolinks
 //= require bootstrap-sprockets
 //= require typeahead.bundle
+//= require markerclusterer_compiled
 //= require_tree .

@@ -40,28 +40,46 @@ javascript:
     map.mapTypes.set(customMapTypeId, customMapType);
     map.setMapTypeId(customMapTypeId);
     
+    var markers = [];
+    var heatMapData = [];
+    
     supporters.forEach(function(supporter) {
       var color = '#00ff00';
       var radius = 500;
+      var weight = 1;
+      
       if (supporter.support == 'signer' ) {
         color = '#FF0000';
         radius = 10;
+        weight = 0.5;
       }
-      var cityCircle = new google.maps.Circle({
+      if (supporter.support == 'supporter' ) {
+        heatMapData.push({location: new google.maps.LatLng(supporter.coordinates[1], supporter.coordinates[0]), weight: weight})
+      }
+      /*var cityCircle = new google.maps.Circle({
          fillColor: color,
          strokeOpacity: 0,
          fillOpacity: 0.35,
          map: map,
          center: {lat: supporter.coordinates[1], lng: supporter.coordinates[0]},
          radius: radius
-       });
+       });*/
+       
        
       var marker = new google.maps.Marker({
         position: {lat: supporter.coordinates[1], lng: supporter.coordinates[0]},
         map: map,
         icon: pinSymbol(color)
       });
+      
+      markers.push(marker);
     });
+    var mcOptions = {gridSize: 50, maxZoom: 15};
+
+    var markerCluster = new MarkerClusterer(map, markers, mcOptions);
+      
+    var heatmap = new google.maps.visualization.HeatmapLayer({data: heatMapData });
+    heatmap.setMap(map);
   }
 
-script async="" defer="" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBbwMtGKDqf4i8x9-OVP1-H_QVAKp92h2M&callback=initMap" 
+script async="" defer="" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBbwMtGKDqf4i8x9-OVP1-H_QVAKp92h2M&callback=initMap&libraries=visualization" 
