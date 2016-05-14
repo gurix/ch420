@@ -21,8 +21,7 @@ class Supporter
   field :coordinates,   type: Array
   field :comments,      type: String
   field :language,      type: String
-  field :email2,        type: String
-  field :email3,        type: String
+  field :unsubscribed,  type: Boolean, default: false
   field :duplicate,     type: Boolean, default: false
 
   validates :first_name,   presence: true
