@@ -1,0 +1,25 @@
+h1 = title 'Spenden, wie zu Grossmutters Zeiten'
+p 
+  | Seit 25 Jahren ist der Verein Legalize it! unterwegs mit einem Postkonto und diesem Einzahlungsschein:
+  dl.dl-horizontal
+    dt Postkonto:
+    dd 87-091354-3, Verein Legalize it!, Postfach 2159, 8031 Zürich
+    dt IBAN:
+    dd CH02 0900 0000 8709 1354 3
+.row
+  .col-xs-12.col-md-9
+    = link_to asset_path('Einzahlungsschein_Spende_Initiative.pdf') do
+      = image_tag('Einzahlungsschein_Spende_Initiative.jpg', class:'img-responsive pagelogo')
+
+h2 Warum kann ich nicht auch online oder per Kreditkarte spenden?
+p Wir haben mehrere Versuche unternommen dies zu ermöglichen mittels verschiedener (zahlbaren) Payment-Service-Providern, sind jedoch immer wieder gescheitert. Die Gründe dafür sind vielfältig. Zum einen bieten viele solche Dienstleister ihren Service gar nicht für Vereine an. Zum anderen ist das Schweizer Vereinsrecht relativ liberal. Ein zentrales Register für Vereine wie in anderen Ländern üblich gibt es nicht. Einzig ein Handelsregistereintrag könnte ein wenig Klarheit schaffen. Dies ist jedoch zu kostspielig und würde momentan zu viel Zeit in Anspruch nehmen. Selbst wenn wir einen solchen hätten, wäre es nicht sicher, dass Dienste wie beispielsweise PayPal uns akzeptieren würden.
+p Eine Andere schwierigere Hürde ist unser Umfeld. Wir haben, genau wie in Amerika, die Schwierigkeit, dass Cannabis unser Themenbereich ist. Da der Umgang mit Cannabis illegal ist, scheinen die Banken der Logik verfallen zu sein, dass alles was mit Cannabis zu tun hat, auch illegal sei. Notabene auch das Ändern des illegalen Status. Viele Finanzdienstleister wie etwa Stripe.com lehnen daher jegliche Zusammenarbeit kategorisch ab.
+
+p 
+ | Somit bleibt nur zum guten alten Einzahlungsschein zu greifen beziehungsweise die richtigen Zahlenkombinationen beim E-Banking an den richtigen Stellen einzufügen.
+ br
+ | Wir würden uns freuen, wenn ihr das macht und uns finanziell unter die Arme greift.  
+  
+p Danke, dein Verein Legalize it!
+
+= link_to 'Zurück', root_path, class: 'btn btn-success'

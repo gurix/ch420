@@ -13,5 +13,6 @@ Rails.application.routes.draw do
     resources :supporters
 
     get '/thanks', to: 'pages#thanks', as: :thanks
+    get '/spenden', to: 'pages#spenden', as: :spenden
   end
 end
