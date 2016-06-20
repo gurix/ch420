@@ -4,7 +4,7 @@ class Supporter
   include Mongoid::Paranoia
   include Geocoder::Model::Mongoid
 
-  COUNTER_START = 322
+  COUNTER_START = 10003
 
   geocoded_by :address
   after_validation :geocode          # auto-fetch coordinates
