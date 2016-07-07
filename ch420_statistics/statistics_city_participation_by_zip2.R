@@ -14,48 +14,32 @@ dt$created_at <- as.Date(dt$created_at)
 dt <- subset(dt, zip >=1000)
 dt <- subset(dt, zip < 10000)
 
-# Read BFS-Data with town names
-mainTable <- read.xlsx(file = "external_data/be-b-00.04-osv-01.xls", sheetIndex = 2, startRow = 1, colIndex = c(2,4,8,6))
-colnames(mainTable) <- c('OHW','GWH','name', 'zip') 
-mainTable <- subset(mainTable, is.na(OHW))
-mainTable <- subset(mainTable, is.na(GWH))
-mainTable <- unique(mainTable)
-
-
 # Read BFS-Data with statistics of population from 2014
 dataTable <- read.xlsx(file = "external_data/su-d-01.02.03.07.xls", sheetName = "2014", startRow = 5, endRow = 3189, colIndex = c(1,2))
-colnames(dataTable) <- c('zip', 'total') 
-
-# Merge town names with statistics of population
-mainTable <- merge(mainTable,dataTable, by="zip", all.y = T)
+colnames(dataTable) <- c('zip', 'total')
 
 # Count number of total participants grouped by zip
 participants_by_zip <- ddply(dt,~zip,summarise,participants=length(zip))
 
-# Calculate the ration between participants and the total amount of habitants
-mainTable$participant_ratio = mainTable$participants/mainTable$total
-
-# Merge number of participants with main table
-mainTable <- merge(mainTable,participants_by_zip, by="zip", all.x=T)
+mainTable <- merge(dataTable, participants_by_zip, by='zip')
 
 # Count number of total signers grouped by zip
 signer_by_zip <- ddply(subset(dt, support=="signer"),~zip,summarise,signers=length(zip))
 
-# Merge number of signers with main table
-mainTable <- merge(mainTable,signer_by_zip, by="zip", all.x=T)
+mainTable <- merge(mainTable, signer_by_zip, by='zip')
 
 # Count number of total signers grouped by zip
 supporter_by_zip <- ddply(subset(dt, support=="supporter"),~zip,summarise,supporters=length(zip))
 
-# Merge number of signers with main table
-mainTable <- merge(mainTable,supporter_by_zip, by="zip", all.x=T)
+mainTable <- merge(mainTable, supporter_by_zip, by='zip')
+
+# Calculate the ration between participants and the total amount of habitants
+mainTable$participant_ratio = mainTable$participants/mainTable$total
 
 # Calculate the ration between signer and supporter
 mainTable$supporter_signer_ratio = mainTable$supporters/mainTable$participants
 
-# Replace Na's with 0
-mainTable[is.na(mainTable)] <- 0
+# Calculate the ration between participants and the total amount of habitants
+mainTable$participant_ratio = mainTable$participants/mainTable$total
 
-mainTable$zip2 <- floor(mainTable$zip/100)
-
-write.xlsx(mainTable, file = "statistics_city_participation_by_zip.xls", row.names=F)
+write.xlsx(mainTable, file = "statistics_city_participation_by_zip2.xls", row.names=F)
