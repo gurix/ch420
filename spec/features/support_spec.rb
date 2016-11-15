@@ -21,9 +21,10 @@ feature 'Support announcement' do
     sleep 5 # Do a real sleep to have a real integration test
 
     expect(ActionMailer::Base.deliveries.count).to eq 0
+    expect_any_instance_of(SupportersController).to receive(:mailchimp_registration).and_return(true)
+
     expect { click_button 'Unterstützung zusichern' }.to change { Supporter.count }.by(1)
     # expect(ActionMailer::Base.deliveries.count).to eq 1
-
     supporter = Supporter.find_by(email: 'blocher@blocher.ch')
     expect(supporter.coordinates).to eq [8.618589100000001, 47.2926304]
     expect(supporter.comments).to eq 'Test text'

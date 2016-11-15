@@ -40,6 +40,7 @@ gem 'puma'
 gem 'geocoder'
 gem 'rails_12factor'
 
+
 gem 'rails_admin'
 
 gem 'mongoid_paranoia'
@@ -53,6 +54,7 @@ group :development, :test do
   gem 'rspec-rails', '~> 3.0'
   
   gem 'pry-rails'
+  gem 'dotenv-rails'
 end
 
 group :development do
