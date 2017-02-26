@@ -16,6 +16,7 @@ fr:
     
   supporters:
     form:
+      logo: Logo de l'initiative
       title_html: Oui, je veux  <strong class="text-success">légaliser le cannabis</strong> en Suisse.
       submit: Confirmer mon soutien
       terms_and_conditions: En soumettant vos données, vous acceptez les conditions d'utilisation.
