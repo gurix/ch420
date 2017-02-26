@@ -1,4 +1,7 @@
-#counter.pull-right
+#counter.pull-right aria-hidden="true"
   = t('.supporters')
   - Supporter.counter.to_s.split('').each do |x|
     .counter_char= x
+.sr-only
+  h2 lang='en' Counter
+  = t('.amount_of_supporters', amount: Supporter.counter)

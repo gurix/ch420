@@ -39,6 +39,7 @@ de:
   shared:
     counter:
       supporters: "Unterstützer:"
+      amount_of_supporters: Zurzeit haben wir %{amount} Unterstützer.
       
   mongoid:
    attributes:

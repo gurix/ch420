@@ -39,6 +39,7 @@ fr:
   shared:
     counter:
       supporters: "Militant:"
+      amount_of_supporters: Nous avons actuellement %{amount} supporters.
       
   mongoid:
    attributes:
