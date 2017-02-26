@@ -19,6 +19,7 @@
     = render 'shared/counter'
 .row
   .col-xs-12.col-md-7
+    h2.sr-only =t('.form')
     = simple_form_for @supporter do |f|
       = f.input :first_name, placeholder: t('.placeholders.first_name')
       = f.input :last_name, placeholder: t('.placeholders.last_name')
@@ -79,5 +80,5 @@
       }).on('typeahead:selected', function(event, datum) {
         $("#supporter_city").val(datum.city);
       });  
-  .col-md-5.col-xs-12
+  aside.col-md-5.col-xs-12
     = render 'right_side'
