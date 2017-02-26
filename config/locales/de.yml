@@ -1,4 +1,6 @@
 de:
+  input_error: Deine Eingaben konnte nicht gespeichert werden. Überprüfe deine Eingaben.
+
   welcome_email:
     subject: Besten Dank für deine Unterstützung!
   

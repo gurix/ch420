@@ -12,7 +12,7 @@ class SupportersController < ApplicationController
       mailchimp_registration
       redirect_to thanks_path
     else
-      flash.now[:danger] = t '.timeout' if input_to_fast?
+      flash.now[:danger] = input_to_fast? ? t('.timeout') : t('input_error')
       render :new
     end
   end

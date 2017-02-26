@@ -1,4 +1,6 @@
 it:
+  input_error: I dati immessi non potevano essere salvati. Verificare i dati immessi.
+
   welcome_email:
     subject: Grazie mille per il tuo sostegno!
   

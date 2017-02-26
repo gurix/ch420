@@ -1,4 +1,6 @@
 fr:
+  input_error: Vos entrées ne peuvent pas être enregistrées. Vérifiez les entrées.
+
   welcome_email:
     subject: Merci beaucoup pour ton soutien!
   
