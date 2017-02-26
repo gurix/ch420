@@ -14,5 +14,6 @@ Rails.application.routes.draw do
 
     get '/thanks', to: 'pages#thanks', as: :thanks
     get '/spenden', to: 'pages#spenden', as: :spenden
+    get '/terms_and_conditions', to: 'pages#terms_and_conditions', as: :terms_and_conditions
   end
 end

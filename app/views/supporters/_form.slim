@@ -33,7 +33,8 @@
       .form-group
         = f.submit value: t('.submit'), class: 'btn btn-success'
       .form-group
-        = link_to t('.terms_and_conditions'),'#', data: { toggle: :modal, target: '#terms_and_conditions'}, class: 'small'
+        = link_to t('.terms_and_conditions'), terms_and_conditions_path, class: 'small'
+
 
     javascript:
       var cities = new Bloodhound({
@@ -80,4 +81,3 @@
       });  
   .col-md-5.col-xs-12
     = render 'right_side'
-= render 'shared/terms_and_conditions'
