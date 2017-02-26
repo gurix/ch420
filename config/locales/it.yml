@@ -16,6 +16,7 @@ it:
     
   supporters:
     form:
+      lang: Lingua
       logo: Logo dell'iniziativa
       title_html: Si, voglio  <strong class="text-success">legalizzare</strong> la  <strong class="text-success">cannabis in Svizzera</strong>
       submit: Garantire il sostengo
