@@ -8,8 +8,8 @@ class MailChimpBatchUpdate
     subscribers = []
 
     Supporter.each_with_index do |supporter, index|
-      subscribers.push(subscriber supporter)
-      if index.modulo(20) == 0
+      subscribers.push(subscriber(supporter))
+      if index.modulo(20).zero?
         batch_subscribe(subscribers)
         subscribers = []
       end
@@ -32,7 +32,8 @@ class MailChimpBatchUpdate
         'MEMBERSHIP' => supporter.li_membership.to_s,
         'AGE' => supporter.age_category,
         'LANG' => supporter.language,
-        'ZIP' => supporter.zip } }
+        'ZIP' => supporter.zip
+      } }
   end
 
   def update_unsubscibed

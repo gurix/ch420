@@ -9,7 +9,7 @@ class ApplicationController < ActionController::Base
 
   # calculate how long a user needed for a form input, ussually we just
   def input_to_fast?
-    fail 'session[:form_timestamp] not set' unless session[:form_timestamp]
+    raise 'session[:form_timestamp] not set' unless session[:form_timestamp]
     duration = Time.now - session[:form_timestamp].to_time
     duration < INPUT_TIMEOUT
   end

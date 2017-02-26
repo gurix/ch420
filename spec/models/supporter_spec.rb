@@ -14,11 +14,11 @@ describe Supporter do
 
   describe '.counter' do
     it 'counts only from a certain number on' do
-      allow(Supporter).to receive(:count)  { 12 }
+      allow(Supporter).to receive(:count) { 12 }
 
       expect(Supporter.counter).to eq Supporter::COUNTER_START
 
-      allow(Supporter).to receive(:count)  { Supporter::COUNTER_START + 12 }
+      allow(Supporter).to receive(:count) { Supporter::COUNTER_START + 12 }
 
       expect(Supporter.counter).to eq Supporter::COUNTER_START + 12
     end
