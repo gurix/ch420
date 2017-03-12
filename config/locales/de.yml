@@ -38,12 +38,16 @@ de:
   pages:
     thanks:
       title: Besten Dank für deine Unterstützung!
-  
+ 
   shared:
+    header:
+      logo: Logo der Initiative
+      title_html: Ja, ich will <strong class="text-success">Cannabis</strong> in der Schweiz <strong class="text-success">legalisieren</strong>
+
     counter:
       supporters: "Unterstützer:"
       amount_of_supporters: Zurzeit haben wir %{amount} Unterstützer.
-      
+
   mongoid:
    attributes:
       supporter:

@@ -1,23 +1,4 @@
 .row
-  .col-md-1.col-xs-4
-    = image_tag('ch420_logo.png', class:'img-responsive pagelogo', alt: t('.logo'))
-  .col-md-8.col-xs-8
-    h1
-      = title t('.title_html')
-  .col-xs-12.col-md-3
-    nav.pull-right
-      h2.sr-only =t('.lang')
-      a href='/' lang='de'
-        | Deutsch
-      | &nbsp; | &nbsp;
-      a href='/it' lang='it'
-        | Italiano
-      | &nbsp; | &nbsp;
-      a href='/fr' lang='fr'
-        | Français
-    br/
-    = render 'shared/counter'
-.row
   .col-xs-12.col-md-7
     h2.sr-only =t('.form')
     = simple_form_for @supporter do |f|
