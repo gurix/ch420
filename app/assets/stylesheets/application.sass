@@ -15,23 +15,36 @@
  */
 
 $brand-success: #66903F
-$font-size-base: 16px
+$font-size-base: 14px
 $font-size-h3: $font-size-base
+$navbar-default-bg: #FFF
+$navbar-default-border: none
+$navbar-padding-horizontal: none
+$navbar-default-link-color: #66903F
+$navbar-default-link-active-bg: #FFF
 
 @import "bootstrap-sprockets"
 @import "bootstrap"
 @import "typeaheadjs"
 
 body
-  .container
+  > .container
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
     padding-top: 20px
   
+  header
+    h1
+      font-size: 20px
+      margin-top: 35px
+  
+  ul#topnav
+    font-size: 1.5em
+    
+    li.active
+      border-bottom: 1px solid #66903F
   
   .lead
     font-weight: normal
-  .pagelogo
-    margin-top: 22px
     
   #new_supporter
     label.required

@@ -1,6 +1,17 @@
 it:
   input_error: I dati immessi non potevano essere salvati. Verificare i dati immessi.
 
+  shared:
+    header:
+      logo: Logo dell'iniziativa
+      title_html: Si, voglio  <strong class="text-success">legalizzare</strong> la  <strong class="text-success">cannabis in Svizzera</strong>
+    topnavigation:
+      donation: Donazione
+    counter:
+      supporters: "Sostenitore:"
+      amount_of_supporters: Al momento abbiamo %{amount} sostenitori.
+
+
   welcome_email:
     subject: Grazie mille per il tuo sostegno!
   
@@ -21,7 +32,6 @@ it:
       form: Modulo
       lang: Lingua
       logo: Logo dell'iniziativa
-      title_html: Si, voglio  <strong class="text-success">legalizzare</strong> la  <strong class="text-success">cannabis in Svizzera</strong>
       submit: Garantire il sostengo
       terms_and_conditions: "Con l'invio dei tuoi dati, accetti le condizioni d'utilizzo."
       placeholders:
@@ -38,11 +48,6 @@ it:
   pages:
     thanks:
       title: Grazie mille per il tuo sostegno!
-  
-  shared:
-    counter:
-      supporters: "Sostenitore:"
-      amount_of_supporters: Al momento abbiamo %{amount} sostenitori.
       
   mongoid:
    attributes:

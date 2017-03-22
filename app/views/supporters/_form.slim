@@ -1,6 +1,7 @@
+- title(t('shared.header.title_html'))
 .row
   .col-xs-12.col-md-7
-    h2.sr-only =t('.form')
+    h2.sr-only = t('.form')
     = simple_form_for @supporter do |f|
       = f.input :first_name, placeholder: t('.placeholders.first_name')
       = f.input :last_name, placeholder: t('.placeholders.last_name')

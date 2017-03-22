@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root 'supporters#new'
+  root to: redirect("/#{I18n.default_locale}")
 
   namespace :admin do
     get '/map', to: 'pages#map', as: :map

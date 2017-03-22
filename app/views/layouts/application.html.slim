@@ -38,5 +38,6 @@ html lang="#{I18n.locale}"
     / = console if Rails.env.development?
     .container
       = render 'shared/header'
+      = render 'shared/topnavigation'
       = render 'shared/flashes'
       = yield

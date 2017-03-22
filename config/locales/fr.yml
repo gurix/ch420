@@ -1,6 +1,16 @@
 fr:
   input_error: Vos entrées ne peuvent pas être enregistrées. Vérifiez les entrées.
 
+  shared:
+    counter:
+      supporters: "Militant:"
+      amount_of_supporters: Nous avons actuellement %{amount} supporters.
+    header:  
+      logo: Logo de l'initiative
+      title_html: Oui, je veux  <strong class="text-success">légaliser le cannabis</strong> en Suisse.
+    topnavigation:
+      donation: Donation
+      
   welcome_email:
     subject: Merci beaucoup pour ton soutien!
   
@@ -20,8 +30,6 @@ fr:
     form:
       form: Formulaire
       lang: Langue
-      logo: Logo de l'initiative
-      title_html: Oui, je veux  <strong class="text-success">légaliser le cannabis</strong> en Suisse.
       submit: Confirmer mon soutien
       terms_and_conditions: En soumettant vos données, vous acceptez les conditions d'utilisation.
       placeholders:
@@ -39,11 +47,6 @@ fr:
     thanks:
       title: Merci beaucoup pour ton soutien!
   
-  shared:
-    counter:
-      supporters: "Militant:"
-      amount_of_supporters: Nous avons actuellement %{amount} supporters.
-      
   mongoid:
    attributes:
       supporter:
