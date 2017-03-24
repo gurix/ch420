@@ -24,6 +24,7 @@ class SupportersController < ApplicationController
   end
 
   def mailchimp_registration
+    return unless Rails.env.production?
     mailchimp = Mailchimp::API.new(ENV['MAILCHIMP_API'])
     mailchimp.lists.subscribe(ENV['CH420_LIST_ID'], { 'email' => @supporter.email }, merge_vars, 'html', false)
   end
