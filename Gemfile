@@ -22,6 +22,9 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'rails_bootstrap_navbar'
 
+# This gem hooks up your Rails application with Roadie to help you generate HTML emails.
+gem 'roadie-rails', '~> 1.0'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

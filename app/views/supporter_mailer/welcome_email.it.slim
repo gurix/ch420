@@ -1,21 +1,34 @@
-p 
-  strong Ciao #{@supporter.first_name},
-
-p Ora sei una parte del movimento!
+p Ciao #{@supporter.first_name}, ora sei una parte del movimento!
 
 p Vi informeremo via e-mail circa i prossimi passi e diventare attivo. Su <a href="https://www.hanflegal.ch/initiative">https://www.hanflegal.ch/initiative</a> può informarsi sulle attività in corso.
 
 p 
-  b Che cosa puoi fare?
-p 
+  | Che cosa puoi fare?
   ul
-    li Invia il <a href="https://ch420.herokuapp.com">https://ch420.herokuapp.com</a> a tutti i tuoi amici e conoscenti
+    li Invia il <a href="https://hanflegal.ch/ch420">https://hanflegal.ch/ch420</a> a tutti i tuoi amici e conoscenti
     li Seguici su <a href="https://www.facebook.com/vereinlegalizeit">Facebook</a> e <a href="https://twitter.com/VereinLegalize">Twitter</a>
     li Racconta die nostri progetti sui social media con l’Hashtag #CH420
     li Di a tutti di unirsi ai nostri progetti
     li Diventa un membro dell’ <a href="https://www.hanflegal.ch">associazione Verein Legalize it!</a>
-    li Visita il nostro <a href="https://forum.hanflegal.ch">Forum</a>. Puoi trovare scambi di lavoro e progetti interessanti in cui potrebbe esser richiesto il tuo aiuto.
 
 p 
   | Saluti, 
   em hanflegal.ch
+
+.portrait
+  = image_tag 'nino.png', class: 'img-rounded', width: 150
+  br
+  strong Nino Forrer
+  br
+  a href="mailto: nino@hanflegal.ch" nino@hanflegal.ch
+  br
+  em Strategie / Presse 
+  
+.portrait
+  = image_tag 'markus.png', class: 'img-rounded', width: 150
+  br
+  strong Markus Graf
+  br
+  a href="mailto: markus@hanflegal.ch" markus@hanflegal.ch
+  br
+  em Inhalt / Technik
