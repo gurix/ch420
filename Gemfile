@@ -20,7 +20,11 @@ gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
 
+# Easily generate a Twitter Bootstrap navbar in your Rails app
 gem 'rails_bootstrap_navbar'
+
+# Kaminari Mongoid adapter.
+gem 'kaminari-mongoid'
 
 # This gem hooks up your Rails application with Roadie to help you generate HTML emails.
 gem 'roadie-rails', '~> 1.0'
