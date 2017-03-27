@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :supporters
   root to: redirect("/#{I18n.default_locale}")
 
   namespace :admin do

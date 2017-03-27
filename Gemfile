@@ -29,6 +29,9 @@ gem 'kaminari-mongoid'
 # This gem hooks up your Rails application with Roadie to help you generate HTML emails.
 gem 'roadie-rails', '~> 1.0'
 
+# Devise is a flexible authentication solution for Rails based on Warden.
+gem 'devise' 
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
