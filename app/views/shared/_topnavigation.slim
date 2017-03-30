@@ -4,3 +4,4 @@
     = navbar_group  id: 'topnav' do
       = navbar_item "Home", "/#{I18n.locale}"
       = navbar_item t('.donation'), spenden_path
+      = navbar_item t('.sign_in'), new_supporter_session_path if current_supporter.blank?

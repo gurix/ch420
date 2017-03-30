@@ -3,6 +3,14 @@ p Ciao #{@supporter.first_name}, ora sei una parte del movimento!
 p Vi informeremo via e-mail circa i prossimi passi e diventare attivo. Su <a href="https://www.hanflegal.ch/initiative">https://www.hanflegal.ch/initiative</a> può informarsi sulle attività in corso.
 
 p 
+  | Per regolare i dati possono iscriversi a #{link_to new_supporter_session_url, new_supporter_session_url} i seguenti dati:
+
+  dl.dl-horizontal
+    dt E-Mail
+    dd= @supporter.email
+    dt Password
+    dd= @password
+p 
   | Che cosa puoi fare?
   ul
     li Invia il <a href="https://hanflegal.ch/ch420">https://hanflegal.ch/ch420</a> a tutti i tuoi amici e conoscenti

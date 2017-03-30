@@ -1,5 +1,14 @@
 p Hallo #{@supporter.first_name}, du bist nun ein Teil der Bewegung!
 
+p 
+  | Um deine Angaben anzupassen kannst dich unter #{link_to new_supporter_session_url, new_supporter_session_url} mit folgenden Daten anmelden:
+
+  dl.dl-horizontal
+    dt E-Mail
+    dd= @supporter.email
+    dt Passwort
+    dd= @password
+
 p Wir informieren dich per E-Mail über die nächsten Schritte und kommen aktiv auf dich zu. Auf <a href="https://www.hanflegal.ch/initiative">https://www.hanflegal.ch/initiative</a> informieren wir über laufende Aktivitäten.
 
 p 

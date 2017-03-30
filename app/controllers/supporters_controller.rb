@@ -7,8 +7,9 @@ class SupportersController < ApplicationController
 
   def create
     @supporter = Supporter.new supporter_form_params.merge(language: I18n.locale)
+    @supporter.password = random_password = SecureRandom.hex(5)
     if !input_to_fast? && @supporter.save
-      # SupporterMailer.welcome_email(@supporter).deliver_now
+      SupporterMailer.welcome_email(@supporter, random_password).deliver_now
       mailchimp_registration
       redirect_to thanks_path
     else

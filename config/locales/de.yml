@@ -5,6 +5,7 @@ de:
       title_html: Ja, ich will <strong class="text-success">Cannabis</strong> in der Schweiz <strong class="text-success">legalisieren</strong>
     topnavigation:
       donation: Spenden
+      sign_in: Anmelden
     counter:
       supporters: "Unterstützer:"
       amount_of_supporters: Zurzeit haben wir %{amount} Unterstützer.

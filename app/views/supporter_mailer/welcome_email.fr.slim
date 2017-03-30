@@ -1,9 +1,15 @@
 p Salut #{@supporter.first_name}, Tu fais maintenant partie du mouvement!
 
-
-
 p Nous allons t’envoyer par e-mail les informations sur les prochaines étapes. Sur <a href="https://www.hanflegal.ch/initiative">https://www.hanflegal.ch/initiative</a>  initiative nous informons des activités en cours.
 
+p 
+  | Pour régler vos données peut vous inscrire à  #{link_to new_supporter_session_url, new_supporter_session_url} avec les données suivantes:
+
+  dl.dl-horizontal
+    dt E-Mail
+    dd= @supporter.email
+    dt Mot de passe
+    dd= @password
 p 
   | Que peux-tu faire?
   ul
