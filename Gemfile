@@ -13,8 +13,7 @@ gem 'coffee-rails', '~> 4.1.0'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
-# Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
-gem 'turbolinks'
+
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
@@ -31,6 +30,12 @@ gem 'roadie-rails', '~> 1.0'
 
 # Devise is a flexible authentication solution for Rails based on Warden.
 gem 'devise' 
+
+# Translations for devise
+gem 'devise-i18n'
+
+# Simulate data
+gem 'faker'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

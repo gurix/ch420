@@ -4,6 +4,7 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
   before_action :set_locale
+  before_action :configure_permitted_parameters, if: :devise_controller?
 
   INPUT_TIMEOUT = 2.seconds # We estimate that a user needs more then x seconds to enter some informations
 
@@ -26,5 +27,11 @@ class ApplicationController < ActionController::Base
   # I18n set default language in url
   def default_url_options(options = {})
     options.merge locale: I18n.locale
+  end
+
+  protected
+
+  def configure_permitted_parameters
+    devise_parameter_sanitizer.permit(:account_update, keys: [:first_name, :last_name, :street, :city, :zip, :support, :language, :age_category, :unsubscribed])
   end
 end

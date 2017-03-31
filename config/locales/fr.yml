@@ -2,6 +2,8 @@ fr:
   input_error: Vos entrées ne peuvent pas être enregistrées. Vérifiez les entrées.
 
   shared:
+    "yes": Oui
+    "no": Non
     counter:
       supporters: "Militant:"
       amount_of_supporters: Nous avons actuellement %{amount} supporters.
@@ -10,6 +12,8 @@ fr:
       title_html: Oui, je veux  <strong class="text-success">légaliser le cannabis</strong> en Suisse.
     topnavigation:
       donation: Donation
+      sign_out: déconnecter
+      sign_in: Connexion
       
   welcome_email:
     subject: Merci beaucoup pour ton soutien!
@@ -25,7 +29,12 @@ fr:
     young: J’ai entre 18 et 30 ans
     middle: J’ai entre 30 et 64 ans
     retired: J’ai plus que 64 ans
-    
+ 
+  languages:
+    de: Deutsch
+    fr: Français
+    it: Italiano
+
   supporters:
     form:
       form: Formulaire
@@ -42,13 +51,20 @@ fr:
       
     create:
       timeout: Ihre Eingabe war zu schnell.
-  
+    
+    new:
+      title: Salut %{name}
+      edit: Modifier mes données ...
+      my_data: Mes données
+
   pages:
     thanks:
       title: Merci beaucoup pour ton soutien!
   
   mongoid:
-   attributes:
+    models:
+      supporter: compte
+    attributes:
       supporter:
         first_name: Prénom
         last_name: Nom
@@ -60,3 +76,9 @@ fr:
         age_category: Catégorie d’âge
         li_membership: Je suis intéressé à joindre l'association Legalize It! (50 francs par an).
         comments: Commentaires / Feedback (facultatif)
+        remember_me: Se souvenir de moi
+        password: mot de passe
+        language: Langue
+        unsubscribed: pas de newslettre
+        password_confirmation: confirmer le mot de passe
+        current_password: Mot de passe actuel

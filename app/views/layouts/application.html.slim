@@ -4,8 +4,8 @@ html lang="#{I18n.locale}"
       - flash.each do |type, message|
         = message
       |  #CH420 - #{content_for(:title)}
-    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
-    = javascript_include_tag 'application', 'data-turbolinks-track' => true
+    = stylesheet_link_tag    'application', media: 'all'
+    = javascript_include_tag 'application'
     = csrf_meta_tags
     link href="/apple-icon-57x57.png" rel="apple-touch-icon" sizes="57x57" /
     link href="/apple-icon-60x60.png" rel="apple-touch-icon" sizes="60x60" /
@@ -37,7 +37,7 @@ html lang="#{I18n.locale}"
 
     / = console if Rails.env.development?
     .container
+      = render 'shared/flashes'
       = render 'shared/header'
       = render 'shared/topnavigation'
-      = render 'shared/flashes'
       = yield

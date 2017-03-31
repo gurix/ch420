@@ -1,2 +1,38 @@
-= render 'form'
+- if supporter_signed_in?
+  h1.sr-only = title t('.title', name: current_supporter.first_name)
+  .row
+    .col-xs-12.col-md-7
+      .panel.panel-default
+        .panel-heading
+          h2.panel-title = t '.my_data'
+        .panel-body 
+          dl.dl-horizontal
+            dt = Supporter.human_attribute_name(:email)
+            dd = current_supporter.email
+            dt = Supporter.human_attribute_name(:first_name)
+            dd = current_supporter.first_name
+            dt = Supporter.human_attribute_name(:last_name)
+            dd = current_supporter.last_name
+            dt = Supporter.human_attribute_name(:street)
+            dd = current_supporter.street
+            dt = Supporter.human_attribute_name(:city)
+            dd = "#{current_supporter.zip} #{current_supporter.city}"
+            dt = Supporter.human_attribute_name(:support)
+            dd == t("support_type.#{current_supporter.support}")
+            dt = Supporter.human_attribute_name(:age_category)
+            dd == t("age_category.#{current_supporter.age_category}")
+            dt = Supporter.human_attribute_name(:language)
+            dd = t("languages.#{current_supporter.language}")
+            dt = Supporter.human_attribute_name(:unsubscribed)
+            dd = current_supporter.unsubscribed? ?  t('shared.yes') : t('shared.no')
+      
+          p
+            = link_to t('.edit'), edit_supporter_registration_path(), class: 'pull-right'
+  
+    
+    aside.col-md-5.col-xs-12
+      = render 'right_side'
+
+- else
+ = render 'form' 
   

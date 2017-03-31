@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   devise_for :supporters
-  root to: redirect("/#{I18n.default_locale}")
+  root to: 'supporters#new' 
 
   namespace :admin do
     get '/map', to: 'pages#map', as: :map
@@ -12,7 +12,6 @@ Rails.application.routes.draw do
   scope '/:locale' do
     get '/', to: 'supporters#new'
     resources :supporters
-
     get '/thanks', to: 'pages#thanks', as: :thanks
     get '/spenden', to: 'pages#spenden', as: :spenden
     get '/terms_and_conditions', to: 'pages#terms_and_conditions', as: :terms_and_conditions

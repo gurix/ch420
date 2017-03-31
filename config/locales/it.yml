@@ -2,11 +2,15 @@ it:
   input_error: I dati immessi non potevano essere salvati. Verificare i dati immessi.
 
   shared:
+    "yes": Si
+    "No": No
     header:
       logo: Logo dell'iniziativa
       title_html: Si, voglio  <strong class="text-success">legalizzare</strong> la  <strong class="text-success">cannabis in Svizzera</strong>
     topnavigation:
       donation: Donazione
+      sign_out: Disconnettersi
+      sign_in: Registro
     counter:
       supporters: "Sostenitore:"
       amount_of_supporters: Al momento abbiamo %{amount} sostenitori.
@@ -26,6 +30,11 @@ it:
     young: Ho tra 18 e 30 anni
     middle: Ho tra i 30 ed i 64 anni
     retired: Ho più di 64 anni
+  
+  languages:
+    de: Deutsch
+    fr: Français
+    it: Italiano
     
   supporters:
     form:
@@ -44,7 +53,12 @@ it:
       
     create:
       timeout: Ihre Eingabe war zu schnell.
-  
+    
+    new:
+      title: Ciao %{name}
+      edit: Modifica i miei dati ...
+      my_data: Miei dati
+
   pages:
     thanks:
       title: Grazie mille per il tuo sostegno!
@@ -62,3 +76,9 @@ it:
         age_category: Categoria Età 
         li_membership: Sono interessato a diventare membro attivo di Verein Legalize It (50 franchi annuali di tassa).
         comments: Commenti / Feedback (opzionale)
+        remember_me: Ricordati di mel
+        password: Password
+        language: Lingua
+        unsubscribed: No Newsletter
+        password_confirmation: conferma password
+        current_password: Password corrente

@@ -6,8 +6,8 @@ class Supporter
          :recoverable, :rememberable, :trackable, :validatable
 
   ## Database authenticatable
-  field :email,              type: String, default: ""
-  field :encrypted_password, type: String, default: ""
+  field :email,              type: String, default: ''
+  field :encrypted_password, type: String, default: ''
 
   ## Recoverable
   field :reset_password_token,   type: String
@@ -47,7 +47,6 @@ class Supporter
   field :street,        type: String
   field :zip,           type: Integer
   field :city,          type: String
-  field :email,         type: String
   field :support,       type: String # Indicates the type of support
   field :li_membership, type: Boolean, default: false
   field :age_category,  type: String

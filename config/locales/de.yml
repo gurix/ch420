@@ -1,11 +1,14 @@
 de:
   shared:
+    "yes": Ja
+    "no": Nein
     header:
       logo: Logo der Initiative
       title_html: Ja, ich will <strong class="text-success">Cannabis</strong> in der Schweiz <strong class="text-success">legalisieren</strong>
     topnavigation:
       donation: Spenden
       sign_in: Anmelden
+      sign_out: Abmelden
     counter:
       supporters: "Unterstützer:"
       amount_of_supporters: Zurzeit haben wir %{amount} Unterstützer.
@@ -26,6 +29,11 @@ de:
     young: Ich bin 18 bis 30 Jahre alt
     middle: Ich bin 30 bis 64 Jahre alt
     retired: Ich bin über 64 Jahre alt
+
+  languages:
+    de: Deutsch
+    fr: Français
+    it: Italiano
     
   supporters:
     form:
@@ -45,13 +53,20 @@ de:
       
     create:
       timeout: Ihre Eingabe war zu schnell.
+    
+    new:
+      title: Hallo %{name}
+      edit: Meine Daten bearbeiten...
+      my_data: Meine Daten
   
   pages:
     thanks:
       title: Besten Dank für deine Unterstützung!
 
   mongoid:
-   attributes:
+    models:
+      supporter: Konto
+    attributes:
       supporter:
         first_name: Vorname
         last_name: Nachname
@@ -63,3 +78,9 @@ de:
         age_category: Alterskategorie
         li_membership: Ich bin interessiert an einer Mitgliedschaft beim Verein Legalize it! (50 Franken pro Jahr)
         comments: Kommentar / Feedback (optional)
+        remember_me: Angemeldet bleiben
+        password: Passwort
+        language: Sprache
+        unsubscribed: Kein Newsletter
+        password_confirmation: Passwort bestätigen
+        current_password: Aktuelles Passwort
