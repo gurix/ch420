@@ -109,6 +109,9 @@ GEM
     kaminari (0.17.0)
       actionpack (>= 3.0.0)
       activesupport (>= 3.0.0)
+    kaminari-actionview (1.0.1)
+      actionview
+      kaminari-core (= 1.0.1)
     kaminari-core (1.0.1)
     kaminari-mongoid (1.0.1)
       kaminari-core (~> 1.0)
@@ -304,6 +307,7 @@ DEPENDENCIES
   geocoder
   jbuilder (~> 2.0)
   jquery-rails
+  kaminari-actionview
   kaminari-mongoid
   mailchimp-api
   mongoid (~> 5.0.0)

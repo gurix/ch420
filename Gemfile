@@ -24,6 +24,8 @@ gem 'rails_bootstrap_navbar'
 
 # Kaminari Mongoid adapter.
 gem 'kaminari-mongoid'
+gem 'kaminari-actionview'
+
 
 # This gem hooks up your Rails application with Roadie to help you generate HTML emails.
 gem 'roadie-rails', '~> 1.0'
