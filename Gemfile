@@ -26,7 +26,6 @@ gem 'rails_bootstrap_navbar'
 gem 'kaminari-mongoid'
 gem 'kaminari-actionview'
 
-
 # This gem hooks up your Rails application with Roadie to help you generate HTML emails.
 gem 'roadie-rails', '~> 1.0'
 
@@ -77,6 +76,12 @@ group :development, :test do
 end
 
 group :development do
+  # A series of things you can use to benchmark a Rails or Ruby app.
+  gem 'derailed_benchmarks'
+  
+  # To use all profiling methods available
+  gem 'stackprof'
+  
   # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 2.0'
 
