@@ -11,6 +11,7 @@ de:
       sign_out: Abmelden
       initiative_text: Der Initiativtext im Wortlaut
       initiative: Die Initiative
+      arguments: Argumentarium
     counter:
       supporters: "Unterstützer:"
       amount_of_supporters: Zurzeit haben wir %{amount} Unterstützer.
@@ -70,6 +71,7 @@ de:
   
   routes:
     initiative_text: initiativtext
+    arguments: argumentarium
 
   mongoid:
     models:

@@ -15,7 +15,8 @@ fr:
       sign_out: déconnecter
       sign_in: Connexion
       initiative: l' initiative
-      initiative_text: L'initiative propose (DE)
+      initiative_text: L'initiative propose (en allemand)
+      arguments: Arguments (en allemand)
       
   welcome_email:
     subject: Merci beaucoup pour ton soutien!
@@ -67,7 +68,8 @@ fr:
       title: Merci beaucoup pour ton soutien!
       
   routes:
-    initiative_text: "l_initiative_propose"
+    initiative_text: l_initiative_propose
+    arguments: arguments
 
   mongoid:
     models:

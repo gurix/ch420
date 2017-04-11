@@ -10,10 +10,10 @@ Rails.application.routes.draw do
     get '/map', to: 'pages#map', as: :map
     # resources :supporters, only: :index
   end
-  
 
   localized do
     get '/initiative_text', to: 'pages#show', as: :initiative_text, page: 'initiative_text'
+    get '/arguments', to: 'pages#show', as: :arguments, page: 'arguments'
   end
 
   get '/cities_autocomplete', to: 'cities_autocomplete#index', as: :cities_autocomplete

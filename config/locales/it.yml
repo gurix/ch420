@@ -13,6 +13,7 @@ it:
       sign_in: Registro
       initiative_text: Il testo dell’iniziativa
       initiative: l'iniziativa
+      arguments: Argomentazioni
       
     counter:
       supporters: "Sostenitore:"
@@ -71,6 +72,7 @@ it:
   
   routes:
     initiative_text: il_testo_dell_iniziativa
+    arguments: argomentazioni
 
   mongoid:
    attributes:
