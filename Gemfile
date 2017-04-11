@@ -26,6 +26,9 @@ gem 'rails_bootstrap_navbar'
 gem 'kaminari-mongoid'
 gem 'kaminari-actionview'
 
+# Translate routing
+gem 'route_translator'
+
 # This gem hooks up your Rails application with Roadie to help you generate HTML emails.
 gem 'roadie-rails', '~> 1.0'
 

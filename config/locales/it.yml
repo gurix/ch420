@@ -11,6 +11,9 @@ it:
       donation: Donazione
       sign_out: Disconnettersi
       sign_in: Registro
+      initiative_text: Il testo dell’iniziativa
+      initiative: l'iniziativa
+      
     counter:
       supporters: "Sostenitore:"
       amount_of_supporters: Al momento abbiamo %{amount} sostenitori.
@@ -62,7 +65,13 @@ it:
   pages:
     thanks:
       title: Grazie mille per il tuo sostegno!
-      
+    
+    show:
+      not_found: La pagina non è stata trovata.
+  
+  routes:
+    initiative_text: il_testo_dell_iniziativa
+
   mongoid:
    attributes:
       supporter:

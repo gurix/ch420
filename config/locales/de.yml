@@ -9,6 +9,8 @@ de:
       donation: Spenden
       sign_in: Anmelden
       sign_out: Abmelden
+      initiative_text: Der Initiativtext im Wortlaut
+      initiative: Die Initiative
     counter:
       supporters: "Unterstützer:"
       amount_of_supporters: Zurzeit haben wir %{amount} Unterstützer.
@@ -60,8 +62,14 @@ de:
       my_data: Meine Daten
   
   pages:
+    show:
+      not_found: Die Seite konnte nicht gefunden werden. 
+
     thanks:
       title: Besten Dank für deine Unterstützung!
+  
+  routes:
+    initiative_text: initiativtext
 
   mongoid:
     models:

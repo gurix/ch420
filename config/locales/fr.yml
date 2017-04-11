@@ -14,6 +14,8 @@ fr:
       donation: Donation
       sign_out: déconnecter
       sign_in: Connexion
+      initiative: l' initiative
+      initiative_text: L'initiative propose (DE)
       
   welcome_email:
     subject: Merci beaucoup pour ton soutien!
@@ -58,9 +60,15 @@ fr:
       my_data: Mes données
 
   pages:
+    show:
+      not_found: La page n'a pas été trouvé.
+
     thanks:
       title: Merci beaucoup pour ton soutien!
-  
+      
+  routes:
+    initiative_text: "l_initiative_propose"
+
   mongoid:
     models:
       supporter: compte
