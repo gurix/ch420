@@ -15,6 +15,7 @@ Rails.application.routes.draw do
     get '/initiative_text', to: 'pages#show', as: :initiative_text, page: 'initiative_text'
     get '/arguments', to: 'pages#show', as: :arguments, page: 'arguments'
     get '/faq', to: 'pages#show', as: :faq, page: 'faq'
+    get '/terms_and_conditions', to: 'pages#show', as: :terms_and_conditions, page: 'terms_and_conditions'
   end
 
   get '/cities_autocomplete', to: 'cities_autocomplete#index', as: :cities_autocomplete
@@ -23,6 +24,5 @@ Rails.application.routes.draw do
     resources :supporters
     get '/thanks', to: 'pages#thanks', as: :thanks
     get '/spenden', to: 'pages#spenden', as: :spenden
-    get '/terms_and_conditions', to: 'pages#terms_and_conditions', as: :terms_and_conditions
   end
 end

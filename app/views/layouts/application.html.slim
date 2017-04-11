@@ -41,3 +41,12 @@ html lang="#{I18n.locale}"
       = render 'shared/header'
       = render 'shared/topnavigation'
       = yield
+      hr
+      footer.row
+        .col-xs-12.col-sm-6
+          = render 'core_statements'
+        .col-xs-12.col-sm-4
+          = render 'contact'
+        .col-xs-12.col-sm-2
+          = render 'address'
+        
