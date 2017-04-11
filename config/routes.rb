@@ -14,6 +14,7 @@ Rails.application.routes.draw do
   localized do
     get '/initiative_text', to: 'pages#show', as: :initiative_text, page: 'initiative_text'
     get '/arguments', to: 'pages#show', as: :arguments, page: 'arguments'
+    get '/faq', to: 'pages#show', as: :faq, page: 'faq'
   end
 
   get '/cities_autocomplete', to: 'cities_autocomplete#index', as: :cities_autocomplete

@@ -14,6 +14,7 @@ it:
       initiative_text: Il testo dell’iniziativa
       initiative: l'iniziativa
       arguments: Argomentazioni
+      faq: Domande e risposte (in tedesco)
       
     counter:
       supporters: "Sostenitore:"
@@ -73,6 +74,7 @@ it:
   routes:
     initiative_text: il_testo_dell_iniziativa
     arguments: argomentazioni
+    faq: domande_e_risposte
 
   mongoid:
    attributes:

@@ -12,6 +12,8 @@ de:
       initiative_text: Der Initiativtext im Wortlaut
       initiative: Die Initiative
       arguments: Argumentarium
+      faq: Fragen und Antworten
+
     counter:
       supporters: "Unterstützer:"
       amount_of_supporters: Zurzeit haben wir %{amount} Unterstützer.
@@ -72,6 +74,7 @@ de:
   routes:
     initiative_text: initiativtext
     arguments: argumentarium
+    faq: fragen_und_antworten
 
   mongoid:
     models:

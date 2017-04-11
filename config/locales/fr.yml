@@ -17,6 +17,7 @@ fr:
       initiative: l' initiative
       initiative_text: L'initiative propose (en allemand)
       arguments: Arguments (en allemand)
+      faq: Questions et réponses (en allemand)
       
   welcome_email:
     subject: Merci beaucoup pour ton soutien!
@@ -70,6 +71,7 @@ fr:
   routes:
     initiative_text: l_initiative_propose
     arguments: arguments
+    faq: questions_et_reponses
 
   mongoid:
     models:
