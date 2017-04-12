@@ -13,6 +13,7 @@ de:
       initiative: Die Initiative
       arguments: Argumentarium
       faq: Fragen und Antworten
+      sponsoring: Sponsoren & Spenden
 
     counter:
       supporters: "Unterstützer:"
@@ -75,6 +76,7 @@ de:
     initiative_text: initiativtext
     arguments: argumentarium
     faq: fragen_und_antworten
+    sponsoring: sponsoren_und_spenden
 
   mongoid:
     models:

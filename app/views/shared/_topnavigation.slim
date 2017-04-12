@@ -7,6 +7,6 @@
          = navbar_item t('.initiative_text'), initiative_text_path
          = navbar_item t('.arguments'), arguments_path
          = navbar_item t('.faq'), faq_path
-      = navbar_item t('.donation'), spenden_path
+      = navbar_item t('.sponsoring'), sponsoring_path
       = navbar_item t('.sign_in'), new_supporter_session_path unless supporter_signed_in?
       = navbar_item t('.sign_out'), destroy_supporter_session_path, nil, 'data-method' => :delete  if supporter_signed_in?

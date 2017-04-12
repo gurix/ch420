@@ -15,6 +15,7 @@ it:
       initiative: l'iniziativa
       arguments: Argomentazioni
       faq: Domande e risposte (in tedesco)
+      sponsoring: Donazione e Sponsor
       
     counter:
       supporters: "Sostenitore:"
@@ -75,6 +76,7 @@ it:
     initiative_text: il_testo_dell_iniziativa
     arguments: argomentazioni
     faq: domande_e_risposte
+    sponsoring: donazione_e_sponsor
 
   mongoid:
    attributes:

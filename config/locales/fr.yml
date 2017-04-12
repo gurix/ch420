@@ -18,6 +18,7 @@ fr:
       initiative_text: L'initiative propose (en allemand)
       arguments: Arguments (en allemand)
       faq: Questions et réponses (en allemand)
+      sponsoring: Donation et Sponsors  (en allemand)
       
   welcome_email:
     subject: Merci beaucoup pour ton soutien!
@@ -72,6 +73,7 @@ fr:
     initiative_text: l_initiative_propose
     arguments: arguments
     faq: questions_et_reponses
+    sponsoring: donation_et_sponsor
 
   mongoid:
     models:
