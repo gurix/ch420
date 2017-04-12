@@ -14,6 +14,7 @@ de:
       arguments: Argumentarium
       faq: Fragen und Antworten
       sponsoring: Sponsoren & Spenden
+      numbers: Zahlen
 
     counter:
       supporters: "Unterstützer:"
@@ -77,6 +78,7 @@ de:
     arguments: argumentarium
     faq: fragen_und_antworten
     sponsoring: sponsoren_und_spenden
+    numbers: zahlen
 
   mongoid:
     models:

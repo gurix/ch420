@@ -16,6 +16,7 @@ it:
       arguments: Argomentazioni
       faq: Domande e risposte (in tedesco)
       sponsoring: Donazione e Sponsor
+      numbers: Numeri (in tedesco)
       
     counter:
       supporters: "Sostenitore:"
@@ -77,6 +78,7 @@ it:
     arguments: argomentazioni
     faq: domande_e_risposte
     sponsoring: donazione_e_sponsor
+    numbers: numeri
 
   mongoid:
    attributes:
