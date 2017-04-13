@@ -12,6 +12,8 @@ describe Supporter do
   it { is_expected.to validate_presence_of(:age_category) }
   it { is_expected.to validate_presence_of(:language) }
 
+  it { is_expected.to embed_one(:publicity) }
+
   describe '.counter' do
     it 'counts only from a certain number on' do
       allow(Supporter).to receive(:count) { 12 }

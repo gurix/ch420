@@ -11,6 +11,18 @@ gem 'coffee-rails', '~> 4.1.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 
+# Integrate Paperclip into Mongoid.
+gem "mongoid-paperclip"
+
+# To extend paperclip with locales
+gem 'paperclip-i18n'
+
+# Amazon's S3 file hosting service
+gem 'aws-sdk'
+
+# A fixtures replacement 
+gem 'factory_girl'
+
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 

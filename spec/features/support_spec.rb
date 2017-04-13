@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-feature 'Support announcement' do
+feature 'Support' do
   scenario 'User announces support' do
     visit root_path
 

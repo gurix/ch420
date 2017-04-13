@@ -1,0 +1,28 @@
+- if current_supporter.publicity
+  .panel.panel-default
+    .panel-heading
+      h2.panel-title 
+        = t '.title'
+    .panel-body 
+       dl.dl-horizontal
+        dt = Publicity.human_attribute_name(:status)
+        - if current_supporter.publicity.state == 'pending'
+         dd.text-danger = t('.pending') 
+        - if current_supporter.publicity.state == 'approved'
+         dd.text-success = t('.pending')
+        - unless current_supporter.publicity.organisation.blank?
+          dt = Publicity.human_attribute_name(:organisation)
+          dd = current_supporter.publicity.organisation
+        dt = Publicity.human_attribute_name(:statement)
+        dd = current_supporter.publicity.statement
+        dt = Publicity.human_attribute_name(:avatar)
+        dd = image_tag current_supporter.publicity.avatar.url(:small), alt: ''
+       
+       .pull-right
+        = link_to t(".renew"), new_publicity_path
+        br
+        = link_to t(".delete"), publicity_path, data: { confirm: t("shared.are_you_sure") }, method: :delete, class: 'text-danger'
+       
+- else
+  .alert.alert-notice 
+    = link_to t('.create_publicity'), new_publicity_path

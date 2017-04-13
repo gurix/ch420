@@ -21,7 +21,8 @@ it:
     counter:
       supporters: "Sostenitore:"
       amount_of_supporters: Al momento abbiamo %{amount} sostenitori.
-
+    
+    are_you_sure: Sei sicuro?
 
   welcome_email:
     subject: Grazie mille per il tuo sostegno!
@@ -57,7 +58,15 @@ it:
         city: Hinterpfupfikon
         zip: "4200"
         email: hans.muster@hanflegal.ch
-      
+    
+    publicity:
+      title: La mia dichiarazione
+      renew: Ripresentare Statement
+      delete: Eliminare la dichiarazione
+      pending: La pubblicazione non è stato approvato
+      approved: La dichiarazione è stata rilasciata
+      create_publicity: La tua opinione conta, quindi vi chiediamo qui pubblicamente esprimere la tua opinione su iniziativa di cannabis possibile. Girare in una dichiarazione forte e mostrare il tuo volto! Il mio supporto rendere pubblico ...
+       
     create:
       timeout: Ihre Eingabe war zu schnell.
     
@@ -65,6 +74,19 @@ it:
       title: Ciao %{name}
       edit: Modifica i miei dati ...
       my_data: Miei dati
+  
+  publicities:
+    form:
+      title: Lasciare un commento sull'iniziativa cannabis
+      organisation: Organizzazione (opzionale)
+      organisation_placeholder: Partito di appartenenza, di associazione o di altre organizzazioni
+      avatar: Carica una foto
+      save: Inviato per la revisione
+    
+    create:
+      success: Grazie, i dati vengono controllati.
+    update:
+      success: Grazie, i dati vengono controllati.
 
   pages:
     thanks:
@@ -99,3 +121,8 @@ it:
         unsubscribed: No Newsletter
         password_confirmation: conferma password
         current_password: Password corrente
+      publicity:
+        status: Statu
+        organisation: Organizzazione
+        statement: Dichiarazione
+        avatar: Foto

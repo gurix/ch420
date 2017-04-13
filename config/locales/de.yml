@@ -15,6 +15,8 @@ de:
       faq: Fragen und Antworten
       sponsoring: Sponsoren & Spenden
       numbers: Zahlen
+    
+    are_you_sure: Bist du sicher?
 
     counter:
       supporters: "Unterstützer:"
@@ -57,6 +59,14 @@ de:
         city: Hinterpfupfikon
         zip: "4200"
         email: hans.muster@hanflegal.ch
+
+    publicity:
+      title: Mein Statement
+      renew: Statement neu einreichen
+      delete: Statement löschen
+      pending: Die Veröffentlichung wurde noch nicht genehmigt
+      approved: Das statement wurde Veröffentlicht
+      create_publicity: Deine Meinung zählt, darum bitten wir dir hier die Möglichkeit öffentlich deine Meinung zur Cannabis-Initiative kundzutun. Gib ein Starkes Statement ab und zeig dein Gesicht! Meine Unterstützung öffentlich kundtun ...
       
     create:
       timeout: Ihre Eingabe war zu schnell.
@@ -66,6 +76,19 @@ de:
       edit: Meine Daten bearbeiten...
       my_data: Meine Daten
   
+  publicities:
+    form:
+      title: Meine Meinung zur Cannabis-Initiative veröffentlichen
+      organisation: Organisation (Optional)
+      organisation_placeholder: Parteizugehörigkeit, Verband oder sonstige Organisationen
+      avatar: Lade ein Bild von dir Hoch
+      save: Zur Überprüfung einsenden
+    
+    create:
+      success: Besten Dank die Daten werden überprüft.
+    update:
+      success: Besten Dank die Daten werden überprüft.
+
   pages:
     show:
       not_found: Die Seite konnte nicht gefunden werden. 
@@ -101,3 +124,8 @@ de:
         unsubscribed: Kein Newsletter
         password_confirmation: Passwort bestätigen
         current_password: Aktuelles Passwort
+      publicity:
+        status: Status
+        organisation: Organisation
+        statement: Statement
+        avatar: Bild

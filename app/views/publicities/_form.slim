@@ -1,0 +1,6 @@
+h1= title t('.title')
+= simple_form_for(@publicity, url: publicity_path) do |form|
+  = form.input :organisation, required: false, label: t('.organisation'), placeholder: t('.organisation_placeholder')
+  = form.input :statement, as: :text, required: false
+  = form.input :avatar, as: :file, label: t('.avatar'), required: false
+  = form.submit t('.save'), class: 'btn btn-primary'

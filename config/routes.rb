@@ -24,6 +24,7 @@ Rails.application.routes.draw do
   scope '/:locale' do
     get '/', to: 'supporters#new'
     resources :supporters
+    resource :publicity
     get '/thanks', to: 'pages#thanks', as: :thanks
     get '/spenden', to: 'pages#spenden', as: :spenden
   end
