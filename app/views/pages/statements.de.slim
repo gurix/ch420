@@ -1,0 +1,13 @@
+- supporters = Supporter.where('publicity.state' => :approved).desc(:created_at)
+
+h1 = title t('.title')
+- supporters.each do |supporter|
+  .statement
+    = image_tag supporter.publicity.avatar.url(:small), alt: "#{supporter.first_name} #{supporter.last_name}"
+    h2= "#{supporter.first_name} #{supporter.last_name}, #{supporter.city}"
+    - unless supporter.publicity.organisation.blank?
+      em= ", #{supporter.publicity.organisation}"
+    br
+    = supporter.publicity.statement
+    hr.clearfix
+     

@@ -17,6 +17,7 @@ it:
       faq: Domande e risposte (in tedesco)
       sponsoring: Donazione e Sponsor
       numbers: Numeri (in tedesco)
+      statements: Dichiarazioni
       
     counter:
       supporters: "Sostenitore:"
@@ -99,6 +100,9 @@ it:
     
     show:
       not_found: La pagina non è stata trovata.
+    
+    statements: 
+      title: Dichiarazioni di nostri sostenitori
   
   routes:
     initiative_text: il_testo_dell_iniziativa
@@ -106,6 +110,7 @@ it:
     faq: domande_e_risposte
     sponsoring: donazione_e_sponsor
     numbers: numeri
+    statements: dichiarazioni
 
   mongoid:
    attributes:

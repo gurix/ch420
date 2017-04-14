@@ -13,22 +13,13 @@
  *= require_tree .
  *= require_self
  */
-
-$brand-success: #66903F
-$navbar-default-bg: #FFF
-$navbar-default-border: none
-$font-size-base: 14px
-$navbar-padding-horizontal: none
-$navbar-default-link-color: #66903F
-$navbar-default-link-active-bg: #FFF
-$font-size-h1: floor($font-size-base * 1.8)
-$font-size-h2: floor($font-size-base * 1.5)
-$font-size-h3: floor($font-size-base * 1.2)
-
+@import "variables"
 @import "bootstrap-sprockets"
 @import "bootstrap"
 @import "typeaheadjs"
 @import "footnotes"
+@import "statements"
+
 .alert-alert
   @extend .alert-danger
 

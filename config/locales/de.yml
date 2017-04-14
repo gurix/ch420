@@ -15,6 +15,7 @@ de:
       faq: Fragen und Antworten
       sponsoring: Sponsoren & Spenden
       numbers: Zahlen
+      statementes: Statements
     
     are_you_sure: Bist du sicher?
     edit: Bearbeiten
@@ -100,6 +101,9 @@ de:
 
     thanks:
       title: Besten Dank für deine Unterstützung!
+    
+    statements:
+      title: Statements von unseren Unterstützern
   
   routes:
     initiative_text: initiativtext
@@ -107,6 +111,7 @@ de:
     faq: fragen_und_antworten
     sponsoring: sponsoren_und_spenden
     numbers: zahlen
+    statementes: statements
 
   mongoid:
     models:

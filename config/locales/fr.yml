@@ -5,8 +5,8 @@ fr:
     "yes": Oui
     "no": Non
     counter:
-      supporters: "Militant:"
-      amount_of_supporters: Nous avons actuellement %{amount} supporters.
+      supporters: "Partisans:"
+      amount_of_supporters: Nous avons actuellement %{amount} partisans.
     header:  
       logo: Logo de l'initiative
       title_html: Oui, je veux  <strong class="text-success">légaliser le cannabis</strong> en Suisse.
@@ -20,6 +20,7 @@ fr:
       faq: Questions et réponses (en allemand)
       sponsoring: Donation et Sponsors  (en allemand)
       numbers: Chiffres (en allemand)
+      statements: Déclarations 
     
     are_you_sure: Tu es sûre?
     edit: Éditer
@@ -31,9 +32,7 @@ fr:
   support_type:
     signer: Je signerais une initiative populaire pour la <span class="text-success">légalisation du cannabis</span>.
     supporter: Je signerais une initiative populaire pour la <span class="text-success">légalisation du cannabis</span> et aiderais activement à trouver des signatures dans ma région.
-    # activist: Ich unterschreibe eine Volksinitiative für die <span class="text-success">Legalisierung von Cannabis</span> und beteilige mich bei der Planung und Koordination einer Volksinitiative.
-    # nonvoting_supporter: Ich bin nicht stimmberechtigt, helfe aber aktiv Unterschriften in meiner Umgebung zu sammeln um <span class="text-success">Cannabis zu legalisierung</span>.
-    
+
   age_category:
     underage: J’ai moins de 18 ans
     young: J’ai entre 18 et 30 ans
@@ -97,6 +96,9 @@ fr:
 
     thanks:
       title: Merci beaucoup pour ton soutien!
+    
+    statements:
+      title: Les déclarations de nos partisans
       
   routes:
     initiative_text: l_initiative_propose
@@ -104,6 +106,7 @@ fr:
     faq: questions_et_reponses
     sponsoring: donation_et_sponsor
     numbers: chiffres
+    statements: declarations 
 
   mongoid:
     models:
