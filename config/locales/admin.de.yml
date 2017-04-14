@@ -1,0 +1,8 @@
+de:
+  admin:
+    title: Administration
+    publicities:
+      index:
+        title: Unveröffentlichte Statements
+      form:
+        title: Statement

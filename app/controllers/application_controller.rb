@@ -29,6 +29,10 @@ class ApplicationController < ActionController::Base
     options.merge locale: I18n.locale
   end
 
+  def admin_area
+    false
+  end
+
   protected
 
   def configure_permitted_parameters

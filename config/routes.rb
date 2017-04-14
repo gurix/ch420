@@ -2,12 +2,11 @@ Rails.application.routes.draw do
   devise_for :supporters
   root to: 'supporters#new' 
 
-  mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
-
   get "/pages/:page" => "pages#show"
 
   namespace :admin do
     get '/map', to: 'pages#map', as: :map
+    resources :publicities
     # resources :supporters, only: :index
   end
 
@@ -28,4 +27,6 @@ Rails.application.routes.draw do
     get '/thanks', to: 'pages#thanks', as: :thanks
     get '/spenden', to: 'pages#spenden', as: :spenden
   end
+
+  mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
 end

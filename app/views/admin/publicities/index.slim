@@ -1,0 +1,19 @@
+h1 = title t('.title')
+table.table
+  tbody
+    - @pending.each do | supporter |
+      tr
+        td 
+          = "#{supporter.first_name} #{supporter.last_name}"
+          br
+          = supporter.city
+          br
+          = mail_to supporter.email, supporter.email
+          br
+          = supporter.publicity.organisation
+        td width="50%" = supporter.publicity.statement
+        td = image_tag(supporter.publicity.avatar.url(:small))
+        td = link_to t('shared.edit'), edit_admin_publicity_path(supporter)
+
+
+    

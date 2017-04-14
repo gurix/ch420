@@ -1,0 +1,8 @@
+it:
+  admin:
+    title: Amministrazione
+    publicities:
+      index:
+        title: Dichiarazioni non pubblicati
+      form:
+        title: Dichiarazione

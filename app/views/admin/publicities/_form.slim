@@ -1,0 +1,14 @@
+h1= title "#{t('.title')} #{@publicity.supporter.first_name} #{@publicity.supporter.last_name}, #{@publicity.supporter.city}"
+= simple_form_for(@publicity, url: admin_publicity_path(@publicity.supporter)) do |form|
+  .form-group
+    = "#{@publicity.supporter.first_name} #{@publicity.supporter.last_name}, #{@publicity.supporter.city}"
+
+  = form.input :organisation, required: false
+  = form.input :statement, as: :text, required: false
+  = form.input :avatar, as: :file, required: false
+  - if @publicity.avatar
+    .form-group
+      = image_tag(@publicity.avatar.url(:medium))
+  = form.input :state, as: :radio_buttons, collection: t('publicity_states').map{ |x| [x.first, raw(x.last)]}, label_method: :last, value_method: :first, required: false
+  = form.submit t('shared.save'), class: 'btn btn-primary'
+  

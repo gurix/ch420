@@ -23,6 +23,8 @@ it:
       amount_of_supporters: Al momento abbiamo %{amount} sostenitori.
     
     are_you_sure: Sei sicuro?
+    edit: Modifica
+    save: Salvare
 
   welcome_email:
     subject: Grazie mille per il tuo sostegno!
@@ -38,6 +40,11 @@ it:
     young: Ho tra 18 e 30 anni
     middle: Ho tra i 30 ed i 64 anni
     retired: Ho più di 64 anni
+  
+  publicity_states:
+    pending: La pubblicazione non è stato approvato
+    approved: La dichiarazione è stata rilasciata
+    declined: La dichiarazione è stata respinta
   
   languages:
     de: Deutsch
@@ -63,8 +70,6 @@ it:
       title: La mia dichiarazione
       renew: Ripresentare Statement
       delete: Eliminare la dichiarazione
-      pending: La pubblicazione non è stato approvato
-      approved: La dichiarazione è stata rilasciata
       create_publicity: La tua opinione conta, quindi vi chiediamo qui pubblicamente esprimere la tua opinione su iniziativa di cannabis possibile. Girare in una dichiarazione forte e mostrare il tuo volto! Il mio supporto rendere pubblico ...
        
     create:

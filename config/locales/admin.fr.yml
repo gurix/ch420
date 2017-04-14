@@ -1,0 +1,8 @@
+fr:
+  admin:
+    title: Administration
+    publicities:
+      index:
+        title: Déclarations non publiées
+      form:
+        title: Déclaration

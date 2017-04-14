@@ -17,6 +17,8 @@ de:
       numbers: Zahlen
     
     are_you_sure: Bist du sicher?
+    edit: Bearbeiten
+    save: Speichern
 
     counter:
       supporters: "Unterstützer:"
@@ -38,6 +40,11 @@ de:
     young: Ich bin 18 bis 30 Jahre alt
     middle: Ich bin 30 bis 64 Jahre alt
     retired: Ich bin über 64 Jahre alt
+ 
+  publicity_states:
+    pending: Die Veröffentlichung wurde noch nicht genehmigt
+    approved: Das Statement wurde Veröffentlicht
+    declined: Das Statement wurde abgelehnt
 
   languages:
     de: Deutsch
@@ -64,8 +71,6 @@ de:
       title: Mein Statement
       renew: Statement neu einreichen
       delete: Statement löschen
-      pending: Die Veröffentlichung wurde noch nicht genehmigt
-      approved: Das statement wurde Veröffentlicht
       create_publicity: Deine Meinung zählt, darum bitten wir dir hier die Möglichkeit öffentlich deine Meinung zur Cannabis-Initiative kundzutun. Gib ein Starkes Statement ab und zeig dein Gesicht! Meine Unterstützung öffentlich kundtun ...
       
     create:
@@ -125,7 +130,7 @@ de:
         password_confirmation: Passwort bestätigen
         current_password: Aktuelles Passwort
       publicity:
-        status: Status
+        state: Status
         organisation: Organisation
         statement: Statement
         avatar: Bild

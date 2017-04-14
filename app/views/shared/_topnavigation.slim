@@ -11,3 +11,6 @@
       = navbar_item t('.sponsoring'), sponsoring_path
       = navbar_item t('.sign_in'), new_supporter_session_path unless supporter_signed_in?
       = navbar_item t('.sign_out'), destroy_supporter_session_path, nil, 'data-method' => :delete  if supporter_signed_in?
+      - if supporter_signed_in? && current_supporter.admin?
+        = navbar_dropdown t('admin.title') do
+          = navbar_item t('admin.publicities.index.title'), admin_publicities_path

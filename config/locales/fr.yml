@@ -22,6 +22,8 @@ fr:
       numbers: Chiffres (en allemand)
     
     are_you_sure: Tu es sûre?
+    edit: Éditer
+    save: Sauver
 
   welcome_email:
     subject: Merci beaucoup pour ton soutien!
@@ -37,7 +39,12 @@ fr:
     young: J’ai entre 18 et 30 ans
     middle: J’ai entre 30 et 64 ans
     retired: J’ai plus que 64 ans
- 
+  
+  publicity_states:
+    pending: La publication n'a pas été approuvé
+    approved: La déclaration a été publiée
+    declined: La déclaration a été rejetée
+
   languages:
     de: Deutsch
     fr: Français
@@ -56,12 +63,11 @@ fr:
         city: Hinterpfupfikon
         zip: "4200"
         email: hans.muster@hanflegal.ch
+
     publicity:
       title: Ma déclaration
       renew: resoumettre déclaration 
       delete: supprimer déclaration
-      pending: La publication n'a pas été approuvé
-      approved: La déclaration a été publiée
       create_publicity: Votre opinion compte, nous vous demandons ici d'exprimer publiquement votre avis sur initiative de cannabis possible. Rendre public mon soutien ...
  
     create:

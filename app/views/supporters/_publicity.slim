@@ -6,10 +6,7 @@
     .panel-body 
        dl.dl-horizontal
         dt = Publicity.human_attribute_name(:status)
-        - if current_supporter.publicity.state == 'pending'
-         dd.text-danger = t('.pending') 
-        - if current_supporter.publicity.state == 'approved'
-         dd.text-success = t('.pending')
+        dd= t("publicity_states.#{current_supporter.publicity.state}") 
         - unless current_supporter.publicity.organisation.blank?
           dt = Publicity.human_attribute_name(:organisation)
           dd = current_supporter.publicity.organisation
