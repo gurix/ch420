@@ -8,14 +8,13 @@ it:
       logo: Logo dell'iniziativa
       title_html: Si, voglio  <strong class="text-success">legalizzare</strong> la  <strong class="text-success">cannabis in Svizzera</strong>
     topnavigation:
-      donation: Donazione
       sign_out: Disconnettersi
       sign_in: Registro
       initiative_text: Il testo dell’iniziativa
       initiative: l'iniziativa
       arguments: Argomentazioni
       faq: Domande e risposte (in tedesco)
-      sponsoring: Donazione e Sponsor
+      sponsoring: Sponsor
       numbers: Numeri (in tedesco)
       statements: Dichiarazioni
       
@@ -26,7 +25,7 @@ it:
     are_you_sure: Sei sicuro?
     edit: Modifica
     save: Salvare
-
+  donation: Donazione
   welcome_email:
     subject: Grazie mille per il tuo sostegno!
   
@@ -108,7 +107,8 @@ it:
     initiative_text: il_testo_dell_iniziativa
     arguments: argomentazioni
     faq: domande_e_risposte
-    sponsoring: donazione_e_sponsor
+    sponsoring: sponsor
+    donation: donazione
     numbers: numeri
     statements: dichiarazioni
 

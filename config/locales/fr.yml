@@ -11,21 +11,21 @@ fr:
       logo: Logo de l'initiative
       title_html: Oui, je veux  <strong class="text-success">légaliser le cannabis</strong> en Suisse.
     topnavigation:
-      donation: Donation
       sign_out: déconnecter
       sign_in: Connexion
       initiative: l' initiative
       initiative_text: L'initiative propose (en allemand)
       arguments: Arguments (en allemand)
       faq: Questions et réponses (en allemand)
-      sponsoring: Donation et Sponsors  (en allemand)
+      sponsoring: Sponsors (en allemand)
       numbers: Chiffres (en allemand)
       statements: Déclarations 
     
     are_you_sure: Tu es sûre?
     edit: Éditer
     save: Sauver
-
+  
+  donation: Donation
   welcome_email:
     subject: Merci beaucoup pour ton soutien!
   
@@ -104,7 +104,8 @@ fr:
     initiative_text: l_initiative_propose
     arguments: arguments
     faq: questions_et_reponses
-    sponsoring: donation_et_sponsor
+    sponsoring: sponsor
+    donation: donation
     numbers: chiffres
     statements: declarations 
 

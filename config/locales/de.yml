@@ -6,14 +6,13 @@ de:
       logo: Logo der Initiative
       title_html: Ja, ich will <strong class="text-success">Cannabis</strong> in der Schweiz <strong class="text-success">legalisieren</strong>
     topnavigation:
-      donation: Spenden
       sign_in: Anmelden
       sign_out: Abmelden
       initiative_text: Der Initiativtext im Wortlaut
       initiative: Die Initiative
       arguments: Argumentarium
       faq: Fragen und Antworten
-      sponsoring: Sponsoren & Spenden
+      sponsoring: Sponsoren
       numbers: Zahlen
       statementes: Statements
     
@@ -26,7 +25,7 @@ de:
       amount_of_supporters: Zurzeit haben wir %{amount} Unterstützer.
 
   input_error: Deine Eingaben konnte nicht gespeichert werden. Überprüfe deine Eingaben.
-
+  donation: Deine Spende
   welcome_email:
     subject: Besten Dank für deine Unterstützung!
   
@@ -109,7 +108,8 @@ de:
     initiative_text: initiativtext
     arguments: argumentarium
     faq: fragen_und_antworten
-    sponsoring: sponsoren_und_spenden
+    sponsoring: sponsoren
+    donation: spenden
     numbers: zahlen
     statementes: statements
 

@@ -30,12 +30,19 @@ body.admin
   background: repeating-linear-gradient(45deg, yellow, yellow 50px, black 50px, black 100px)
 
 body
+  nav.languages
+    position: absolute
+    top: 12px
+    right: 12px
+
   > .container
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
     padding: 20px
     margin-top: 10px
     background: #FFF
   header
+    .pagelogo
+      max-height: 91px
     h1
       font-size: 20px
       margin-top: 35px
@@ -102,4 +109,23 @@ body
 
     ol 
       padding-left: 1em
+  
+  .donation_button
+    height: 50px
+    background: $brand-success
+    width: 200px
+    text-align: center
+    font-size: 18px
+    line-height: 50px
+    font-family: sans-serif
+    color: #FFF
+    transform: rotate(-45deg)
+    position: relative
+    top: 30px
+    left: -50px
+    box-shadow: inset 0px 0px 0px 4px rgba(255, 255, 255, 0.34)
 
+    a 
+      color: #FFF
+
+    

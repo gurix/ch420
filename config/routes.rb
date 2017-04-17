@@ -16,6 +16,7 @@ Rails.application.routes.draw do
     get '/faq', to: 'pages#show', as: :faq, page: 'faq'
     get '/terms_and_conditions', to: 'pages#show', as: :terms_and_conditions, page: 'terms_and_conditions'
     get '/sponsoring', to: 'pages#show', as: :sponsoring, page: 'sponsoring'
+    get '/donation', to: 'pages#show', as: :donation, page: 'donation'
     get '/numbers', to: 'pages#show', as: :numbers, page: 'numbers'
     get '/statements', to: 'pages#show', as: :statements, page: 'statements'
   end
@@ -26,7 +27,6 @@ Rails.application.routes.draw do
     resources :supporters
     resource :publicity
     get '/thanks', to: 'pages#thanks', as: :thanks
-    get '/spenden', to: 'pages#spenden', as: :spenden
   end
 
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'

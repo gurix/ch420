@@ -1,4 +1,6 @@
 h1 =  t("Unsere Sponsoren")
+.lead
+  | Wir suchen tatkräftige Sponsoren, die uns bei der Sammlung der Unterschriften und im späteren Wahlkampf finanziell unterstützen. Im Gegenzug ermöglichen wir den Sponsoren, sich mit Logo, einem kleinen Text und Link zu präsentieren. 
 .row
   .col-xs-12.col-sm-6.col-md-3
     = image_tag 'dummy.png', alt: 'Platzhalter für Logo', class: 'img-responsive'
@@ -11,35 +13,3 @@ h1 =  t("Unsere Sponsoren")
     p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
   .col-xs-12.col-sm-6.col-md-3
     = image_tag 'dummy.png', alt: 'Platzhalter für Logo', class: 'img-responsive'
-
-.row
-  .col-xs-12.col-sm-6.col-md-3
-    = image_tag 'dummy.png', alt: 'Platzhalter für Logo', class: 'img-responsive'
-  .col-xs-12.col-sm-6.col-md-9
-    h2 Ihr Firmenname
-    p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-hr
-.row
-  .col-xs-12.col-md-6
-    h1 = title 'Deine Spende zählt - Verein Legalize it!'
-    p 
-      dl.dl-horizontal
-        dt Postkonto:
-        dd 87-091354-3, Verein Legalize it!, Postfach 2159, 8031 Zürich
-        dt IBAN:
-        dd CH02 0900 0000 8709 1354 3 
-        dt Zahlungszweck:
-        dd Spende Initiative
-    h2 Warum kann ich nicht auch online oder per Kreditkarte spenden?
-    p Wir haben mehrere Versuche unternommen, dies mittels verschiedener (zahlbaren) Payment-Service-Providern zu ermöglichen, sind jedoch immer wieder gescheitert. Die Gründe dafür sind vielfältig: Zum einen bieten viele solche Dienstleister ihren Service gar nicht für Vereine an, zum anderen ist das Schweizer Vereinsrecht relativ liberal. Ein zentrales Register für Vereine wie in anderen Ländern üblich, gibt es nicht. Einzig ein Handelsregistereintrag könnte ein wenig Klarheit schaffen. Dies ist jedoch zu kostspielig und würde momentan zu viel Zeit in Anspruch nehmen. Selbst wenn wir einen solchen hätten, wäre es nicht sicher, dass Dienste wie beispielsweise PayPal uns akzeptieren würden.
-    p Eine andere schwierigere Hürde ist unser Umfeld. Wir haben, genau wie in Amerika, die Schwierigkeit, dass unser Themenbereich Cannabis ist. Da der Umgang mit Cannabis illegal ist, scheinen die Banken der Logik verfallen zu sein, dass alles was mit Cannabis zu tun hat, auch illegal sei, notabene auch das Ändern des illegalen Status. Viele Finanzdienstleister wie etwa Stripe.com lehnen daher jegliche Zusammenarbeit kategorisch ab.
-
-    p Somit bleibt nur zum guten alten Einzahlungsschein zu greifen beziehungsweise die richtigen Zahlenkombinationen beim E-Banking an den richtigen Stellen einzufügen.
-    p
-    b Wir würden uns freuen, wenn ihr das macht und uns finanziell unter die Arme greift.
-      
-    p Danke, dein Verein Legalize it!
-  .col-xs-12.col-md-6
-    = link_to asset_path('Einzahlungsschein_Spende_Initiative.pdf') do
-      = image_tag('Einzahlungsschein_Spende_Initiative.jpg', class:'img-responsive pagelogo', alt: 'Einzahlungsschein Spende initiative')
-

@@ -27,6 +27,7 @@ html lang="#{I18n.locale}"
     meta content="#ffffff" name="theme-color" /
 
   body class="#{'admin' if controller.admin_area}"
+    = render 'donation_button'
     javascript:
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -36,7 +37,17 @@ html lang="#{I18n.locale}"
       ga('create', 'UA-79948850-1', 'auto');
       ga('send', 'pageview');
 
-    / = console if Rails.env.development?
+    nav.languages
+      h2.sr-only =t('.lang')
+      a href='/' lang='de'
+        | Deutsch
+      | &nbsp; | &nbsp;
+      a href='/it' lang='it'
+        | Italiano
+      | &nbsp; | &nbsp;
+      a href='/fr' lang='fr'
+        | Français
+    br/
     .container
       = render 'shared/flashes'
       = render 'shared/header'
@@ -50,4 +61,4 @@ html lang="#{I18n.locale}"
           = render 'contact'
         .col-xs-12.col-sm-2
           = render 'address'
-        
+      
