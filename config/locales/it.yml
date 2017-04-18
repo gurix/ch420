@@ -128,7 +128,6 @@ it:
         remember_me: Ricordati di mel
         password: Password
         language: Lingua
-        unsubscribed: No Newsletter
         password_confirmation: conferma password
         current_password: Password corrente
       publicity:

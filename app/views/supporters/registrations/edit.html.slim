@@ -19,7 +19,6 @@
         = f.input :support, as: :radio_buttons, collection: t('support_type').map{ |x| [x.first, raw(x.last)]}, label_method: :last, value_method: :first
         = f.input :age_category, as: :radio_buttons, collection: t('age_category'), label_method: :last, value_method: :first
         = f.input :language, as: :radio_buttons, collection: t('languages').map{ |x| [x.first, raw(x.last)]}, label_method: :last, value_method: :first
-        = f.input :unsubscribed, as: :boolean 
       .form-actions
         = f.button :submit, t("devise.registrations.edit.update"), class: 'btn btn-primary'
     p = link_to t("devise.shared.links.back"), :back

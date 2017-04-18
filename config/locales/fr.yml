@@ -127,7 +127,6 @@ fr:
         remember_me: Se souvenir de moi
         password: mot de passe
         language: Langue
-        unsubscribed: pas de newslettre
         password_confirmation: confirmer le mot de passe
         current_password: Mot de passe actuel
       

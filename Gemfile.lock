@@ -103,7 +103,6 @@ GEM
       dotenv (= 2.2.0)
       railties (>= 3.2, < 5.1)
     erubis (2.7.0)
-    excon (0.55.0)
     execjs (2.7.0)
     factory_girl (4.8.0)
       activesupport (>= 3.0.0)
@@ -145,9 +144,6 @@ GEM
       nokogiri (>= 1.5.9)
     mail (2.6.4)
       mime-types (>= 1.16, < 4)
-    mailchimp-api (2.0.6)
-      excon (>= 0.16.0)
-      json (>= 1.7.7)
     memory_profiler (0.9.8)
     method_source (0.8.2)
     mime-types (3.1)
@@ -353,7 +349,6 @@ DEPENDENCIES
   jquery-rails
   kaminari-actionview
   kaminari-mongoid
-  mailchimp-api
   mongoid (~> 5.0.0)
   mongoid-paperclip
   mongoid-rspec (= 3.0.0)

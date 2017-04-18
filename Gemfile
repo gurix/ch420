@@ -78,8 +78,6 @@ gem 'rails_admin'
 
 gem 'mongoid_paranoia'
 
-gem 'mailchimp-api', require: 'mailchimp'
-
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'

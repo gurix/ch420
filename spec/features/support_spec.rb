@@ -21,7 +21,7 @@ feature 'Support' do
     sleep 5 # Do a real sleep to have a real integration test
 
     expect(ActionMailer::Base.deliveries.count).to eq 0
-    expect_any_instance_of(SupportersController).to receive(:mailchimp_registration).and_return(true)
+    expect_any_instance_of(SupportersController).to receive(:sendy_registraion).and_return(true)
 
     expect { click_button 'Unterstützung zusichern' }.to change { Supporter.count }.by(1)
     # expect(ActionMailer::Base.deliveries.count).to eq 1
