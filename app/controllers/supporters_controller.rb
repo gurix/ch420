@@ -10,7 +10,7 @@ class SupportersController < ApplicationController
     @supporter.password = random_password = SecureRandom.hex(5)
     if !input_to_fast? && @supporter.save
       SupporterMailer.welcome_email(@supporter, random_password).deliver_now
-      mailchimp_registration
+      sendy_registraion
       redirect_to thanks_path
     else
       flash.now[:danger] = input_to_fast? ? t('.timeout') : t('input_error')
@@ -24,20 +24,11 @@ class SupportersController < ApplicationController
     params.require(:supporter).permit(:first_name, :last_name, :street, :zip, :email, :support, :li_membership, :age_category, :city, :comments)
   end
 
-  def mailchimp_registration
-    return unless Rails.env.production?
-    mailchimp = Mailchimp::API.new(ENV['MAILCHIMP_API'])
-    mailchimp.lists.subscribe(ENV['CH420_LIST_ID'], { 'email' => @supporter.email }, merge_vars, 'html', false)
-  end
-
-  def merge_vars
-    { 'EMAIL' => @supporter.email,
-      'FNAME' => @supporter.first_name,
-      'LNAME' => @supporter.last_name,
-      'SUPPORT' => @supporter.support,
-      'MEMBERSHIP' => @supporter.li_membership.to_s,
-      'AGE' => @supporter.age_category,
-      'LANG' => @supporter.language,
-      'ZIP' => @supporter.zip }
+  # We use sendy for newsletters atm
+  def sendy_registraion
+    uri = URI('http://newsletter.cannabis-initiative.ch/subscribe')
+    Net::HTTP.post_form(uri, list: ENV["SENDY_LIST_#{I18n.locale.upcase}"],
+                             email: @supporter.email,
+                             name: "#{@supporter.first_name} #{@supporter.last_name}")
   end
 end
