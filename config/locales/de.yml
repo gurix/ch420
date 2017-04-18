@@ -15,10 +15,12 @@ de:
       sponsoring: Sponsoren
       numbers: Zahlen
       statementes: Statements
-    
+      
+    lang: Sprache
     are_you_sure: Bist du sicher?
     edit: Bearbeiten
     save: Speichern
+    description: Volksinitiative zur Legalisierung von Cannabis in der Schweiz.
 
     counter:
       supporters: "Unterstützer:"
@@ -54,8 +56,6 @@ de:
   supporters:
     form:
       form: Formular
-      lang: Sprache
-      logo: Logo der Initiative
       title_html: Ja, ich will <strong class="text-success">Cannabis</strong> in der Schweiz <strong class="text-success">legalisieren</strong>
       submit: Unterstützung zusichern
       terms_and_conditions: Mit dem Absenden deiner Daten stimmst du den Nutzungsbedingungen zu.

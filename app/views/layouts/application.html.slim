@@ -26,6 +26,16 @@ html lang="#{I18n.locale}"
     meta content="/ms-icon-144x144.png" name="msapplication-TileImage" /
     meta content="#ffffff" name="theme-color" /
 
+    meta property="og:title" content="#{content_for(:title)}"
+    meta property="og:description" content="#{t('shared.description')}" 
+    meta property="og:image" content="#{image_url('ch420_logo.png')}"
+
+    meta name="twitter:title" content="#{content_for(:title)}"
+    meta name="twitter:image" content="#{image_url('ch420_logo.png')}"
+    meta name="twitter:site" content="@vereinlegalize"
+    meta name="twitter:description" content="#{t('shared.description')}"
+    meta name="twitter:image:alt" content="#{t('shared.header.logo')}"
+
   body class="#{'admin' if controller.admin_area}"
     = render 'donation_button'
     javascript:
@@ -38,7 +48,7 @@ html lang="#{I18n.locale}"
       ga('send', 'pageview');
 
     nav.languages
-      h2.sr-only =t('.lang')
+      h2.sr-only =t('shared.lang')
       a href='/' lang='de'
         | Deutsch
       | &nbsp; | &nbsp;

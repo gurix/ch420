@@ -21,9 +21,11 @@ fr:
       numbers: Chiffres (en allemand)
       statements: Déclarations 
     
+    lang: Langue
     are_you_sure: Tu es sûre?
     edit: Éditer
     save: Sauver
+    description: Initiative populaire pour la légalisation du cannabis en Suisse.
   
   donation: Donation
   welcome_email:
@@ -52,7 +54,6 @@ fr:
   supporters:
     form:
       form: Formulaire
-      lang: Langue
       submit: Confirmer mon soutien
       terms_and_conditions: En soumettant vos données, vous acceptez les conditions d'utilisation.
       placeholders:

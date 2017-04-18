@@ -22,9 +22,12 @@ it:
       supporters: "Sostenitore:"
       amount_of_supporters: Al momento abbiamo %{amount} sostenitori.
     
+    lang: Lingua
     are_you_sure: Sei sicuro?
     edit: Modifica
     save: Salvare
+    description: L’iniziativa popolare per la legalizzazione della Cannabis in Svizzera
+
   donation: Donazione
   welcome_email:
     subject: Grazie mille per il tuo sostegno!
@@ -54,7 +57,6 @@ it:
   supporters:
     form:
       form: Modulo
-      lang: Lingua
       logo: Logo dell'iniziativa
       submit: Garantire il sostengo
       terms_and_conditions: "Con l'invio dei tuoi dati, accetti le condizioni d'utilizzo."
