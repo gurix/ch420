@@ -22,7 +22,7 @@ Rails.application.routes.draw do
   end
 
   get '/cities_autocomplete', to: 'cities_autocomplete#index', as: :cities_autocomplete
-  scope '/:locale' do
+  scope '/:locale',  locale: /de|it|fr/ do
     get '/', to: 'supporters#new'
     resources :supporters
     resource :publicity
