@@ -103,6 +103,7 @@ de:
     
     statements:
       title: Statements von unseren Unterstützern
+      submit_your_own_statement: Veröffentliche dein eigenes Statement...
   
   routes:
     initiative_text: initiativtext

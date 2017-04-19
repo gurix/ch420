@@ -100,6 +100,7 @@ fr:
     
     statements:
       title: Les déclarations de nos partisans
+      submit_your_own_statement: Publie tes propres déclaration ...
       
   routes:
     initiative_text: l_initiative_propose
