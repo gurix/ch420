@@ -24,7 +24,7 @@ Rails.application.routes.draw do
   get '/cities_autocomplete', to: 'cities_autocomplete#index', as: :cities_autocomplete
   scope '/:locale',  locale: /de|it|fr/ do
     get '/', to: 'supporters#new'
-    resources :supporters
+    resources :supporters, only: [:new, :create]
     resource :publicity
     get '/thanks', to: 'pages#thanks', as: :thanks
   end
