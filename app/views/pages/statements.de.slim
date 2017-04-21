@@ -1,4 +1,4 @@
-- supporters = Supporter.where('publicity.state' => :approved).desc(:created_at)
+- supporters = Supporter.where('publicity.state' => :approved).desc('publicity.created_at')
 
 h1 = title t('.title')
 - supporters.each do |supporter|
