@@ -51,17 +51,17 @@ html lang="#{I18n.locale}"
         a href="https://wemakeit.com/projects/cannabislegalisierungs-crowd" class="text-success" 
           = t('shared.crowdfunding')
         
-    nav.languages
-      h2.sr-only =t('shared.lang')
-      a href='/' lang='de'
-        | Deutsch
-      | &nbsp; | &nbsp;
-      a href='/it' lang='it'
-        | Italiano
-      | &nbsp; | &nbsp;
-      a href='/fr' lang='fr'
-        | Français
-    br/
+      nav.languages.pull-right
+        h2.sr-only =t('shared.lang')
+        a href='/' lang='de'
+          | Deutsch
+        | &nbsp; | &nbsp;
+        a href='/it' lang='it'
+          | Italiano
+        | &nbsp; | &nbsp;
+        a href='/fr' lang='fr'
+          | Français
+    
     .container.content
       = render 'shared/flashes'
       = render 'shared/header'
