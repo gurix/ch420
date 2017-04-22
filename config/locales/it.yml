@@ -2,6 +2,7 @@ it:
   input_error: I dati immessi non potevano essere salvati. Verificare i dati immessi.
 
   shared:
+    crowdfunding: Sostienici e ad entrare nel crowdfunding per finanziare l'iniziativa!
     "yes": Si
     "No": No
     header:

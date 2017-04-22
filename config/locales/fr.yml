@@ -2,6 +2,7 @@ fr:
   input_error: Vos entrées ne peuvent pas être enregistrées. Vérifiez les entrées.
 
   shared:
+    crowdfunding: Soutenez-nous et participer à crowdfunding pour financer l'initiative!
     "yes": Oui
     "no": Non
     counter:
