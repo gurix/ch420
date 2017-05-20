@@ -25,7 +25,7 @@ de:
 
     counter:
       supporters: "Unterstützer:"
-      amount_of_supporters: Zurzeit haben wir %{amount} Unterstützer.
+      amount_of_supporters: Zurzeit haben wir %{amount} Unterstützer. 
 
   input_error: Deine Eingaben konnte nicht gespeichert werden. Überprüfe deine Eingaben.
   donation: Deine Spende
@@ -105,6 +105,7 @@ de:
     statements:
       title: Statements von unseren Unterstützern
       submit_your_own_statement: Veröffentliche dein eigenes Statement...
+      read_more: das ganze Statement lesen.
   
   routes:
     initiative_text: initiativtext

@@ -23,6 +23,9 @@ gem 'aws-sdk'
 # A fixtures replacement 
 gem 'factory_girl'
 
+# It's a small library to provide the Rails I18n translations on the JavaScript.
+gem "i18n-js"
+
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 

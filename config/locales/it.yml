@@ -106,6 +106,7 @@ it:
     statements: 
       title: Dichiarazioni di nostri sostenitori
       submit_your_own_statement: Pubblica il tuo propria dichiarazione ...
+      read_more: leggere l'intero.
   
   routes:
     initiative_text: il_testo_dell_iniziativa

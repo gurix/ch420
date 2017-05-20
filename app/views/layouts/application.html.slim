@@ -75,4 +75,7 @@ html lang="#{I18n.locale}"
           = render 'contact'
         .col-xs-12.col-sm-2
           = render 'address'
-      
+ 
+  javascript:
+    I18n.defaultLocale = "#{I18n.default_locale}";
+    I18n.locale = "#{I18n.locale}";

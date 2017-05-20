@@ -8,7 +8,7 @@ h1 = title t('.title')
     - unless supporter.publicity.organisation.blank?
       em= ", #{supporter.publicity.organisation}"
     br
-    = supporter.publicity.statement
+    p = supporter.publicity.statement
     hr.clearfix
      
 .text-center = link_to t(".submit_your_own_statement"), new_publicity_path

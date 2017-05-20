@@ -15,4 +15,5 @@
 //= require bootstrap-sprockets
 //= require typeahead.bundle
 //= require markerclusterer_compiled
+//= require i18n/translations
 //= require_tree .
