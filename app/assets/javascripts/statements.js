@@ -1,5 +1,5 @@
 $(document).ready(function(){
-  $('.statement p').each(function(){
+  $('.statement article').each(function(){
     var trimLength = 300;
     var trimMargin = 1.2; // don't trim just a couple of words
     if($(this).text().length > (trimLength * trimMargin)) {
@@ -12,8 +12,8 @@ $(document).ready(function(){
   });
   $('.toggle a').click(function(e){
     e.preventDefault();
-    var para = $(this).closest('p');
-    var initialHeight = $(this).closest('p').innerHeight();
+    var para = $(this).closest('article');
+    var initialHeight = $(this).closest('article').innerHeight();
     para.find('.read-more').show();
     para.find('.toggle').hide();
     var newHeight = para.innerHeight();

@@ -1,5 +1,5 @@
 - supporters = Supporter.where('publicity.state' => :approved).desc('publicity.created_at')
-
+== Redcarpet::Markdown.new(Redcarpet::Render::HTML).render "**test**"
 h1 = title t('.title')
 - supporters.each do |supporter|
   .statement
@@ -8,7 +8,7 @@ h1 = title t('.title')
     - unless supporter.publicity.organisation.blank?
       em= ", #{supporter.publicity.organisation}"
     br
-    p = supporter.publicity.statement
+    article== Redcarpet::Markdown.new(Redcarpet::Render::HTML).render supporter.publicity.statement
     hr.clearfix
      
 .text-center = link_to t(".submit_your_own_statement"), new_publicity_path
