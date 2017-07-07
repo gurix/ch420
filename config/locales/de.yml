@@ -16,6 +16,7 @@ de:
       sponsoring: Sponsoren
       numbers: Zahlen
       statementes: Statements
+      collection_concept: Wie macht man eine Volksinitiative?
       
     lang: Sprache
     are_you_sure: Bist du sicher?
@@ -115,6 +116,7 @@ de:
     donation: spenden
     numbers: zahlen
     statementes: statements
+    collection_concept: Sammelkonzept
 
   mongoid:
     models:

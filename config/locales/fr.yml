@@ -20,7 +20,8 @@ fr:
       faq: Questions et réponses (en allemand)
       sponsoring: Sponsors (en allemand)
       numbers: Chiffres (en allemand)
-      statements: Déclarations 
+      statements: Déclarations
+      collection_concept: Comment faire une initiative populaire? (en allemand)
     
     lang: Langue
     are_you_sure: Tu es sûre?
@@ -112,6 +113,7 @@ fr:
     donation: donation
     numbers: chiffres
     statements: declarations 
+    collection_concept: plan_de_collecte
 
   mongoid:
     models:

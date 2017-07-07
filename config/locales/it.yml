@@ -18,6 +18,7 @@ it:
       sponsoring: Sponsor
       numbers: Numeri (in tedesco)
       statements: Dichiarazioni
+      collection_concept: Come fare un iniziativa popolare? (in tedesco)
       
     counter:
       supporters: "Sostenitore:"
@@ -116,6 +117,7 @@ it:
     donation: donazione
     numbers: numeri
     statements: dichiarazioni
+    collection_concept: sistema_di_raccolta
 
   mongoid:
    attributes:

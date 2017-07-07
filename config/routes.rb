@@ -18,6 +18,7 @@ Rails.application.routes.draw do
     get '/sponsoring', to: 'pages#show', as: :sponsoring, page: 'sponsoring'
     get '/donation', to: 'pages#show', as: :donation, page: 'donation'
     get '/numbers', to: 'pages#show', as: :numbers, page: 'numbers'
+    get '/collection_concept', to: 'pages#show', as: :collection_concept, page: 'collection_concept'
     get '/statements', to: 'pages#show', as: :statements, page: 'statements'
   end
 
