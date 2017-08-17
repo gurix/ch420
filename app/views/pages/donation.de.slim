@@ -33,10 +33,16 @@ b Aktueller Stand: 27'000 CHF
     p Detailliertere Informationen, wie dieses Geld eingesetzt wird, findest du unter <a href="#{collection_concept_path}">«Wie macht man eine Volksinitiative?»</a>
 
 .row
-  .col-xs-12.col-md-9
+  .col-md-7.col-xs-12
     = link_to asset_path('Einzahlungsschein_Spende_Initiative.pdf') do
       = image_tag('Einzahlungsschein_Spende_Initiative.jpg', class:'img-responsive pagelogo', alt: 'Einzahlungsschein Spende initiative')
-
+  .col-md-5.col-xs-12
+    p 
+      = image_tag '1LaYbTiCjhrUhxrQ9D5BQUfxPmRqJ7Q3gG.png', alt: 'Bitcoin Adresse: 1LaYbTiCjhrUhxrQ9D5BQUfxPmRqJ7Q3gG', width: '150', class: 'pull-right'
+    div
+      | Gerne nehmen wir auch Spenden via Bitcoin unter folgender Adresse entgegen:
+      br
+      strong 1LaYbTiCjhrUhxrQ9D5BQUfxPmRqJ7Q3gG
 h2 Warum kann ich nicht auch online oder per Kreditkarte spenden?
 p Wir haben mehrere Versuche unternommen, dies mittels verschiedener (zahlbaren) Payment-Service-Providern zu ermöglichen, sind jedoch immer wieder gescheitert. Die Gründe dafür sind vielfältig: Zum einen bieten viele solche Dienstleister ihren Service gar nicht für Vereine an, zum anderen ist das Schweizer Vereinsrecht relativ liberal. Ein zentrales Register für Vereine wie in anderen Ländern üblich, gibt es nicht. Einzig ein Handelsregistereintrag könnte ein wenig Klarheit schaffen. Dies ist jedoch zu kostspielig und würde momentan zu viel Zeit in Anspruch nehmen. Selbst wenn wir einen solchen hätten, wäre es nicht sicher, dass Dienste wie beispielsweise PayPal uns akzeptieren würden.
 p Eine andere schwierigere Hürde ist unser Umfeld. Wir haben, genau wie in Amerika, die Schwierigkeit, dass unser Themenbereich Cannabis ist. Da der Umgang mit Cannabis illegal ist, scheinen die Banken der Logik verfallen zu sein, dass alles was mit Cannabis zu tun hat, auch illegal sei, notabene auch das Ändern des illegalen Status. Viele Finanzdienstleister wie etwa Stripe.com lehnen daher jegliche Zusammenarbeit kategorisch ab.
