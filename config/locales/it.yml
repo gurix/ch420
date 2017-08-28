@@ -11,7 +11,7 @@ it:
     topnavigation:
       sign_out: Disconnettersi
       sign_in: Registro
-      initiative_text: Il testo dell’iniziativa
+      initiative_text: Il testo dell’iniziativa (in tedesco)
       initiative: l'iniziativa
       arguments: Argomentazioni
       faq: Domande e risposte (in tedesco)
