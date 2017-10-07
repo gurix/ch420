@@ -18,7 +18,7 @@ gem "mongoid-paperclip"
 gem 'paperclip-i18n'
 
 # Amazon's S3 file hosting service
-gem 'aws-sdk'
+gem 'aws-sdk', '< 3.0' # see https://github.com/thoughtbot/paperclip/issues/2484
 
 # A fixtures replacement 
 gem 'factory_girl'
