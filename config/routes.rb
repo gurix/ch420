@@ -28,6 +28,7 @@ Rails.application.routes.draw do
     resources :supporters, only: [:new, :create]
     resource :publicity
     get '/thanks', to: 'pages#thanks', as: :thanks
+    resources :charges    
   end
 
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
