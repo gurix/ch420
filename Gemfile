@@ -12,7 +12,10 @@ gem 'coffee-rails', '~> 4.1.0'
 # gem 'therubyracer', platforms: :ruby
 
 # Integrate Paperclip into Mongoid.
-gem "mongoid-paperclip"
+gem 'mongoid-paperclip'
+
+# Stripe integration
+gem 'stripe'
 
 # To extend paperclip with locales
 gem 'paperclip-i18n'

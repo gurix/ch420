@@ -1,12 +1,19 @@
 h1 = title 'Deine Spende zählt - Verein Legalize it!'
-p 
-  dl.dl-horizontal
-    dt Postkonto:
-    dd 87-091354-3, Verein Legalize it!, Postfach 2159, 8031 Zürich
-    dt IBAN:
-    dd CH02 0900 0000 8709 1354 3 
-    dt Zahlungszweck:
-    dd Spende Initiative
+
+script src="https://checkout.stripe.com/checkout.js"
+javascript:
+  var handler = StripeCheckout.configure({
+    key: "#{Rails.configuration.stripe[:publishable_key]}",
+    locale: '#{I18n.locale}',
+    image: '#{image_url("ch420_logo.png")}',
+    name: 'Verein Legalize it!',
+    currency: 'CHF',
+    description: 'Initiativspende',
+    token: function(token) {
+      $('input#stripeToken').val(token.id);
+      $('form').submit();
+    }
+  });
 
 h2 Spendenbarometer 
 b Aktueller Stand: 62'000 CHF
@@ -32,31 +39,96 @@ b Aktueller Stand: 62'000 CHF
 
     p Detailliertere Informationen, wie dieses Geld eingesetzt wird, findest du unter <a href="#{collection_concept_path}">«Wie macht man eine Volksinitiative?»</a>
 
+h2 Via Kreditkarte online speden
+= form_tag charges_path do
+  = hidden_field_tag(:stripeToken)
+  #error_explanation.text-danger
+    = flash[:error] if flash[:error].present?
+  .row
+    .col-xs12.col-md-5
+      button.donatebox.btn.btn-success onclick="donate(20)" 20 .-
+      button.donatebox.btn.btn-success onclick="donate(50)" 50 .-
+      button.donatebox.btn.btn-success onclick="donate(100)" 100 .-
+      button.donatebox.btn.btn-success onclick="donate(200)" 200 .-
+    .col-xs12.col-md-6
+      .form-group
+        strong oder einen eigenen Betrag
+      .form-group
+        .input-group
+          .input-group-addon CHF
+          = text_field_tag(:amount, 50  , class: 'form-control')
+      
+      .form-group 
+        button#donateButton.btn.btn-success Spenden übermitteln
+
+
+
+h2 Mit Bitcoin und Bitcoin Cash spenden 
 .row
-  .col-md-7.col-xs-12
-    = link_to asset_path('Einzahlungsschein_Spende_Initiative.pdf') do
-      = image_tag('Einzahlungsschein_Spende_Initiative.jpg', class:'img-responsive pagelogo', alt: 'Einzahlungsschein Spende initiative')
-  .col-md-5.col-xs-12
+  .col-md-6.col-xs-12
     p 
       = image_tag '1LaYbTiCjhrUhxrQ9D5BQUfxPmRqJ7Q3gG.png', alt: 'Bitcoin Adresse: 1LaYbTiCjhrUhxrQ9D5BQUfxPmRqJ7Q3gG', width: '150', class: 'pull-right'
     div
       | Gerne nehmen wir auch Spenden via Bitcoin unter folgender Adresse entgegen:
       br
       strong 1LaYbTiCjhrUhxrQ9D5BQUfxPmRqJ7Q3gG
-    .clearfix
-    hr
+  .col-md-6.col-xs-12
     p 
-      = image_tag '1LVGcneFcYqCkhDFNsnhWb6x7cCHHxakg9.png', alt: 'Bitcoin Cash Adresse: 1LVGcneFcYqCkhDFNsnhWb6x7cCHHxakg9', width: '150', class: 'pull-left'
+      = image_tag '1LVGcneFcYqCkhDFNsnhWb6x7cCHHxakg9.png', alt: 'Bitcoin Cash Adresse: 1LVGcneFcYqCkhDFNsnhWb6x7cCHHxakg9', width: '150', class: 'pull-right'
     div
       | Oder Bitcoin Cash unter folgender Adresse:
       br
       strong 1LVGcneFcYqCkhDFNsnhWb6x7cCHHxakg9
-h2 Warum kann ich nicht auch online oder per Kreditkarte spenden?
-p Wir haben mehrere Versuche unternommen, dies mittels verschiedener (zahlbaren) Payment-Service-Providern zu ermöglichen, sind jedoch immer wieder gescheitert. Die Gründe dafür sind vielfältig: Zum einen bieten viele solche Dienstleister ihren Service gar nicht für Vereine an, zum anderen ist das Schweizer Vereinsrecht relativ liberal. Ein zentrales Register für Vereine wie in anderen Ländern üblich, gibt es nicht. Einzig ein Handelsregistereintrag könnte ein wenig Klarheit schaffen. Dies ist jedoch zu kostspielig und würde momentan zu viel Zeit in Anspruch nehmen. Selbst wenn wir einen solchen hätten, wäre es nicht sicher, dass Dienste wie beispielsweise PayPal uns akzeptieren würden.
-p Eine andere schwierigere Hürde ist unser Umfeld. Wir haben, genau wie in Amerika, die Schwierigkeit, dass unser Themenbereich Cannabis ist. Da der Umgang mit Cannabis illegal ist, scheinen die Banken der Logik verfallen zu sein, dass alles was mit Cannabis zu tun hat, auch illegal sei, notabene auch das Ändern des illegalen Status. Viele Finanzdienstleister wie etwa Stripe.com lehnen daher jegliche Zusammenarbeit kategorisch ab.
+.clearfix
 
-p Somit bleibt nur zum guten alten Einzahlungsschein zu greifen beziehungsweise die richtigen Zahlenkombinationen beim E-Banking an den richtigen Stellen einzufügen.
+h2 Per Überweisung spenden
+.row
+  .col-md-7.col-xs-12
+     dl.dl-horizontal
+      dt Postkonto:
+      dd 87-091354-3, Verein Legalize it!, Postfach 2159, 8031 Zürich
+      dt IBAN:
+      dd CH02 0900 0000 8709 1354 3 
+      dt Zahlungszweck:
+      dd Spende Initiative
+  .col-md-5.col-xs-12
+    = link_to asset_path('Einzahlungsschein_Spende_Initiative.pdf') do
+        = image_tag('Einzahlungsschein_Spende_Initiative.jpg', class:'img-responsive', alt: 'Einzahlungsschein Spende initiative')
+
+   
 p
  b Wir würden uns freuen, wenn ihr das macht und uns finanziell unter die Arme greift.
   
 p Danke, dein Verein Legalize it!
+
+javascript:
+  $('.donatebox').on('click', function(e)  {
+    e.preventDefault();
+  });
+
+  function donate(amount) {
+    $('#amount').val(amount);
+    $('#donateButton').click();
+  }
+
+  $('#donateButton').on('click', function(e) {
+    e.preventDefault();
+
+    $('#error_explanation').html('');
+
+    var amount = $('input#amount').val();
+    amount = parseFloat(amount);
+
+    if (isNaN(amount)) {
+      $('#error_explanation').html('<p>Bitte geben sie einen Betrag in CHF ein.</p>');
+    }
+    else if (amount < 5.00) {
+      $('#error_explanation').html('<p>Ihre Spende muss mindestens 5.- CHF betragen.</p>');
+    }
+    else {
+      amount = amount * 100; // Needs to be an integer!
+      handler.open({
+        amount: Math.round(amount)
+      })
+    }
+  });
