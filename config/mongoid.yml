@@ -12,6 +12,11 @@ test:
       database: ch420_test
       hosts:
         - localhost:27017
+
+staging:
+  clients:
+    default:
+      uri: <%= ENV['MONGODB_URI'] %>
         
 production:
   clients:
