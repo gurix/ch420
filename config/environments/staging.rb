@@ -1,6 +1,11 @@
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
 
+  config.middleware.insert_before(::Rack::Runtime, "::Rack::Auth::Basic", "Staging") do |_u, p|
+    p == ENV['STAGING_PASSWORD']
+  end
+
+
   # Code is not reloaded between requests.
   config.cache_classes = true
 
