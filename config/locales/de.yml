@@ -138,6 +138,7 @@ de:
         language: Sprache
         password_confirmation: Passwort bestätigen
         current_password: Aktuelles Passwort
+        tel: Telefon (optional)
       publicity:
         state: Status
         organisation: Organisation

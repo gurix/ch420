@@ -10,6 +10,7 @@ feature 'Support' do
     fill_in 'Postleitzahl', with: '8704'
     fill_in 'Ort', with: 'Herrliberg'
     fill_in 'E-Mail', with: 'blocher@blocher.ch'
+    fill_in 'Telefon', with: '12345'
     fill_in 'Kommentar / Feedback', with: 'Test text'
 
     choose 'Ich würde eine Volksinitiative für die Legalisierung von Cannabis unterschreiben und helfe aktiv Unterschriften in meiner Umgebung zu sammeln.'
@@ -30,6 +31,7 @@ feature 'Support' do
     expect(supporter.comments).to eq 'Test text'
     expect(supporter.language).to eq 'de'
     expect(supporter.li_membership).to eq true
+    expect(supporter.tel).to eq '12345'
   end
 
   scenario 'A bot tries to enter data' do

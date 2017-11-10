@@ -135,7 +135,8 @@ fr:
         language: Langue
         password_confirmation: confirmer le mot de passe
         current_password: Mot de passe actuel
-      
+        tel: Téléphone (facultatif)
+        
       publicity:
         status: Statu
         organisation: Organisation

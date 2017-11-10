@@ -137,6 +137,7 @@ it:
         language: Lingua
         password_confirmation: conferma password
         current_password: Password corrente
+        tel: Telefono (opzionale)
       publicity:
         status: Statu
         organisation: Organizzazione
