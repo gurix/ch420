@@ -65,8 +65,11 @@ html lang="#{I18n.locale}"
     .container.content
       = render 'shared/flashes'
       = render 'shared/header'
-      = render 'shared/topnavigation'
-      = yield
+      .row
+        .col-xs-12.col-sm-3
+          nav#mainnav = render_navigation
+        .col-xs-12.col-sm-9
+          main= yield
       hr
       footer.row
         .col-xs-12.col-sm-6

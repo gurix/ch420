@@ -22,6 +22,7 @@ fr:
       numbers: Chiffres (en allemand)
       statements: Déclarations
       collection_concept: Comment faire une initiative populaire? (en allemand)
+      my_account: Mon compte
     
     lang: Langue
     are_you_sure: Tu es sûre?
@@ -77,7 +78,7 @@ fr:
     
     new:
       title: Salut %{name}
-      edit: Modifier mes données ...
+      edit: Modifier mes données
       my_data: Mes données
   
   publicities:

@@ -19,6 +19,7 @@ it:
       numbers: Numeri (in tedesco)
       statements: Dichiarazioni
       collection_concept: Come fare un iniziativa popolare? (in tedesco)
+      my_account: Il mio account
       
     counter:
       supporters: "Sostenitore:"
@@ -81,7 +82,7 @@ it:
     
     new:
       title: Ciao %{name}
-      edit: Modifica i miei dati ...
+      edit: Modifica i miei dati
       my_data: Miei dati
   
   publicities:
