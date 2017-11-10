@@ -9,6 +9,7 @@ it:
       logo: Logo dell'iniziativa
       title_html: Si, voglio  <strong class="text-success">legalizzare</strong> la  <strong class="text-success">cannabis in Svizzera</strong>
     topnavigation:
+      support: Sostenici
       sign_out: Disconnettersi
       sign_in: Registro
       initiative_text: Il testo dell’iniziativa (in tedesco)
