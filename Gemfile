@@ -14,6 +14,9 @@ gem 'coffee-rails', '~> 4.1.0'
 # Integrate Paperclip into Mongoid.
 gem 'mongoid-paperclip'
 
+# Markdown rendering
+gem 'redcarpet'
+
 # Stripe integration
 gem 'stripe'
 

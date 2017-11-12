@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :greendays
   devise_for :supporters
   root to: 'supporters#new' 
 

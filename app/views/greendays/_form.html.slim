@@ -1,0 +1,14 @@
+= simple_form_for(@greenday) do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.input :title
+    = f.input :address, as: :text
+    = f.input :homepage
+    = f.input :description, as: :text
+    = f.input :logo, as: :file, required: false
+    = image_tag f.object.logo.url(:original), alt: '', class: 'img-responsive'
+    = f.input :delete_logo, as: :boolean
+
+  .form-actions
+    = f.button :submit, 'Shop speichern'
