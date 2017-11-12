@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  resources :greendays
   devise_for :supporters
   root to: 'supporters#new' 
 
@@ -12,6 +11,7 @@ Rails.application.routes.draw do
   end
 
   localized do
+    resources :greendays
     get '/initiative_text', to: 'pages#show', as: :initiative_text, page: 'initiative_text'
     get '/arguments', to: 'pages#show', as: :arguments, page: 'arguments'
     get '/faq', to: 'pages#show', as: :faq, page: 'faq'

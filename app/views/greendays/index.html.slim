@@ -1,14 +1,14 @@
 
 h1.sr-only = title 'Gründonnerstag'
 #map
-= link_to 'Neun Shop erfassen', new_greenday_path if admin?
+= link_to 'Neuen Shop erfassen', new_greenday_path if admin?
 
-.row
+.row.fix
   - @greendays.each do |greenday|
     .col-xs-12.col-sm-6.col-lg-4
       .well
         h2 = greenday.title
-        - if greenday.logo
+        - if greenday.logo.url(:original) != '/logos/original/missing.png'
           = image_tag greenday.logo.url(:original), alt: '', class: 'img-responsive'
         address = simple_format(greenday.address)
         - if greenday.homepage

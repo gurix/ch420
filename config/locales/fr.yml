@@ -116,6 +116,7 @@ fr:
     numbers: chiffres
     statements: declarations 
     collection_concept: plan_de_collecte
+    greendays: jeudi_vert
 
   mongoid:
     models:

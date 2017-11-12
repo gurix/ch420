@@ -120,6 +120,7 @@ it:
     numbers: numeri
     statements: dichiarazioni
     collection_concept: sistema_di_raccolta
+    greendays: giovedi_verdi
 
   mongoid:
    attributes:

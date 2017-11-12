@@ -119,6 +119,7 @@ de:
     numbers: zahlen
     statementes: statements
     collection_concept: Sammelkonzept
+    greendays: gründonnerstag
 
   mongoid:
     models:
