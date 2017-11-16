@@ -57,7 +57,7 @@ SimpleNavigation::Configuration.run do |navigation|
     #                            against the current URI.  You may also use a proc, or the symbol <tt>:subpath</tt>.
     #
     
-    primary.item :greendays, 'Gründonnerstag', greendays_path
+    primary.item :greendays, '#Greensaturday', greendays_path
 
     unless supporter_signed_in?
       primary.item :home, I18n.t('.shared.topnavigation.support'), "/#{I18n.locale}"
