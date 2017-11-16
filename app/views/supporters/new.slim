@@ -23,6 +23,8 @@
             dd == t("age_category.#{current_supporter.age_category}")
             dt = Supporter.human_attribute_name(:language)
             dd = t("languages.#{current_supporter.language}")
+            dt = Supporter.human_attribute_name(:tel)
+            dd = current_supporter.tel
       
           p
             = link_to t('.edit'), edit_supporter_registration_path(), class: 'pull-right'

@@ -12,6 +12,7 @@ fr:
       logo: Logo de l'initiative
       title_html: Oui, je veux  <strong class="text-success">légaliser le cannabis</strong> en Suisse.
     topnavigation:
+      support: Soutenez-nous
       sign_out: déconnecter
       sign_in: Connexion
       initiative: l' initiative
@@ -22,6 +23,7 @@ fr:
       numbers: Chiffres (en allemand)
       statements: Déclarations
       collection_concept: Comment faire une initiative populaire? (en allemand)
+      my_account: Mon compte
     
     lang: Langue
     are_you_sure: Tu es sûre?
@@ -77,7 +79,7 @@ fr:
     
     new:
       title: Salut %{name}
-      edit: Modifier mes données ...
+      edit: Modifier mes données
       my_data: Mes données
   
   publicities:
@@ -114,6 +116,7 @@ fr:
     numbers: chiffres
     statements: declarations 
     collection_concept: plan_de_collecte
+    greendays: jeudi_vert
 
   mongoid:
     models:
@@ -135,7 +138,8 @@ fr:
         language: Langue
         password_confirmation: confirmer le mot de passe
         current_password: Mot de passe actuel
-      
+        tel: Téléphone (facultatif)
+        
       publicity:
         status: Statu
         organisation: Organisation

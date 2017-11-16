@@ -14,8 +14,14 @@ gem 'coffee-rails', '~> 4.1.0'
 # Integrate Paperclip into Mongoid.
 gem 'mongoid-paperclip'
 
+# Markdown rendering
+gem 'redcarpet'
+
 # Stripe integration
 gem 'stripe'
+
+# Render your navigation as HTML list, link list or breadcrumbs.
+gem 'simple-navigation'
 
 # To extend paperclip with locales
 gem 'paperclip-i18n'
@@ -36,9 +42,6 @@ gem 'jquery-rails'
 gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
-
-# Easily generate a Twitter Bootstrap navbar in your Rails app
-gem 'rails_bootstrap_navbar'
 
 # Kaminari Mongoid adapter.
 gem 'kaminari-mongoid'

@@ -7,6 +7,8 @@ de:
       logo: Logo der Initiative
       title_html: Ja, ich will <strong class="text-success">Cannabis</strong> in der Schweiz <strong class="text-success">legalisieren</strong>
     topnavigation:
+      support: Unterstützen
+      my_account: Mein Konto
       sign_in: Anmelden
       sign_out: Abmelden
       initiative_text: Der Initiativtext im Wortlaut
@@ -15,7 +17,7 @@ de:
       faq: Fragen und Antworten
       sponsoring: Sponsoren
       numbers: Zahlen
-      statementes: Statements
+      statements: Statements
       collection_concept: Wie macht man eine Volksinitiative?
       
     lang: Sprache
@@ -80,7 +82,7 @@ de:
     
     new:
       title: Hallo %{name}
-      edit: Meine Daten bearbeiten...
+      edit: Meine Daten bearbeiten
       my_data: Meine Daten
   
   publicities:
@@ -117,6 +119,7 @@ de:
     numbers: zahlen
     statementes: statements
     collection_concept: Sammelkonzept
+    greendays: gründonnerstag
 
   mongoid:
     models:
@@ -138,6 +141,7 @@ de:
         language: Sprache
         password_confirmation: Passwort bestätigen
         current_password: Aktuelles Passwort
+        tel: Telefon (optional)
       publicity:
         state: Status
         organisation: Organisation

@@ -1,0 +1,69 @@
+
+h1.sr-only = title 'Gründonnerstag'
+= render 'description'
+#map
+= link_to 'Neuen Shop erfassen', new_greenday_path if admin?
+
+.row.fix
+  - @greendays.each do |greenday|
+    .col-xs-12.col-sm-6.col-lg-4
+      .well
+        h2 = greenday.title
+        - if greenday.logo.url(:original) != '/logos/original/missing.png'
+          = image_tag greenday.logo.url(:original), alt: '', class: 'img-responsive'
+        address = simple_format(greenday.address)
+        - if greenday.homepage
+          = link_to(greenday.homepage, greenday.homepage, target: "_blank")
+        p = markdown(greenday.description).html_safe
+
+        - if admin?
+          = link_to 'Bearbeiten', edit_greenday_path(greenday)
+          | &nbsp;
+          = link_to 'Löschen', greenday, data: { confirm: 'Are you sure?' }, method: :delete
+
+javascript:
+  function initMap() {
+
+    var map = new google.maps.Map(document.getElementById('map'), {
+      zoom: 8, center: {lat: 47.242, lng: 8.133},
+    });
+
+    var greendays_url = "#{greendays_url(format: :json)}"
+
+    var infowindow = new google.maps.InfoWindow({
+          content: '',
+          maxWidth: 200
+        });
+
+
+    $.getJSON(greendays_url, function(json) {
+      $.each(json, function(key, data) {
+        var marker = new google.maps.Marker({
+          position: {lat: data.coordinates[1], lng: data.coordinates[0] },
+          map: map,
+          title: data.title
+        });
+
+        marker.addListener('click', function() {
+          infowindow.open(map, marker);
+
+          var content = '<b>' + data.title + '</b>'
+          if(data.logo) {
+            content += '<img src="' + data.logo + ' alt="" width="100%"/>'
+          }
+          content += '<address>' + data.address.replace(/\n/g,"<br>")
+          if(data.homepage) {
+            content += '<br/><a href="' + data.homepage + '" target="_blank">' +data.homepage + '</a>'
+          }
+          content += '</address>'
+
+          if(data.description) {
+            content += '<p>' + data.description + '</p>'
+          }
+          infowindow.setContent(content);
+        });
+      });
+    });
+  }
+
+script async="" defer="" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBbwMtGKDqf4i8x9-OVP1-H_QVAKp92h2M&callback=initMap&libraries=visualization" 

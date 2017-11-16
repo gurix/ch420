@@ -45,6 +45,7 @@ class Supporter
   field :comments,      type: String
   field :language,      type: String
   field :duplicate,     type: Boolean, default: false
+  field :tel,           type: String
 
   validates :first_name,   presence: true
   validates :last_name,    presence: true

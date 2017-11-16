@@ -9,6 +9,7 @@
       = f.input :city, placeholder: t('.placeholders.city')
       = f.input :zip, placeholder: t('.placeholders.zip')
       = f.input :email, placeholder: t('.placeholders.email')
+      = f.input :tel, placeholder: '+41 (0) xxxx'
       = f.input :support, as: :radio_buttons, collection: t('support_type').map{ |x| [x.first, raw(x.last)]}, label_method: :last, value_method: :first
       = f.input :li_membership, as: :boolean
       = f.input :age_category, as: :radio_buttons, collection: t('age_category'), label_method: :last, value_method: :first
