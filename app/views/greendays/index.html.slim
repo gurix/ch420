@@ -13,7 +13,7 @@ h1.sr-only = title '#Greensaturday'
           = image_tag greenday.logo.url(:original), alt: '', class: 'img-responsive'
         address = simple_format(greenday.address)
         - if greenday.homepage
-          = link_to(greenday.homepage, greenday.homepage, target: "_blank")
+          = link_to("Website", greenday.homepage, target: "_blank")
         p = markdown(greenday.description).html_safe
 
         - if admin?
@@ -53,7 +53,7 @@ javascript:
           }
           content += '<address>' + data.address.replace(/\n/g,"<br>")
           if(data.homepage) {
-            content += '<br/><a href="' + data.homepage + '" target="_blank">' +data.homepage + '</a>'
+            content += '<br/><a href="' + data.homepage + '" target="_blank">Website</a>'
           }
           content += '</address>'
 
