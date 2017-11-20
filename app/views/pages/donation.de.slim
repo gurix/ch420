@@ -42,8 +42,9 @@ b Aktueller Stand: 73'000 CHF
 h2 Via Kreditkarte online spenden
 = form_tag charges_path do
   = hidden_field_tag(:stripeToken)
-  #error_explanation.text-danger
-    = flash[:error] if flash[:error].present?
+  - if flash[:error].present?
+    #error_explanation.text-danger 
+      = flash[:error] 
   .row
     .col-xs12.col-md-5
       button.donatebox.btn.btn-success onclick="donate(20)" 20 .-
