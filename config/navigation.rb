@@ -57,7 +57,7 @@ SimpleNavigation::Configuration.run do |navigation|
     #                            against the current URI.  You may also use a proc, or the symbol <tt>:subpath</tt>.
     #
     
-    primary.item :greendays, '#Greensaturday', greendays_path
+    #primary.item :greendays, '#Greensaturday', greendays_path
 
     unless supporter_signed_in?
       primary.item :home, I18n.t('.shared.topnavigation.support'), "/#{I18n.locale}"
@@ -70,6 +70,7 @@ SimpleNavigation::Configuration.run do |navigation|
     end
     primary.item :statements, I18n.t('.shared.topnavigation.statements'), statements_path do |statements|
       statements.item :new_statement,  I18n.t('.supporters.publicity.renew'), new_publicity_path
+      statements.item :new_statement,  'Statement Administration', admin_publicities_path if supporter_signed_in? && current_supporter.admin?
     end
     primary.item :donation, I18n.t('donation'), donation_path
     primary.item :blog, 'Blog', 'http://blog.cannabis-initiative.ch/', link_html: { target: '_blank'}
