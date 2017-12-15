@@ -15,66 +15,68 @@ javascript:
     }
   });
 
-h2 Spendenbarometer 
-b Aktueller Stand: 93'000 CHF
-.row 
+h2 Spendenbarometer
+b Aktueller Stand: 101'250 CHF
+.row
   .col-xs-12
     .progress-target style="width: 20%"
       = link_to "Variante C:", collection_concept_path
       br
       | 100'000 CHF
-    
+
     .progress-target style="width: 30%"
       = link_to "Variante B:", collection_concept_path
       br
       | 250'000 CHF
-    
+
     .progress-target style="width: 48%"
       = link_to "Variante A:", collection_concept_path
       br
       | 500'000 CHF
 
     .progress
-      .progress-bar.progress-bar-success role="progressbar" aria-valuenow="93000" aria-valuemin="0" aria-valuemax="500000" style="width: 18.6%"
+      .progress-bar.progress-bar-success role="progressbar" aria-valuenow="101250" aria-valuemin="0" aria-valuemax="500000" style="width: 20.6%"
 
     p Detailliertere Informationen, wie dieses Geld eingesetzt wird, findest du unter <a href="#{collection_concept_path}">«Wie macht man eine Volksinitiative?»</a>
 
 h2 Via Kreditkarte online spenden
 = form_tag charges_path do
   = hidden_field_tag(:stripeToken)
-  - if flash[:error].present?
-    #error_explanation.text-danger 
-      = flash[:error] 
+  #error_explanation.text-danger.hidden
+    = flash[:error] if flash[:error].present?
   .row
     .col-xs12.col-md-5
       button.donatebox.btn.btn-success onclick="donate(20)" 20 .-
       button.donatebox.btn.btn-success onclick="donate(50)" 50 .-
       button.donatebox.btn.btn-success onclick="donate(100)" 100 .-
       button.donatebox.btn.btn-success onclick="donate(200)" 200 .-
+      button.donatebox.btn.btn-success onclick="donate(500)" 500 .-
+      button.donatebox.btn.btn-success onclick="donate(1000)" 1000 .-
+
     .col-xs12.col-md-6
       .form-group
         strong oder einen eigenen Betrag
       .form-group
         .input-group
           .input-group-addon CHF
-          = text_field_tag(:amount, 50  , class: 'form-control')
-      
-      .form-group 
+          = text_field_tag(:amount, 100  , class: 'form-control')
+
+      .form-group
         button#donateButton.btn.btn-success Spenden übermitteln
 
 
 
-h2 Mit Bitcoin und Bitcoin Cash spenden 
+h2 Mit Bitcoin und Bitcoin Cash spenden
 .row
   .col-md-6.col-xs-12
-    p 
+    p
       = image_tag '1LaYbTiCjhrUhxrQ9D5BQUfxPmRqJ7Q3gG.png', alt: 'Bitcoin Adresse: 1LaYbTiCjhrUhxrQ9D5BQUfxPmRqJ7Q3gG', width: '150', class: 'pull-right'
     div
       | Gerne nehmen wir auch Spenden via Bitcoin unter folgender Adresse entgegen:
       br
       strong 1LaYbTiCjhrUhxrQ9D5BQUfxPmRqJ7Q3gG
   .col-md-6.col-xs-12
-    p 
+    p
       = image_tag '1LVGcneFcYqCkhDFNsnhWb6x7cCHHxakg9.png', alt: 'Bitcoin Cash Adresse: 1LVGcneFcYqCkhDFNsnhWb6x7cCHHxakg9', width: '150', class: 'pull-right'
     div
       | Oder Bitcoin Cash unter folgender Adresse:
@@ -89,17 +91,17 @@ h2 Per Überweisung spenden
       dt Postkonto:
       dd 87-091354-3, Verein Legalize it!, Postfach 2159, 8031 Zürich
       dt IBAN:
-      dd CH02 0900 0000 8709 1354 3 
+      dd CH02 0900 0000 8709 1354 3
       dt Zahlungszweck:
       dd Spende Initiative
   .col-md-5.col-xs-12
     = link_to asset_path('Einzahlungsschein_Spende_Initiative.pdf') do
         = image_tag('Einzahlungsschein_Spende_Initiative.jpg', class:'img-responsive', alt: 'Einzahlungsschein Spende initiative')
 
-   
+
 p
  b Wir würden uns freuen, wenn ihr das macht und uns finanziell unter die Arme greift.
-  
+
 p Danke, dein Verein Legalize it!
 
 javascript:
@@ -121,10 +123,12 @@ javascript:
     amount = parseFloat(amount);
 
     if (isNaN(amount)) {
+      $('#error_explanation').toggleClass('hidden')
       $('#error_explanation').html('<p>Bitte geben sie einen Betrag in CHF ein.</p>');
     }
-    else if (amount < 5.00) {
-      $('#error_explanation').html('<p>Ihre Spende muss mindestens 5.- CHF betragen.</p>');
+    else if (amount < 10.00) {
+      $('#error_explanation').toggleClass('hidden')
+      $('#error_explanation').html('<p>Ihre Spende muss mindestens 10.- CHF betragen.</p>');
     }
     else {
       amount = amount * 100; // Needs to be an integer!
