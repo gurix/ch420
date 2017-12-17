@@ -1,0 +1,1 @@
+json.partial! "network_signature_collections/network_signature_collection", network_signature_collection: @network_signature_collection

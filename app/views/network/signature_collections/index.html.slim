@@ -1,0 +1,39 @@
+h1 = title t('.title')
+#signature_collections_table
+  input.search.form-control.string placeholder="#{t('.search')}"
+  table.table
+    thead
+      tr
+        th = Network::SignatureCollection.human_attribute_name :location_name
+        th = Network::SignatureCollection.human_attribute_name :location_zip
+        th = Network::SignatureCollection.human_attribute_name :location_address
+        th = Network::SignatureCollection.human_attribute_name :event_date_start
+        th = Network::SignatureCollection.human_attribute_name :event_date_end
+        - if admin?
+          th
+          th
+          th
+
+    tbody.list
+      - @network_signature_collections.each do |network_signature_collection|
+        tr
+          td.location_name = network_signature_collection.location_name
+          td.location_zip = network_signature_collection.location_zip
+          td.location_address = network_signature_collection.location_address
+          td.event_date_start = l network_signature_collection.event_date_start, format: :short
+          td.event_date_end = l network_signature_collection.event_date_end, format: :short
+          - if admin?
+            td = link_to t('shared.show'), network_signature_collection
+            td = link_to t('shared.edit'), edit_network_signature_collection_path(network_signature_collection)
+            td = link_to t('shared.destroy'), network_signature_collection, data: { confirm: 'Are you sure?' }, method: :delete
+
+br
+
+= link_to t('.new'), new_network_signature_collection_path
+
+javascript:
+  var options = {
+    valueNames: [ 'location_name', 'location_zip', 'location_address', 'event_date_start', 'event_date_end' ]
+  };
+
+  var signature_collections = new List('signature_collections_table', options);

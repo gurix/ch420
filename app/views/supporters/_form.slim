@@ -1,67 +1,61 @@
-- title(t('shared.header.title_html'))
-.row
-  .col-xs-12.col-md-7
-    h2.sr-only = t('.form')
-    = simple_form_for @supporter do |f|
-      = f.input :first_name, placeholder: t('.placeholders.first_name')
-      = f.input :last_name, placeholder: t('.placeholders.last_name')
-      = f.input :street, placeholder: t('.placeholders.street')
-      = f.input :city, placeholder: t('.placeholders.city')
-      = f.input :zip, placeholder: t('.placeholders.zip')
-      = f.input :email, placeholder: t('.placeholders.email')
-      = f.input :tel, placeholder: '+41 (0) xxxx'
-      = f.input :support, as: :radio_buttons, collection: t('support_type').map{ |x| [x.first, raw(x.last)]}, label_method: :last, value_method: :first
-      = f.input :li_membership, as: :boolean
-      = f.input :age_category, as: :radio_buttons, collection: t('age_category'), label_method: :last, value_method: :first
-      = f.input :comments, as: :text
-      .form-group
-        = f.submit value: t('.submit'), class: 'btn btn-success'
-      .form-group
-        = link_to t('.terms_and_conditions'), terms_and_conditions_path, class: 'small'
+= simple_form_for @supporter do |f|
+  = f.input :first_name, placeholder: t('.placeholders.first_name')
+  = f.input :last_name, placeholder: t('.placeholders.last_name')
+  = f.input :street, placeholder: t('.placeholders.street')
+  = f.input :city, placeholder: t('.placeholders.city')
+  = f.input :zip, placeholder: t('.placeholders.zip')
+  = f.input :email, placeholder: t('.placeholders.email')
+  = f.input :tel, placeholder: '+41 (0) xxxx'
+  = f.input :support, as: :radio_buttons, collection: t('support_type').map{ |x| [x.first, raw(x.last)]}, label_method: :last, value_method: :first
+  = f.input :li_membership, as: :boolean
+  = f.input :age_category, as: :radio_buttons, collection: t('age_category'), label_method: :last, value_method: :first
+  = f.input :comments, as: :text
+  .form-group
+    = f.submit value: t('.submit'), class: 'btn btn-success'
+  .form-group
+    = link_to t('.terms_and_conditions'), terms_and_conditions_path, class: 'small'
 
 
-    javascript:
-      var cities = new Bloodhound({
-        datumTokenizer: Bloodhound.tokenizers.whitespace,
-        queryTokenizer: Bloodhound.tokenizers.whitespace,
-        remote: {
-          url: '/cities_autocomplete.json?query=%QUERY',
-          wildcard: '%QUERY',
-        }
-      });
-      
-      var suggestion_template = function (data) {
-          return '<p>' + data.plz + ' - ' + data.city + '</p>';
+javascript:
+  var cities = new Bloodhound({
+    datumTokenizer: Bloodhound.tokenizers.whitespace,
+    queryTokenizer: Bloodhound.tokenizers.whitespace,
+    remote: {
+      url: '/cities_autocomplete.json?query=%QUERY',
+      wildcard: '%QUERY',
+    }
+  });
+  
+  var suggestion_template = function (data) {
+      return '<p>' + data.plz + ' - ' + data.city + '</p>';
+  }
+  
+  $('#supporter_city').typeahead({
+    minLength: 2,
+  },{
+  limit: 20,
+  display: 'city',
+  templates: {
+    suggestion: function (data) {
+        return suggestion_template(data);
+    }
+  },
+    source: cities 
+  }).on('typeahead:selected', function(event, datum) {
+    $("#supporter_zip").val(datum.plz);
+  });
+    
+  $('#supporter_zip').typeahead({
+    minLength: 2,
+  },{
+    limit: 20,
+    display: 'plz',
+    templates: {
+      suggestion: function (data) {
+          return suggestion_template(data);
       }
-      
-      $('#supporter_city').typeahead({
-        minLength: 2,
-      },{
-      limit: 20,
-      display: 'city',
-      templates: {
-        suggestion: function (data) {
-            return suggestion_template(data);
-        }
-      },
-        source: cities 
-      }).on('typeahead:selected', function(event, datum) {
-        $("#supporter_zip").val(datum.plz);
-      });
-        
-      $('#supporter_zip').typeahead({
-        minLength: 2,
-      },{
-        limit: 20,
-        display: 'plz',
-        templates: {
-          suggestion: function (data) {
-              return suggestion_template(data);
-          }
-        },
-        source: cities 
-      }).on('typeahead:selected', function(event, datum) {
-        $("#supporter_city").val(datum.city);
-      });  
-  aside.col-md-5.col-xs-12
-    = render 'right_side'
+    },
+    source: cities 
+  }).on('typeahead:selected', function(event, datum) {
+    $("#supporter_city").val(datum.city);
+  });  

@@ -1,0 +1,21 @@
+p#notice = notice
+
+p
+  strong = Network::SignatureCollection.human_attribute_name :location_name
+  = @network_signature_collection.location_name
+p
+  strong = Network::SignatureCollection.human_attribute_name :location_zip
+  = @network_signature_collection.location_zip
+p
+  strong = Network::SignatureCollection.human_attribute_name :location_address
+  = @network_signature_collection.location_address
+p
+  strong = Network::SignatureCollection.human_attribute_name :event_date_start
+  = @network_signature_collection.event_date_start
+p
+  strong = Network::SignatureCollection.human_attribute_name :event_date_end
+  = @network_signature_collection.event_date_end
+
+= link_to 'Edit', edit_network_signature_collection_path(@network_signature_collection)
+'  |
+= link_to 'Back', network_signature_collections_path

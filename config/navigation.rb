@@ -62,16 +62,25 @@ SimpleNavigation::Configuration.run do |navigation|
     unless supporter_signed_in?
       primary.item :home, I18n.t('.shared.topnavigation.support'), "/#{I18n.locale}"
     end
+
     primary.item :initiative, I18n.t('.shared.topnavigation.initiative'), initiative_text_path do | initiative |
       initiative.item :arguments,  I18n.t('.shared.topnavigation.arguments'), arguments_path
       initiative.item :faq,  I18n.t('.shared.topnavigation.faq'), faq_path
       initiative.item :numbers,  I18n.t('.shared.topnavigation.numbers'), numbers_path
       initiative.item :collection_concept,  I18n.t('.shared.topnavigation.collection_concept'), collection_concept_path
     end
+
     primary.item :statements, I18n.t('.shared.topnavigation.statements'), statements_path do |statements|
       statements.item :new_statement,  I18n.t('.supporters.publicity.renew'), new_publicity_path
     end
+
     primary.item :donation, I18n.t('donation'), donation_path
+
+    primary.item :network, I18n.t('.shared.topnavigation.network'), network_path do | network |
+      network.item :signature_collections, I18n.t('.shared.topnavigation.signature_collections'), network_signature_collections_path
+    end
+
+
     primary.item :blog, 'Blog', 'http://blog.cannabis-initiative.ch/', link_html: { target: '_blank'}
     if supporter_signed_in?
       primary.item :home, I18n.t('.shared.topnavigation.my_account'), "/#{I18n.locale}" do |my_account|

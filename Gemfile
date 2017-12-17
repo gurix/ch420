@@ -14,6 +14,9 @@ gem 'coffee-rails', '~> 4.1.0'
 # Integrate Paperclip into Mongoid.
 gem 'mongoid-paperclip'
 
+# Adds support for multiparameter fields to mongoid 4.x series.
+gem 'mongoid-sadstory'
+
 # Markdown rendering
 gem 'redcarpet'
 
@@ -29,7 +32,7 @@ gem 'paperclip-i18n'
 # Amazon's S3 file hosting service
 gem 'aws-sdk', '< 3.0' # see https://github.com/thoughtbot/paperclip/issues/2484
 
-# A fixtures replacement 
+# A fixtures replacement
 gem 'factory_girl'
 
 # It's a small library to provide the Rails I18n translations on the JavaScript.
@@ -54,7 +57,7 @@ gem 'route_translator'
 gem 'roadie-rails', '~> 1.0'
 
 # Devise is a flexible authentication solution for Rails based on Warden.
-gem 'devise' 
+gem 'devise'
 
 # Translations for devise
 gem 'devise-i18n'
@@ -92,7 +95,7 @@ group :development, :test do
   gem 'byebug'
   gem 'mongoid-rspec', '3.0.0'
   gem 'rspec-rails', '~> 3.0'
-  
+
   gem 'pry-rails'
   gem 'dotenv-rails'
 end
@@ -100,12 +103,16 @@ end
 group :development do
   # A series of things you can use to benchmark a Rails or Ruby app.
   gem 'derailed_benchmarks'
-  
+
   # To use all profiling methods available
   gem 'stackprof'
-  
+
   # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 2.0'
+
+  # Better Errors replaces the standard Rails error page with a much better and more useful error page. 
+  gem "better_errors"
+  gem "binding_of_caller"
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   # gem 'spring'

@@ -24,6 +24,8 @@ fr:
       statements: Déclarations
       collection_concept: Comment faire une initiative populaire? (en allemand)
       my_account: Mon compte
+      network: Réseau
+      signature_collections: Collection des signatures
     
     lang: Langue
     are_you_sure: Tu es sûre?
@@ -117,6 +119,8 @@ fr:
     statements: declarations 
     collection_concept: plan_de_collecte
     greendays: greensaturday
+    network: reseau
+    signature_collections: collection_signature
 
   mongoid:
     models:

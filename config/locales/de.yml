@@ -19,34 +19,38 @@ de:
       numbers: Zahlen
       statements: Statements
       collection_concept: Wie macht man eine Volksinitiative?
-      
+      network: Netzwerk
+      signature_collections: Unterschriftensammlung
+
     lang: Sprache
     are_you_sure: Bist du sicher?
     edit: Bearbeiten
+    show: Anzeigen
+    destroy: Löschen
     save: Speichern
     description: Volksinitiative zur Legalisierung von Cannabis in der Schweiz.
 
     counter:
       supporters: "Unterstützer:"
-      amount_of_supporters: Zurzeit haben wir %{amount} Unterstützer. 
+      amount_of_supporters: Zurzeit haben wir %{amount} Unterstützer.
 
   input_error: Deine Eingaben konnte nicht gespeichert werden. Überprüfe deine Eingaben.
   donation: Deine Spende
   welcome_email:
     subject: Besten Dank für deine Unterstützung!
-  
+
   support_type:
     signer: Ich würde eine Volksinitiative für die <span class="text-success">Legalisierung von Cannabis</span> unterschreiben.
     supporter: Ich würde eine Volksinitiative für die <span class="text-success">Legalisierung von Cannabis</span> unterschreiben und helfe aktiv Unterschriften in meiner Umgebung zu sammeln.
     # activist: Ich unterschreibe eine Volksinitiative für die <span class="text-success">Legalisierung von Cannabis</span> und beteilige mich bei der Planung und Koordination einer Volksinitiative.
     # nonvoting_supporter: Ich bin nicht stimmberechtigt, helfe aber aktiv Unterschriften in meiner Umgebung zu sammeln um <span class="text-success">Cannabis zu legalisierung</span>.
-    
+
   age_category:
     underage: Ich bin jünger als 18 Jahre alt
     young: Ich bin 18 bis 30 Jahre alt
     middle: Ich bin 30 bis 64 Jahre alt
     retired: Ich bin über 64 Jahre alt
- 
+
   publicity_states:
     pending: Die Veröffentlichung wurde noch nicht genehmigt
     approved: Das Statement wurde Veröffentlicht
@@ -56,7 +60,7 @@ de:
     de: Deutsch
     fr: Français
     it: Italiano
-    
+
   supporters:
     form:
       form: Formular
@@ -76,15 +80,15 @@ de:
       renew: Statement neu einreichen
       delete: Statement löschen
       create_publicity: Deine Meinung zählt, darum bitten wir dir hier die Möglichkeit öffentlich deine Meinung zur Cannabis-Initiative kundzutun. Gib ein Starkes Statement ab und zeig dein Gesicht! Meine Unterstützung öffentlich kundtun ...
-      
+
     create:
       timeout: Ihre Eingabe war zu schnell.
-    
+
     new:
       title: Hallo %{name}
       edit: Meine Daten bearbeiten
       my_data: Meine Daten
-  
+
   publicities:
     form:
       title: Meine Meinung zur Cannabis-Initiative veröffentlichen
@@ -92,7 +96,7 @@ de:
       organisation_placeholder: Parteizugehörigkeit, Verband oder sonstige Organisationen
       avatar: Lade ein Bild von dir Hoch
       save: Zur Überprüfung einsenden
-    
+
     create:
       success: Besten Dank die Daten werden überprüft.
     update:
@@ -100,16 +104,21 @@ de:
 
   pages:
     show:
-      not_found: Die Seite konnte nicht gefunden werden. 
+      not_found: Die Seite konnte nicht gefunden werden.
 
     thanks:
       title: Besten Dank für deine Unterstützung!
-    
+
     statements:
       title: Statements von unseren Unterstützern
       submit_your_own_statement: Veröffentliche dein eigenes Statement...
       read_more: das ganze Statement lesen.
-  
+  network:
+    signature_collections:
+      index:
+        new: Neue Sammlung erfasssen
+        title: Unterschriftensammlungen
+        search: Suche
   routes:
     initiative_text: initiativtext
     arguments: argumentarium
@@ -120,6 +129,8 @@ de:
     statementes: statements
     collection_concept: Sammelkonzept
     greendays: greensaturday
+    network: netzwerk
+    signature_collections: unterschriftensammlung
 
   mongoid:
     models:
@@ -147,3 +158,9 @@ de:
         organisation: Organisation
         statement: Statement
         avatar: Bild
+      network/signature_collection:
+        location_name: Ort
+        location_zip: Postleitzahl
+        location_address: Adresse
+        event_date_start: Startzeit
+        event_date_end: Endzeit

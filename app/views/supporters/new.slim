@@ -35,5 +35,10 @@
       = render 'right_side'
 
 - else
- = render 'form' 
-  
+  - title(t('shared.header.title_html'))
+  .row
+    .col-xs-12.col-md-7
+      h2.sr-only = t('.form')
+  = render 'form' 
+  aside.col-md-5.col-xs-12
+    = render 'right_side'

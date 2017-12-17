@@ -33,6 +33,11 @@ class ApplicationController < ActionController::Base
     false
   end
 
+  def only_admin
+    return true if current_supporter && current_supporter.admin?
+    raise ActionController::RoutingError, 'Not Found'
+  end
+
   protected
 
   def configure_permitted_parameters

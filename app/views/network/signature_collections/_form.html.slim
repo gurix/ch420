@@ -1,0 +1,12 @@
+= simple_form_for(@network_signature_collection) do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.input :location_name
+    = f.input :location_zip, as: :numeric
+    = f.input :location_address
+    = f.input :event_date_start, as: :datetime
+    = f.input :event_date_end, as: :datetime
+
+  .form-actions
+    = f.button :submit, value: t('shared.save')

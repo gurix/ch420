@@ -57,9 +57,4 @@ class GreendaysController < ApplicationController
   def greenday_params
     params.require(:greenday).permit(:title, :address, :homepage, :description, :logo, :delete_logo)
   end
-
-  def only_admin
-    return true if current_supporter && current_supporter.admin?
-    raise ActionController::RoutingError, 'Not Found'
-  end
 end

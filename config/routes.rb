@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+
   devise_for :supporters
   root to: 'supporters#new' 
 
@@ -11,6 +12,11 @@ Rails.application.routes.draw do
   end
 
   localized do
+    get 'network', to: 'pages#show', as: :network, page: 'network'
+    namespace :network do
+      resources :signature_collections
+    end
+    
     resources :greendays
     get '/initiative_text', to: 'pages#show', as: :initiative_text, page: 'initiative_text'
     get '/arguments', to: 'pages#show', as: :arguments, page: 'arguments'

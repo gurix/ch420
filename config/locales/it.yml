@@ -21,7 +21,9 @@ it:
       statements: Dichiarazioni
       collection_concept: Come fare un iniziativa popolare? (in tedesco)
       my_account: Il mio account
-      
+      network: Reticolato 
+      signature_collections: collezione di firme
+
     counter:
       supporters: "Sostenitore:"
       amount_of_supporters: Al momento abbiamo %{amount} sostenitori.
@@ -121,6 +123,8 @@ it:
     statements: dichiarazioni
     collection_concept: sistema_di_raccolta
     greendays: greensaturday
+    network: reticolato
+    signature_collections: collezione_firme
 
   mongoid:
    attributes:
