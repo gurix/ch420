@@ -5,7 +5,7 @@ class Network::SignatureCollectionsController < ApplicationController
   # GET /network/signature_collections
   # GET /network/signature_collections.json
   def index
-    @network_signature_collections = Network::SignatureCollection.all
+    @network_signature_collections = Network::SignatureCollection.where(:event_date_start.gte =>  DateTime.now)
   end
 
   # GET /network/signature_collections/1
