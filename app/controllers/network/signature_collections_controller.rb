@@ -5,7 +5,22 @@ class Network::SignatureCollectionsController < ApplicationController
   # GET /network/signature_collections
   # GET /network/signature_collections.json
   def index
+    @query, @location, @distance = params[:query], params[:location], params[:distance]
+
     @network_signature_collections = Network::SignatureCollection.where(:event_date_start.gte =>  DateTime.now)
+
+    @network_signature_collections = @network_signature_collections.or(location_zip_s: /#{@query}/) if @query
+    @network_signature_collections = @network_signature_collections.or(location_name: /#{@query}/) if @query
+    @network_signature_collections = @network_signature_collections.or(location_address: /#{@query}/) if @query
+
+    distance_from_location
+  end
+
+  def distance_from_location
+    return unless @location && @distance
+    location_coordinates = Geocoder.coordinates(@location)
+    return unless location_coordinates # only filter when coordinates found
+    @network_signature_collections = @network_signature_collections.geo_near(location_coordinates.reverse).max_distance(@distance.to_f/111)
   end
 
   # GET /network/signature_collections/1

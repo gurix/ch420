@@ -110,7 +110,7 @@ group :development do
   # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 2.0'
 
-  # Better Errors replaces the standard Rails error page with a much better and more useful error page. 
+  # Better Errors replaces the standard Rails error page with a much better and more useful error page.
   gem "better_errors"
   gem "binding_of_caller"
 

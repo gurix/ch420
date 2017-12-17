@@ -119,6 +119,7 @@ de:
         new: Neue Sammlung erfasssen
         title: Unterschriftensammlungen
         search: Suche
+        location: Ort
   routes:
     initiative_text: initiativtext
     arguments: argumentarium

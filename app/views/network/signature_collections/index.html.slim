@@ -1,6 +1,21 @@
 h1 = title t('.title')
-#signature_collections_table
-  input.search.form-control.string placeholder="#{t('.search')}"
+css:
+  .form-inline > * {
+    margin: 5px;
+  }
+form
+  .form-inline
+    input.form-control placeholder="#{t('.search')}" name="query" value="#{@query}"
+    input.form-control placeholder="#{t('.location')}" name="location" value="#{@location}"
+    select.form-control name="distance"
+      - [5, 10, 20, 50, 100, 150, 200].each do | d |
+        - if d == @distance.to_i
+          option value="#{d}" selected="selected" #{d} Km
+        - else
+          option value="#{d}" #{d} Km
+
+    input.btn.btn-primary type="submit" value="#{t('.search')}"
+
   table.table
     thead
       tr
@@ -30,10 +45,3 @@ h1 = title t('.title')
 br
 
 = link_to t('.new'), new_network_signature_collection_path
-
-javascript:
-  var options = {
-    valueNames: [ 'location_name', 'location_zip', 'location_address', 'event_date_start', 'event_date_end' ]
-  };
-
-  var signature_collections = new List('signature_collections_table', options);
