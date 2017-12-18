@@ -23,7 +23,7 @@ class ChargesController < ApplicationController
     Stripe::Charge.create(amount: @amount, currency: 'CHF', source: params[:stripeToken], description: 'Initiativspende')
 
   rescue Stripe::CardError => e
-    flash[:error] = e.message
+    flash[:danger] = e.message
     redirect_to donation_path
   end
 end
