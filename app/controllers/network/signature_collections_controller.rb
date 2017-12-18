@@ -9,9 +9,9 @@ class Network::SignatureCollectionsController < ApplicationController
 
     @network_signature_collections = Network::SignatureCollection.where(:event_date_start.gte =>  DateTime.now)
 
-    @network_signature_collections = @network_signature_collections.or(location_zip_s: /#{@query}/) if @query
-    @network_signature_collections = @network_signature_collections.or(location_name: /#{@query}/) if @query
-    @network_signature_collections = @network_signature_collections.or(location_address: /#{@query}/) if @query
+    @network_signature_collections = @network_signature_collections.or(location_zip_s: /#{@query}/i) if @query
+    @network_signature_collections = @network_signature_collections.or(location_name: /#{@query}/i) if @query
+    @network_signature_collections = @network_signature_collections.or(location_address: /#{@query}/i) if @query
 
     distance_from_location
   end
