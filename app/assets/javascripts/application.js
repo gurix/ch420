@@ -16,5 +16,4 @@
 //= require typeahead.bundle
 //= require markerclusterer_compiled
 //= require i18n/translations
-//= require list
 //= require_tree .
