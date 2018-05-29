@@ -1,7 +1,6 @@
 ---
 title: '#CH420 Statistiken Onlineforumlar'
 author: "Markus Graf"
-date: "23. April 2016"
 output: html_document
 ---
 
@@ -28,4 +27,10 @@ pielabels<- paste(percentlabels, "%", sep="")
 cols <- rainbow(4)
 pie(ages, main="Altersverteilung #CH420", col=cols, labels=pielabels, cex=0.8, sub=paste("N =", sum(ages)))
 legend("topright", c("30-64",">64","< 18","18-30"), cex=0.8, fill=cols)
+
+support <- table(all$support)
+pielabels<- support
+cols <- rainbow(2)
+pie(support, main="Supportverteilung #CH420", col=cols, labels=pielabels, cex=0.8, sub=paste("N =", sum(support)))
+legend("topright", c("Unterschreibende","Sammler"), cex=0.8, fill=cols)
 ```
