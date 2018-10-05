@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   devise_for :supporters
-  root to: 'supporters#new' 
+  root to: 'supporters#new'
 
   get "/pages/:page" => "pages#show"
 
@@ -19,7 +19,6 @@ Rails.application.routes.draw do
     get '/sponsoring', to: 'pages#show', as: :sponsoring, page: 'sponsoring'
     get '/donation', to: 'pages#show', as: :donation, page: 'donation'
     get '/numbers', to: 'pages#show', as: :numbers, page: 'numbers'
-    get '/collection_concept', to: 'pages#show', as: :collection_concept, page: 'collection_concept'
     get '/statements', to: 'pages#show', as: :statements, page: 'statements'
   end
 
@@ -29,7 +28,7 @@ Rails.application.routes.draw do
     resources :supporters, only: [:new, :create]
     resource :publicity
     get '/thanks', to: 'pages#thanks', as: :thanks
-    resources :charges    
+    resources :charges
   end
 
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'

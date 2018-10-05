@@ -6,7 +6,7 @@ SimpleNavigation::Configuration.run do |navigation|
   # The renderer can also be specified as option in the render_navigation call.
   # navigation.renderer = Your::Custom::Renderer
 
-  # Specify the class that will be applied to active navigation items. Defaults to 'selected' 
+  # Specify the class that will be applied to active navigation items. Defaults to 'selected'
   #navigation.selected_class = 'selected'
 
   # Specify the class that will be applied to the current leaf of
@@ -28,12 +28,12 @@ SimpleNavigation::Configuration.run do |navigation|
 
   # Specify if the auto highlight feature is turned on (globally, for the whole navigation). Defaults to true
   #navigation.auto_highlight = true
-  
-  # Specifies whether auto highlight should ignore query params and/or anchors when 
-  # comparing the navigation items with the current URL. Defaults to true 
+
+  # Specifies whether auto highlight should ignore query params and/or anchors when
+  # comparing the navigation items with the current URL. Defaults to true
   #navigation.ignore_query_params_on_auto_highlight = true
   #navigation.ignore_anchors_on_auto_highlight = true
-  
+
   # If this option is set to true, all item names will be considered as safe (passed through html_safe). Defaults to false.
   #navigation.consider_item_names_as_safe = false
 
@@ -56,7 +56,7 @@ SimpleNavigation::Configuration.run do |navigation|
     #                            when the item should be highlighted, you can set a regexp which is matched
     #                            against the current URI.  You may also use a proc, or the symbol <tt>:subpath</tt>.
     #
-    
+
     #primary.item :greendays, '#Greensaturday', greendays_path
 
     unless supporter_signed_in?
@@ -66,7 +66,6 @@ SimpleNavigation::Configuration.run do |navigation|
       initiative.item :arguments,  I18n.t('.shared.topnavigation.arguments'), arguments_path
       initiative.item :faq,  I18n.t('.shared.topnavigation.faq'), faq_path
       initiative.item :numbers,  I18n.t('.shared.topnavigation.numbers'), numbers_path
-      initiative.item :collection_concept,  I18n.t('.shared.topnavigation.collection_concept'), collection_concept_path
     end
     primary.item :statements, I18n.t('.shared.topnavigation.statements'), statements_path do |statements|
       statements.item :new_statement,  I18n.t('.supporters.publicity.renew'), new_publicity_path
