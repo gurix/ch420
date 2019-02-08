@@ -15,7 +15,6 @@ Rails.application.routes.draw do
     get '/initiative_text', to: 'pages#show', as: :initiative_text, page: 'initiative_text'
     get '/terms_and_conditions', to: 'pages#show', as: :terms_and_conditions, page: 'terms_and_conditions'
     get '/donation', to: 'pages#show', as: :donation, page: 'donation'
-    get '/statements', to: 'pages#show', as: :statements, page: 'statements'
   end
 
   get '/cities_autocomplete', to: 'cities_autocomplete#index', as: :cities_autocomplete
