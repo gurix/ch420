@@ -13,11 +13,8 @@ Rails.application.routes.draw do
   localized do
     resources :greendays
     get '/initiative_text', to: 'pages#show', as: :initiative_text, page: 'initiative_text'
-    get '/arguments', to: 'pages#show', as: :arguments, page: 'arguments'
-    get '/faq', to: 'pages#show', as: :faq, page: 'faq'
     get '/terms_and_conditions', to: 'pages#show', as: :terms_and_conditions, page: 'terms_and_conditions'
     get '/donation', to: 'pages#show', as: :donation, page: 'donation'
-    get '/numbers', to: 'pages#show', as: :numbers, page: 'numbers'
     get '/statements', to: 'pages#show', as: :statements, page: 'statements'
   end
 

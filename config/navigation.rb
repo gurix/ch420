@@ -62,11 +62,7 @@ SimpleNavigation::Configuration.run do |navigation|
     unless supporter_signed_in?
       primary.item :home, I18n.t('.shared.topnavigation.support'), "/#{I18n.locale}"
     end
-    primary.item :initiative, I18n.t('.shared.topnavigation.initiative'), initiative_text_path do | initiative |
-      initiative.item :arguments,  I18n.t('.shared.topnavigation.arguments'), arguments_path
-      initiative.item :faq,  I18n.t('.shared.topnavigation.faq'), faq_path
-      initiative.item :numbers,  I18n.t('.shared.topnavigation.numbers'), numbers_path
-    end
+    primary.item :initiative, I18n.t('.shared.topnavigation.initiative'), initiative_text_path
     primary.item :statements, I18n.t('.shared.topnavigation.statements'), statements_path do |statements|
       statements.item :new_statement,  I18n.t('.supporters.publicity.renew'), new_publicity_path
       statements.item :new_statement,  'Statement Administration', admin_publicities_path if supporter_signed_in? && current_supporter.admin?
