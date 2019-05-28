@@ -1,6 +1,6 @@
 - title(t('shared.header.title_html'))
 .row
-  .col-xs-12.col-md-7
+  .col-xs-12
     h2.sr-only = t('.form')
     = simple_form_for @supporter do |f|
       = f.input :first_name, placeholder: t('.placeholders.first_name')
@@ -29,11 +29,11 @@
           wildcard: '%QUERY',
         }
       });
-      
+
       var suggestion_template = function (data) {
           return '<p>' + data.plz + ' - ' + data.city + '</p>';
       }
-      
+
       $('#supporter_city').typeahead({
         minLength: 2,
       },{
@@ -44,11 +44,11 @@
             return suggestion_template(data);
         }
       },
-        source: cities 
+        source: cities
       }).on('typeahead:selected', function(event, datum) {
         $("#supporter_zip").val(datum.plz);
       });
-        
+
       $('#supporter_zip').typeahead({
         minLength: 2,
       },{
@@ -59,9 +59,7 @@
               return suggestion_template(data);
           }
         },
-        source: cities 
+        source: cities
       }).on('typeahead:selected', function(event, datum) {
         $("#supporter_city").val(datum.city);
-      });  
-  aside.col-md-5.col-xs-12
-    = render 'right_side'
+      });
