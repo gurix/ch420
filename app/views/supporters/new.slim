@@ -1,11 +1,11 @@
 - if supporter_signed_in?
   h1.sr-only = title t('.title', name: current_supporter.first_name)
   .row
-    .col-xs-12.col-md-7
+    .col-xs-12
       .panel.panel-default
         .panel-heading
           h2.panel-title = t '.my_data'
-        .panel-body 
+        .panel-body
           dl.dl-horizontal
             dt = Supporter.human_attribute_name(:email)
             dd = current_supporter.email
@@ -25,15 +25,11 @@
             dd = t("languages.#{current_supporter.language}")
             dt = Supporter.human_attribute_name(:tel)
             dd = current_supporter.tel
-      
+
           p
             = link_to t('.edit'), edit_supporter_registration_path(), class: 'pull-right'
-  
+
       = render 'publicity'
 
-    aside.col-md-5.col-xs-12
-      = render 'right_side'
-
 - else
- = render 'form' 
-  
+ = render 'form'
