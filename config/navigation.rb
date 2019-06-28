@@ -69,7 +69,7 @@ SimpleNavigation::Configuration.run do |navigation|
         my_account.item :sign_out, I18n.t('.shared.topnavigation.sign_out'), destroy_supporter_session_path, link_html: { 'data-method' => :delete  }
       end
     else
-      primary.item :home, I18n.t('.shared.topnavigation.sign_in'), new_supporter_session_path
+    #  primary.item :home, I18n.t('.shared.topnavigation.sign_in'), new_supporter_session_path
     end
 
 

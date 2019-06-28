@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe "greendays/new", type: :view do
+RSpec.describe "greendays/new", pending: true, type: :view do
   before(:each) do
     assign(:greenday, Greenday.new(
       :title => "MyString",
