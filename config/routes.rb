@@ -12,7 +12,7 @@ Rails.application.routes.draw do
 
   localized do
     #resources :greendays
-    get '/initiative_text', to: 'pages#show', as: :initiative_text, page: 'initiative_text'
+    #get '/initiative_text', to: 'pages#show', as: :initiative_text, page: 'initiative_text'
     get '/terms_and_conditions', to: 'pages#show', as: :terms_and_conditions, page: 'terms_and_conditions'
     #get '/donation', to: 'pages#show', as: :donation, page: 'donation'
   end

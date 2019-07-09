@@ -50,7 +50,7 @@ html lang="#{I18n.locale}"
       ga('create', 'UA-79948850-1', 'auto');
       ga('send', 'pageview');
     .container.anouncement
-      .text-center.lead.alert.alert-success
+      /.text-center.lead.alert.alert-success
        | Für das Projekt Initiative ist Ende Januar ein neuer Träger­verein gegründet worden.
        br
        | Weitere Informationen dazu werden folgen.
@@ -76,8 +76,10 @@ html lang="#{I18n.locale}"
           main= yield
       hr
       footer.row
-        .col-xs-12.col-sm-6
-          = render 'core_statements'
+        /.col-xs-12.col-sm-6
+          /= render 'core_statements'
+        .col-xs-12
+          p Dieses Onlineformular wurde vom <a href="https://www.hanflegal.ch">Verein Legalize it!</a> erstellt, um Unterstützende für eine neue Volksinitiative zur Legalisierung von Cannabis in der Schweiz zu sammeln. Die Geschichte des Initiativprojekts kann im <a href="/pages/archiv">Archiv</a> nachgelesen werden. Fragen zum Initiativprojekt können an <a href="mailto: info@cannabis-consensus.ch">info@cannabis-consensus.ch</a> gestellt werden.
 
   javascript:
     I18n.defaultLocale = "#{I18n.default_locale}";

@@ -62,7 +62,9 @@ SimpleNavigation::Configuration.run do |navigation|
     unless supporter_signed_in?
       primary.item :home, I18n.t('.shared.topnavigation.support'), "/#{I18n.locale}"
     end
-    primary.item :initiative, I18n.t('.shared.topnavigation.initiative'), initiative_text_path
+    # primary.item :initiative, I18n.t('.shared.topnavigation.initiative'), initiative_text_path
+    primary.item :archivb, "Archiv", '/pages/archiv'
+    
     if supporter_signed_in?
       primary.item :home, I18n.t('.shared.topnavigation.my_account'), "/#{I18n.locale}" do |my_account|
         my_account.item :edit_account, I18n.t('.supporters.new.edit'), edit_supporter_registration_path()
